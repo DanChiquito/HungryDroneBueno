@@ -51,7 +51,7 @@
       <HintPath>..\packages\GMap.NET.Windows.1.8.5\lib\net40\GMap.NET.WindowsPresentation.dll</HintPath>
     </Reference>
     <Reference Include="ManejaProducto">
-      <HintPath>..\..\..\..\OneDrive\Documentos\5 SEMESTRE\Técnicas de programación\Proyecto\PaginaMENU\ManejaProducto\bin\Debug\netstandard2.0\ManejaProducto.dll</HintPath>
+      <HintPath>..\..\..\..\source\repos\HungryDrone\ManejaProducto.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
