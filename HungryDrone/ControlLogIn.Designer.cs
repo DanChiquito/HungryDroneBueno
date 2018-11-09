@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormControlLogIn));
             this.label2 = new System.Windows.Forms.Label();
             this.txtbUser = new System.Windows.Forms.TextBox();
@@ -35,6 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtbPass = new System.Windows.Forms.TextBox();
             this.btnIniciar = new System.Windows.Forms.Button();
+            this.errorProvAdmin = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -45,7 +48,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(108, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 20);
+            this.label2.Size = new System.Drawing.Size(273, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "¡Bienvenido Administrador!";
             // 
@@ -54,7 +57,7 @@
             this.txtbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbUser.Location = new System.Drawing.Point(87, 182);
             this.txtbUser.Name = "txtbUser";
-            this.txtbUser.Size = new System.Drawing.Size(280, 23);
+            this.txtbUser.Size = new System.Drawing.Size(280, 27);
             this.txtbUser.TabIndex = 1;
             // 
             // label1
@@ -65,7 +68,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(83, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.Size = new System.Drawing.Size(79, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
@@ -77,7 +80,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label3.Location = new System.Drawing.Point(83, 246);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 20);
+            this.label3.Size = new System.Drawing.Size(114, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Contraseña";
             // 
@@ -87,7 +90,7 @@
             this.txtbPass.Location = new System.Drawing.Point(87, 279);
             this.txtbPass.Name = "txtbPass";
             this.txtbPass.PasswordChar = '*';
-            this.txtbPass.Size = new System.Drawing.Size(280, 23);
+            this.txtbPass.Size = new System.Drawing.Size(280, 27);
             this.txtbPass.TabIndex = 1;
             this.txtbPass.UseSystemPasswordChar = true;
             // 
@@ -102,10 +105,15 @@
             this.btnIniciar.TabIndex = 2;
             this.btnIniciar.Text = "Iniciar Sesión";
             this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
+            // errorProvAdmin
+            // 
+            this.errorProvAdmin.ContainerControl = this;
             // 
             // FormControlLogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(450, 497);
@@ -123,7 +131,7 @@
             this.Name = "FormControlLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ControlLogIn";
-            this.Load += new System.EventHandler(this.ControlLogIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvAdmin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +145,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbPass;
         private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.ErrorProvider errorProvAdmin;
     }
 }
