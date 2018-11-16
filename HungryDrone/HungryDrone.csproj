@@ -85,6 +85,12 @@
     <Compile Include="formCheckDrone.Designer.cs">
       <DependentUpon>formCheckDrone.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDatosUsuarioFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatosUsuarioFinal.Designer.cs">
+      <DependentUpon>FormDatosUsuarioFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="formInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ControlLogIn.resx">
       <DependentUpon>ControlLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDatosUsuarioFinal.resx">
+      <DependentUpon>FormDatosUsuarioFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formInicio.resx">
       <DependentUpon>formInicio.cs</DependentUpon>

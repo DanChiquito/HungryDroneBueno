@@ -7,6 +7,9 @@ namespace HungryDrone
     public partial class FormControlLogIn : Form
     {
         private string password = "HungryDrone";
+        private string user1 = "Daniel";
+        private string user2 = "Nataly";
+        private string user3 = "Itan";
         public FormControlLogIn()
         {
             InitializeComponent();
@@ -28,9 +31,9 @@ namespace HungryDrone
                 }
                 else 
                 {
-                    if (txtbPass.Text == password)
+                    if (txtbPass.Text == password && (txtbUser.Text == user1 || txtbUser.Text == user2 || txtbUser.Text == user3))
                     {
-                        txtbPass.Clear();
+                        //AQUI SE DEBE SACAR EL OTRO FORMULARIO
                     }
                     else
                     {
@@ -45,11 +48,11 @@ namespace HungryDrone
                 {
                     MessageBox.Show("Los campos no se pueden dejar en blanco", "No se puede continuar",0,MessageBoxIcon.Exclamation);
                 }
-                else if(txtbUser.Text == "")
+                if(txtbUser.Text == "" || txtbUser.Text != user1 || txtbUser.Text != user2 || txtbUser.Text != user3)
                 {
-                    errorProvAdmin.SetError(txtbUser, "Falta el nombre del usuario");
+                    errorProvAdmin.SetError(txtbUser, "El campo esta vacío o el nombre de usuario no existe");
                 }
-                else if (txtbPass.Text == "" || txtbPass.Text != password)
+                if (txtbPass.Text == "" || txtbPass.Text != password)
                 {
                     errorProvAdmin.SetError(txtbPass, "La contraseña es incorrecta o el campo esta en blanco");
                 }

@@ -51,7 +51,7 @@ namespace HungryDrone
 
         private void btnMenuLat_Click(object sender, EventArgs e)
         {
-            if(panelMenuLat.Width ==200)
+            if(panelMenuLat.Width == 200)
             {
                 panelMenuLat.Width = 80;
             }

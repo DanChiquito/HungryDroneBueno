@@ -16,6 +16,12 @@ namespace HungryDrone
         Producto Pizza = new Producto("Pizza Capricciosa", 250, true);
 
         Producto Pasta = new Producto("Pasta con salmon", 220, true);
+
+        Producto Hamburguesa = new Producto("HungryBurguer", 180, true);
+
+        Producto Burros = new Producto("Burros Supremos", 220, true);
+
+        decimal cantidadproductos;
         #endregion
 
         #region Constructor
@@ -27,55 +33,17 @@ namespace HungryDrone
         #endregion
 
         #region Control de Pedidos
-        private void cantidadSushi_MouseDown(object sender, MouseEventArgs e)
-        {
 
-            try
-            {
-
-                if (cantidadSushi.Value + cantidadHotDog.Value > 3)
-                {
-                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
-
-                }
-                else if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value > 3)
-                {
-                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
-                }
-                else if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value > 3)
-                {
-                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
-                }
-            }
-            catch (ApplicationException error1)
-            {
-                errorProv.SetError(btnPagar, error1.Message);
-            }
-            btnPagar.Enabled = false;
-            if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value <= 3)
-            {
-                errorProv.Clear();
-                btnPagar.Enabled = true;
-            }
-        }
-        
         private void cantidadHotDog_MouseDown(object sender, MouseEventArgs e)
         {
+            cantidadproductos = cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value + cantidadBurro.Value + cantidadHambu.Value;
             try
             {
 
-                if (cantidadSushi.Value + cantidadHotDog.Value > 3)
+                if (cantidadproductos > 3)
                 {
                     throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
 
-                }
-                else if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value > 3)
-                {
-                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
-                }
-                else if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value > 3)
-                {
-                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
                 }
             }
             catch (ApplicationException error1)
@@ -83,31 +51,46 @@ namespace HungryDrone
                 errorProv.SetError(btnPagar, error1.Message);
             }
             btnPagar.Enabled = false;
-            if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value <= 3)
+            if (cantidadproductos <= 3)
             {
                 errorProv.Clear();
                 btnPagar.Enabled = true;
             }
             
+        }
+        private void cantidadSushi_MouseDown(object sender, MouseEventArgs e)
+        {
+            cantidadproductos = cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value + cantidadBurro.Value + cantidadHambu.Value;
+            try
+            {
+                if (cantidadproductos > 3)
+                {
+                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
+
+                }
+            }
+            catch (ApplicationException error1)
+            {
+                errorProv.SetError(btnPagar, error1.Message);
+            }
+            btnPagar.Enabled = false;
+
+            if (cantidadproductos <= 3)
+            {
+                errorProv.Clear();
+                btnPagar.Enabled = true;
+            }
         }
 
         private void cantidadPizza_MouseDown(object sender, MouseEventArgs e)
         {
+            cantidadproductos = cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value + cantidadBurro.Value + cantidadHambu.Value;
             try
             {
-
-                if (cantidadSushi.Value + cantidadHotDog.Value > 3)
+                if (cantidadproductos > 3)
                 {
                     throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
 
-                }
-                else if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value > 3)
-                {
-                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
-                }
-                else if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value > 3)
-                {
-                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
                 }
             }
             catch (ApplicationException error1)
@@ -115,31 +98,24 @@ namespace HungryDrone
                 errorProv.SetError(btnPagar, error1.Message);
             }
             btnPagar.Enabled = false;
-            if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value <= 3)
+
+            if (cantidadproductos <= 3)
             {
                 errorProv.Clear();
                 btnPagar.Enabled = true;
             }
-            
+
         }
 
         private void cantidadPasta_MouseDown(object sender, MouseEventArgs e)
         {
+            cantidadproductos = cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value + cantidadBurro.Value + cantidadHambu.Value;
             try
             {
-
-                if (cantidadSushi.Value + cantidadHotDog.Value > 3)
+                if (cantidadproductos > 3)
                 {
                     throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
 
-                }
-                else if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value > 3)
-                {
-                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
-                }
-                else if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value > 3)
-                {
-                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
                 }
             }
             catch (ApplicationException error1)
@@ -147,12 +123,65 @@ namespace HungryDrone
                 errorProv.SetError(btnPagar, error1.Message);
             }
             btnPagar.Enabled = false;
-            if (cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value <= 3)
+
+            if (cantidadproductos <= 3)
             {
                 errorProv.Clear();
                 btnPagar.Enabled = true;
             }
-            
+
+        }
+
+        private void cantidadHambu_MouseDown(object sender, MouseEventArgs e)
+        {
+            cantidadproductos = cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value + cantidadBurro.Value + cantidadHambu.Value;
+            try
+            {
+
+
+                if (cantidadproductos > 3)
+                {
+                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
+
+                }
+            }
+            catch (ApplicationException error1)
+            {
+                errorProv.SetError(btnPagar, error1.Message);
+            }
+            btnPagar.Enabled = false;
+
+            if (cantidadproductos <= 3)
+            {
+                errorProv.Clear();
+                btnPagar.Enabled = true;
+            }
+        }
+
+        private void cantidadBurro_MouseDown(object sender, MouseEventArgs e)
+        {
+            cantidadproductos = cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value + cantidadBurro.Value + cantidadHambu.Value;
+            try
+            {
+
+
+                if (cantidadproductos > 3)
+                {
+                    throw new ApplicationException("El drone no puede llevar más de 3 ordenes a la vez");
+
+                }
+            }
+            catch (ApplicationException error1)
+            {
+                errorProv.SetError(btnPagar, error1.Message);
+            }
+            btnPagar.Enabled = false;
+
+            if (cantidadproductos <= 3)
+            {
+                errorProv.Clear();
+                btnPagar.Enabled = true;
+            }
         }
         #endregion
 
@@ -163,8 +192,10 @@ namespace HungryDrone
             float totSushi = (byte)cantidadSushi.Value * Sushi.Precio;
             float totPizza = (byte)cantidadPizza.Value * Pizza.Precio;
             float totPasta = (byte)cantidadPasta.Value * Pasta.Precio;
+            float totHambu = (byte)cantidadHambu.Value * Hamburguesa.Precio;
+            float totBurros = (byte)cantidadBurro.Value * Burros.Precio;
 
-            float Total = totHotDog + totSushi + totPizza + totPasta;
+            float Total = totHotDog + totSushi + totPizza + totPasta + totBurros + totHambu;
 
             try
             {
@@ -174,7 +205,7 @@ namespace HungryDrone
                 }
                 else
                 {
-                    FormPagar formPagar = new FormPagar(Total);
+                    FormPagar formPagar = new FormPagar(Total,(byte)cantidadHotDog.Value, (byte)cantidadSushi.Value, (byte)cantidadPizza.Value, (byte)cantidadPasta.Value);
                     AddOwnedForm(formPagar);
                     formPagar.FormBorderStyle = FormBorderStyle.None;
                     formPagar.TopLevel = false;
@@ -201,5 +232,7 @@ namespace HungryDrone
         {
             Close();
         }
+
+        
     }
 }

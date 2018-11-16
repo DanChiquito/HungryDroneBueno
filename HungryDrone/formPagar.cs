@@ -8,7 +8,7 @@ namespace HungryDrone
     {
         PagoTarjeta tarjeta;
 
-        public FormPagar(float total)
+        public FormPagar(float total, byte hotdogs, byte sushi, byte pizza, byte pasta)
         {
             InitializeComponent();
             lbTotal.Text = total.ToString();
@@ -26,14 +26,22 @@ namespace HungryDrone
                 else
                 {
                     tarjeta = new PagoTarjeta(mskNumero.Text,mskFecha.Text,mskCvv.Text,txtbNombre.Text);
-                    MessageBox.Show("Procesando pago...");
+                    MessageBox.Show("Procesando pago...", "Espere un momento",0 ,MessageBoxIcon.Asterisk);
                     if (tarjeta.Tarjeta())
                     {
-                        MessageBox.Show("Pago aceptado, pedido en camino");
+                        FormDatosUsuarioFinal formUsuarioFinal = new FormDatosUsuarioFinal(txtbNombre.Text,"","",float.Parse(lbTotal.Text));
+                            AddOwnedForm(formUsuarioFinal);
+                        formUsuarioFinal.FormBorderStyle = FormBorderStyle.None;
+                        formUsuarioFinal.TopLevel = false;
+                        formUsuarioFinal.Dock = DockStyle.Fill;
+                        this.Controls.Add(formUsuarioFinal);
+                        this.Tag = formUsuarioFinal;
+                        formUsuarioFinal.BringToFront();
+                        formUsuarioFinal.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Pago declinado, actualice su método de pago");
+                        MessageBox.Show("Actualice su método de pago","Pago Declinado", 0,MessageBoxIcon.Exclamation);
                     }
                 }
             }
