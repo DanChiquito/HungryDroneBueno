@@ -33,7 +33,7 @@ namespace HungryDrone
             gMapControl1.Zoom = 9;
             gMapControl1.AutoScroll = true;
 
-            markerOverlay = new GMapOverlay("Marcador");
+            markerOverlay = new GMapOverlay("Su pocisión");
             marker = new GMarkerGoogle(new PointLatLng(latInicial, lngInicial), GMarkerGoogleType.red);
             markerOverlay.Markers.Add(marker);
 
@@ -42,6 +42,15 @@ namespace HungryDrone
 
             gMapControl1.Overlays.Add(markerOverlay);
         }
-        
+
+        private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            double lat = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lat;
+            double lng = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lng;
+
+            marker.Position = new PointLatLng(lat, lng);
+            marker.ToolTipText = string.Format("Ubicación:\n Latitud: {0}\n Longitud:{1}", lat, lng);
+
+        }
     }
 }

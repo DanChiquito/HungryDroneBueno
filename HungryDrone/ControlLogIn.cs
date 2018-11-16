@@ -6,6 +6,10 @@ namespace HungryDrone
 {
     public partial class FormControlLogIn : Form
     {
+        private string password = "HungryDrone";
+        private string user1 = "Daniel";
+        private string user2 = "Nataly";
+        private string user3 = "Itan";
         public FormControlLogIn()
         {
             InitializeComponent();
@@ -16,9 +20,44 @@ namespace HungryDrone
             Close();
         }
 
-        private void ControlLogIn_Load(object sender, EventArgs e)
+        private void btnIniciar_Click(object sender, EventArgs e)
         {
-
+            try
+            { 
+                errorProvAdmin.Clear();
+                if(txtbUser.Text == ""|| txtbPass.Text == "")
+                {
+                    throw new ApplicationException();
+                }
+                else 
+                {
+                    if (txtbPass.Text == password && (txtbUser.Text == user1 || txtbUser.Text == user2 || txtbUser.Text == user3))
+                    {
+                        //AQUI SE DEBE SACAR EL OTRO FORMULARIO
+                    }
+                    else
+                    {
+                        throw new ApplicationException();
+                    }
+                }
+                
+            }
+            catch(ApplicationException)
+            {
+                if (txtbUser.Text == "" &&  txtbPass.Text == "")
+                {
+                    MessageBox.Show("Los campos no se pueden dejar en blanco", "No se puede continuar",0,MessageBoxIcon.Exclamation);
+                }
+                if(txtbUser.Text == "" || txtbUser.Text != user1 || txtbUser.Text != user2 || txtbUser.Text != user3)
+                {
+                    errorProvAdmin.SetError(txtbUser, "El campo esta vacío o el nombre de usuario no existe");
+                }
+                if (txtbPass.Text == "" || txtbPass.Text != password)
+                {
+                    errorProvAdmin.SetError(txtbPass, "La contraseña es incorrecta o el campo esta en blanco");
+                }
+                
+            }
         }
     }
 }
