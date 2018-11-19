@@ -12,6 +12,12 @@ namespace HungryDrone
 {
     public partial class FormDatosUsuarioFinal : Form
     {
+        /*public FormDatosUsuarioFinal()
+        {
+
+        }
+        
+        */
         public FormDatosUsuarioFinal(string nombre, string direccion, byte hotdogs, byte sushi, byte pizza, byte pasta, byte burro, byte burguer, float total)
         {
             InitializeComponent();
