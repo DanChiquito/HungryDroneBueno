@@ -188,6 +188,7 @@ namespace HungryDrone
         #region Eventos
         private void btnPagar_Click(object sender, EventArgs e)
         {
+            cantidadproductos = cantidadSushi.Value + cantidadHotDog.Value + cantidadPizza.Value + cantidadPasta.Value + cantidadBurro.Value + cantidadHambu.Value;
             float totHotDog = (byte)cantidadHotDog.Value * HotDog.Precio;
             float totSushi = (byte)cantidadSushi.Value * Sushi.Precio;
             float totPizza = (byte)cantidadPizza.Value * Pizza.Precio;
@@ -199,13 +200,20 @@ namespace HungryDrone
 
             try
             {
-                if (cantidadHotDog.Value == 0 && cantidadSushi.Value == 0 && cantidadPizza.Value == 0 && cantidadPasta.Value == 0)
+                if (cantidadproductos == 0)
                 {
                     throw new ApplicationException("No se ha seleccionado ningún producto");
                 }
                 else
                 {
-                    FormPagar formPagar = new FormPagar(Total,(byte)cantidadHotDog.Value, (byte)cantidadSushi.Value, (byte)cantidadPizza.Value, (byte)cantidadPasta.Value);
+                    byte hotdog = (byte)cantidadHotDog.Value;
+                    byte suchi = (byte)cantidadSushi.Value;
+                    byte pizza = (byte)cantidadPizza.Value;
+                    byte pasta = (byte)cantidadPasta.Value;
+                    byte burrito = (byte)cantidadBurro.Value;
+                    byte burguer = (byte)cantidadHambu.Value;
+
+                    FormPagar formPagar = new FormPagar(Total, hotdog, suchi, pizza, pasta , burrito, burguer);
                     AddOwnedForm(formPagar);
                     formPagar.FormBorderStyle = FormBorderStyle.None;
                     formPagar.TopLevel = false;
@@ -232,7 +240,5 @@ namespace HungryDrone
         {
             Close();
         }
-
-        
     }
 }

@@ -33,10 +33,10 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnMenuLat = new System.Windows.Forms.PictureBox();
             this.btnMinim = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelMenuLat = new System.Windows.Forms.Panel();
             this.btnInicio = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
@@ -82,15 +82,6 @@
             this.panel3.TabIndex = 7;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.Color.White;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(200, 53);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(450, 497);
-            this.panelContenedor.TabIndex = 8;
-            // 
             // btnMenuLat
             // 
             this.btnMenuLat.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -126,6 +117,15 @@
             this.btnCerrar.TabIndex = 8;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.Color.White;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(200, 53);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(450, 497);
+            this.panelContenedor.TabIndex = 8;
             // 
             // panelMenuLat
             // 
@@ -210,7 +210,7 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(650, 550);

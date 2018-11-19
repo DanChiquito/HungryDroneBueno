@@ -94,7 +94,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DarkRed;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(430, 479);
+            this.groupBox1.Size = new System.Drawing.Size(554, 479);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menú";
@@ -132,9 +132,9 @@
             this.panel2.Controls.Add(this.cantidadSushi);
             this.panel2.Controls.Add(this.cantidadHotDog);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(6, 22);
+            this.panel2.Location = new System.Drawing.Point(6, 21);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(424, 408);
+            this.panel2.Size = new System.Drawing.Size(542, 418);
             this.panel2.TabIndex = 15;
             // 
             // label16
@@ -143,7 +143,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(25, 1084);
+            this.label16.Location = new System.Drawing.Point(20, 1171);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(131, 17);
             this.label16.TabIndex = 73;
@@ -155,9 +155,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(38, 518);
+            this.label6.Location = new System.Drawing.Point(45, 543);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(323, 37);
+            this.label6.Size = new System.Drawing.Size(323, 57);
             this.label6.TabIndex = 27;
             this.label6.Text = "En masa artesanal, con queso mozzarella, aceitunas negras, pimiento verde y la tr" +
     "adicional salsa de tomate.\r\n";
@@ -169,7 +169,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(40, 1097);
+            this.label17.Location = new System.Drawing.Point(45, 1188);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(322, 37);
             this.label17.TabIndex = 74;
@@ -182,7 +182,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(23, 694);
+            this.label10.Location = new System.Drawing.Point(20, 748);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(136, 17);
             this.label10.TabIndex = 30;
@@ -193,11 +193,11 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.DarkRed;
-            this.label18.Location = new System.Drawing.Point(25, 555);
+            this.label18.Location = new System.Drawing.Point(45, 600);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(91, 17);
+            this.label18.Size = new System.Drawing.Size(96, 17);
             this.label18.TabIndex = 75;
-            this.label18.Text = "MXN220.00";
+            this.label18.Text = "MXN 220.00";
             // 
             // label11
             // 
@@ -205,7 +205,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(38, 707);
+            this.label11.Location = new System.Drawing.Point(45, 765);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(322, 36);
             this.label11.TabIndex = 31;
@@ -218,11 +218,11 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkRed;
-            this.label9.Location = new System.Drawing.Point(25, 1134);
+            this.label9.Location = new System.Drawing.Point(45, 1225);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 17);
+            this.label9.Size = new System.Drawing.Size(96, 17);
             this.label9.TabIndex = 27;
-            this.label9.Text = "MXN220.00";
+            this.label9.Text = "MXN 220.00";
             // 
             // cantidadBurro
             // 
@@ -231,7 +231,7 @@
             this.cantidadBurro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cantidadBurro.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadBurro.ForeColor = System.Drawing.Color.Black;
-            this.cantidadBurro.Location = new System.Drawing.Point(355, 1087);
+            this.cantidadBurro.Location = new System.Drawing.Point(434, 1174);
             this.cantidadBurro.Maximum = new decimal(new int[] {
             3,
             0,
@@ -248,11 +248,11 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkRed;
-            this.label12.Location = new System.Drawing.Point(25, 743);
+            this.label12.Location = new System.Drawing.Point(45, 801);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 17);
+            this.label12.Size = new System.Drawing.Size(96, 17);
             this.label12.TabIndex = 32;
-            this.label12.Text = "MXN220.00";
+            this.label12.Text = "MXN 220.00";
             // 
             // cantidadPasta
             // 
@@ -261,7 +261,7 @@
             this.cantidadPasta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cantidadPasta.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadPasta.ForeColor = System.Drawing.Color.Black;
-            this.cantidadPasta.Location = new System.Drawing.Point(353, 697);
+            this.cantidadPasta.Location = new System.Drawing.Point(434, 751);
             this.cantidadPasta.Maximum = new decimal(new int[] {
             3,
             0,
@@ -276,9 +276,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::HungryDrone.Properties.Resources.pastas;
-            this.pictureBox4.Location = new System.Drawing.Point(26, 582);
+            this.pictureBox4.Location = new System.Drawing.Point(23, 636);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(363, 109);
+            this.pictureBox4.Size = new System.Drawing.Size(471, 109);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 40;
             this.pictureBox4.TabStop = false;
@@ -286,9 +286,9 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::HungryDrone.Properties.Resources.ham1;
-            this.pictureBox7.Location = new System.Drawing.Point(26, 778);
+            this.pictureBox7.Location = new System.Drawing.Point(23, 840);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(363, 109);
+            this.pictureBox7.Size = new System.Drawing.Size(471, 109);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox7.TabIndex = 48;
             this.pictureBox7.TabStop = false;
@@ -296,9 +296,9 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::HungryDrone.Properties.Resources.Quesadillas;
-            this.pictureBox10.Location = new System.Drawing.Point(26, 972);
+            this.pictureBox10.Location = new System.Drawing.Point(23, 1059);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(363, 109);
+            this.pictureBox10.Size = new System.Drawing.Size(474, 109);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox10.TabIndex = 63;
             this.pictureBox10.TabStop = false;
@@ -309,7 +309,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(23, 889);
+            this.label15.Location = new System.Drawing.Point(20, 952);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(118, 17);
             this.label15.TabIndex = 69;
@@ -321,9 +321,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(38, 902);
+            this.label2.Location = new System.Drawing.Point(45, 969);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(324, 50);
+            this.label2.Size = new System.Drawing.Size(324, 56);
             this.label2.TabIndex = 70;
             this.label2.Text = "Un par de bollos de ajonjoli recién horneado con queso derretido, lechuga, aros f" +
     "ritos de cebolla, \r\ncarne de arrachera de 320g y orden de papas grande.\r\n";
@@ -334,7 +334,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(25, 952);
+            this.label1.Location = new System.Drawing.Point(45, 1025);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 17);
             this.label1.TabIndex = 71;
@@ -347,7 +347,7 @@
             this.cantidadHambu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cantidadHambu.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadHambu.ForeColor = System.Drawing.Color.Black;
-            this.cantidadHambu.Location = new System.Drawing.Point(353, 892);
+            this.cantidadHambu.Location = new System.Drawing.Point(434, 955);
             this.cantidadHambu.Maximum = new decimal(new int[] {
             3,
             0,
@@ -364,11 +364,11 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkRed;
-            this.label14.Location = new System.Drawing.Point(21, 168);
+            this.label14.Location = new System.Drawing.Point(45, 168);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 17);
+            this.label14.Size = new System.Drawing.Size(87, 17);
             this.label14.TabIndex = 43;
-            this.label14.Text = "MXN35.00";
+            this.label14.Text = "MXN 35.00";
             // 
             // label13
             // 
@@ -376,7 +376,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(21, 119);
+            this.label13.Location = new System.Drawing.Point(21, 115);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(146, 17);
             this.label13.TabIndex = 42;
@@ -385,9 +385,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::HungryDrone.Properties.Resources.pizzacapri;
-            this.pictureBox3.Location = new System.Drawing.Point(26, 391);
+            this.pictureBox3.Location = new System.Drawing.Point(23, 414);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(363, 109);
+            this.pictureBox3.Size = new System.Drawing.Size(471, 109);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 39;
             this.pictureBox3.TabStop = false;
@@ -397,7 +397,7 @@
             this.pictureBox1.Image = global::HungryDrone.Properties.Resources.hochos2;
             this.pictureBox1.Location = new System.Drawing.Point(24, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(365, 109);
+            this.pictureBox1.Size = new System.Drawing.Size(473, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
@@ -407,7 +407,7 @@
             this.pictureBox2.Image = global::HungryDrone.Properties.Resources.chuchi;
             this.pictureBox2.Location = new System.Drawing.Point(24, 196);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(363, 109);
+            this.pictureBox2.Size = new System.Drawing.Size(473, 109);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
@@ -418,7 +418,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(37, 132);
+            this.label7.Location = new System.Drawing.Point(45, 132);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(324, 36);
             this.label7.TabIndex = 16;
@@ -444,9 +444,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(38, 318);
+            this.label4.Location = new System.Drawing.Point(45, 325);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(322, 38);
+            this.label4.Size = new System.Drawing.Size(322, 61);
             this.label4.TabIndex = 25;
             this.label4.Text = "Con hongos japoneses, rebozado con masa tempura y con tiras de cebolla de verdeo " +
     "y huevos de pescado.";
@@ -459,7 +459,7 @@
             this.cantidadPizza.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cantidadPizza.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadPizza.ForeColor = System.Drawing.Color.Black;
-            this.cantidadPizza.Location = new System.Drawing.Point(352, 508);
+            this.cantidadPizza.Location = new System.Drawing.Point(434, 529);
             this.cantidadPizza.Maximum = new decimal(new int[] {
             3,
             0,
@@ -476,11 +476,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(23, 356);
+            this.label5.Location = new System.Drawing.Point(45, 386);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 17);
+            this.label5.Size = new System.Drawing.Size(96, 17);
             this.label5.TabIndex = 26;
-            this.label5.Text = "MXN130.00";
+            this.label5.Text = "MXN 130.00";
             // 
             // cantidadSushi
             // 
@@ -489,7 +489,7 @@
             this.cantidadSushi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cantidadSushi.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadSushi.ForeColor = System.Drawing.Color.Black;
-            this.cantidadSushi.Location = new System.Drawing.Point(351, 307);
+            this.cantidadSushi.Location = new System.Drawing.Point(434, 311);
             this.cantidadSushi.Maximum = new decimal(new int[] {
             3,
             0,
@@ -508,7 +508,7 @@
             this.cantidadHotDog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cantidadHotDog.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadHotDog.ForeColor = System.Drawing.Color.Black;
-            this.cantidadHotDog.Location = new System.Drawing.Point(351, 118);
+            this.cantidadHotDog.Location = new System.Drawing.Point(434, 118);
             this.cantidadHotDog.Maximum = new decimal(new int[] {
             3,
             0,
@@ -526,7 +526,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(22, 505);
+            this.label8.Location = new System.Drawing.Point(20, 526);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(136, 17);
             this.label8.TabIndex = 28;
@@ -541,7 +541,7 @@
             this.btnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPagar.Location = new System.Drawing.Point(21, 436);
+            this.btnPagar.Location = new System.Drawing.Point(92, 445);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(365, 28);
             this.btnPagar.TabIndex = 2;
@@ -554,7 +554,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(450, 497);
+            this.ClientSize = new System.Drawing.Size(578, 497);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.ForeColor = System.Drawing.Color.DarkRed;

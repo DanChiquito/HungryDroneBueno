@@ -58,7 +58,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(115, 12);
+            this.groupBox2.Location = new System.Drawing.Point(177, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(214, 68);
             this.groupBox2.TabIndex = 5;
@@ -71,7 +71,7 @@
             this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotal.Location = new System.Drawing.Point(76, 34);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(0, 15);
+            this.lbTotal.Size = new System.Drawing.Size(0, 18);
             this.lbTotal.TabIndex = 0;
             // 
             // label6
@@ -80,7 +80,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(138, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(38, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "MXN";
             // 
@@ -90,49 +90,49 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(62, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 15);
+            this.label1.Size = new System.Drawing.Size(20, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "$ ";
             // 
             // txtbNombre
             // 
-            this.txtbNombre.Location = new System.Drawing.Point(78, 232);
+            this.txtbNombre.Location = new System.Drawing.Point(115, 235);
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Size = new System.Drawing.Size(318, 22);
+            this.txtbNombre.Size = new System.Drawing.Size(318, 26);
             this.txtbNombre.TabIndex = 2;
             // 
             // mskCvv
             // 
-            this.mskCvv.Location = new System.Drawing.Point(367, 171);
+            this.mskCvv.Location = new System.Drawing.Point(412, 174);
             this.mskCvv.Mask = "000";
             this.mskCvv.Name = "mskCvv";
-            this.mskCvv.Size = new System.Drawing.Size(21, 22);
+            this.mskCvv.Size = new System.Drawing.Size(21, 26);
             this.mskCvv.TabIndex = 1;
             // 
             // mskFecha
             // 
-            this.mskFecha.Location = new System.Drawing.Point(79, 171);
+            this.mskFecha.Location = new System.Drawing.Point(92, 174);
             this.mskFecha.Mask = "00/00";
             this.mskFecha.Name = "mskFecha";
-            this.mskFecha.Size = new System.Drawing.Size(59, 22);
+            this.mskFecha.Size = new System.Drawing.Size(59, 26);
             this.mskFecha.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(364, 152);
+            this.label4.Location = new System.Drawing.Point(408, 153);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 16);
+            this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "CVV:";
             // 
             // mskNumero
             // 
-            this.mskNumero.Location = new System.Drawing.Point(78, 116);
+            this.mskNumero.Location = new System.Drawing.Point(223, 124);
             this.mskNumero.Mask = "0000-0000-0000-0000";
             this.mskNumero.Name = "mskNumero";
-            this.mskNumero.Size = new System.Drawing.Size(106, 22);
+            this.mskNumero.Size = new System.Drawing.Size(106, 26);
             this.mskNumero.TabIndex = 1;
             // 
             // label3
@@ -140,9 +140,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(76, 153);
+            this.label3.Location = new System.Drawing.Point(89, 153);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 15);
+            this.label3.Size = new System.Drawing.Size(138, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Fecha Vencimiento:";
             // 
@@ -151,9 +151,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(76, 214);
+            this.label5.Location = new System.Drawing.Point(112, 214);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 15);
+            this.label5.Size = new System.Drawing.Size(66, 18);
             this.label5.TabIndex = 0;
             this.label5.Text = "Nombre:";
             // 
@@ -162,9 +162,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(75, 98);
+            this.label2.Location = new System.Drawing.Point(220, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 15);
+            this.label2.Size = new System.Drawing.Size(130, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Numero de tarjeta:";
             // 
@@ -179,9 +179,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(248, 298);
+            this.button2.Location = new System.Drawing.Point(309, 276);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 45);
+            this.button2.Size = new System.Drawing.Size(171, 57);
             this.button2.TabIndex = 4;
             this.button2.Text = "Aceptar";
             this.button2.UseVisualStyleBackColor = false;
@@ -192,7 +192,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(31, 350);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(386, 145);
+            this.pictureBox1.Size = new System.Drawing.Size(507, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -205,19 +205,19 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(56, 297);
+            this.btnCancelar.Location = new System.Drawing.Point(79, 276);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 45);
+            this.btnCancelar.Size = new System.Drawing.Size(171, 57);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // FormPagar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(450, 497);
+            this.ClientSize = new System.Drawing.Size(578, 497);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
@@ -239,7 +239,6 @@
             this.Name = "FormPagar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HUNGRY DRONE";
-            this.Load += new System.EventHandler(this.FormPagar_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
