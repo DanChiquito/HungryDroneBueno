@@ -25,6 +25,7 @@ namespace HungryDrone
             try
             { 
                 errorProvAdmin.Clear();
+                MessageBox.Show("Comprobando contraseña y usuario...","Espere un momento",0,MessageBoxIcon.Information);
                 if(txtbUser.Text == ""|| txtbPass.Text == "")
                 {
                     throw new ApplicationException();
@@ -33,7 +34,15 @@ namespace HungryDrone
                 {
                     if (txtbPass.Text == password && (txtbUser.Text == user1 || txtbUser.Text == user2 || txtbUser.Text == user3))
                     {
-                        //AQUI SE DEBE SACAR EL OTRO FORMULARIO
+                        formCheckDrone formchecardrone = new formCheckDrone();
+                        AddOwnedForm(formchecardrone);
+                        formchecardrone.FormBorderStyle = FormBorderStyle.None;
+                        formchecardrone.TopLevel = false;
+                        formchecardrone.Dock = DockStyle.Fill;
+                        this.Controls.Add(formchecardrone);
+                        this.Tag = formchecardrone;
+                        formchecardrone.BringToFront();
+                        formchecardrone.Show();
                     }
                     else
                     {

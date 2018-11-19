@@ -12,7 +12,7 @@ namespace HungryDrone
 {
     public partial class HomePage : Form
     {
-        
+
         public HomePage()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace HungryDrone
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
             mostrarLogo();
@@ -44,20 +44,46 @@ namespace HungryDrone
             fh.Show();
         }
 
+
+        #region Botones del menu Lateral
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new formInicio());
+            panelMenuLat.Enabled = false;
+            panelMenuLat.Width = 80;
+            panelContenedor.Enabled = true;
+        }
         private void btnMenu2_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new FormMenu());
+            panelMenuLat.Enabled = false;
+            panelMenuLat.Width = 80;
+            panelContenedor.Enabled = true;
         }
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormControlLogIn());
+            panelMenuLat.Enabled = false;
+            panelMenuLat.Width = 80;
+            panelContenedor.Enabled = true;
+        }
+
+        #endregion
 
         private void btnMenuLat_Click(object sender, EventArgs e)
         {
-            if(panelMenuLat.Width == 200)
+            if (panelMenuLat.Width == 200)
             {
                 panelMenuLat.Width = 80;
+                panelContenedor.Enabled = true;
+                panelMenuLat.Enabled = false;
             }
             else
             {
                 panelMenuLat.Width = 200;
+                panelContenedor.Enabled = false;
+                panelMenuLat.Enabled = true;
             }
         }
 
@@ -68,7 +94,12 @@ namespace HungryDrone
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("¿Esta seguro de que desea salir?", "Esta a punto de dejar Hungry Drone", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }
+           
         }
 
         private void panel3_MouseDown(object sender, MouseEventArgs e)
@@ -77,14 +108,6 @@ namespace HungryDrone
             SendMessage(this.Handle,0x112,0xf012,0);
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new FormControlLogIn());
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new formInicio());
-        }
+       
     }
 }

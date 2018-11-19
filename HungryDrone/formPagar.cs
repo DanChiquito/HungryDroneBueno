@@ -8,9 +8,10 @@ namespace HungryDrone
     {
         PagoTarjeta tarjeta;
 
-        public FormPagar(float total, byte hotdogs, byte sushi, byte pizza, byte pasta)
+        public FormPagar(float total, byte hotdogs, byte sushi, byte pizza, byte pasta, byte burro, byte burguer)
         {
             InitializeComponent();
+            
             lbTotal.Text = total.ToString();
         }
 
@@ -29,8 +30,9 @@ namespace HungryDrone
                     MessageBox.Show("Procesando pago...", "Espere un momento",0 ,MessageBoxIcon.Asterisk);
                     if (tarjeta.Tarjeta())
                     {
-                        FormDatosUsuarioFinal formUsuarioFinal = new FormDatosUsuarioFinal(txtbNombre.Text,"","",float.Parse(lbTotal.Text));
-                            AddOwnedForm(formUsuarioFinal);
+                        FormDatosUsuarioFinal formUsuarioFinal = new FormDatosUsuarioFinal(txtbNombre.Text,"",1, 2, 3, 5, 6, 4, float.Parse(lbTotal.Text));
+                        //FormDatosUsuarioFinal formUsuarioFinal = new FormDatosUsuarioFinal(txtbNombre.Text, "", hotdogs, sushi, pizza, pasta, burro, burguer, float.Parse(lbTotal.Text));
+                        AddOwnedForm(formUsuarioFinal);
                         formUsuarioFinal.FormBorderStyle = FormBorderStyle.None;
                         formUsuarioFinal.TopLevel = false;
                         formUsuarioFinal.Dock = DockStyle.Fill;
@@ -49,11 +51,6 @@ namespace HungryDrone
             {
                 errorProv.SetError(txtbNombre, error.Message);
             }
-        }
-
-        private void FormPagar_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
