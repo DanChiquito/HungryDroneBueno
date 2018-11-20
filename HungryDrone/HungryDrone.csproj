@@ -127,6 +127,9 @@
     <EmbeddedResource Include="ControlLogIn.resx">
       <DependentUpon>ControlLogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formCheckDrone.resx">
+      <DependentUpon>formCheckDrone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDatosUsuarioFinal.resx">
       <DependentUpon>FormDatosUsuarioFinal.cs</DependentUpon>
     </EmbeddedResource>
