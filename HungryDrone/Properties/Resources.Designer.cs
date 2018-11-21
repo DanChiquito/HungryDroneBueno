@@ -243,6 +243,16 @@ namespace HungryDrone.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap person1 {
+            get {
+                object obj = ResourceManager.GetObject("person1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap persona1 {
             get {
                 object obj = ResourceManager.GetObject("persona1", resourceCulture);
@@ -256,6 +266,16 @@ namespace HungryDrone.Properties {
         internal static System.Drawing.Bitmap pizzaa {
             get {
                 object obj = ResourceManager.GetObject("pizzaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prson {
+            get {
+                object obj = ResourceManager.GetObject("prson", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +306,46 @@ namespace HungryDrone.Properties {
         internal static System.Drawing.Bitmap torta {
             get {
                 object obj = ResourceManager.GetObject("torta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ubi {
+            get {
+                object obj = ResourceManager.GetObject("ubi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ubi2 {
+            get {
+                object obj = ResourceManager.GetObject("ubi2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ubi3 {
+            get {
+                object obj = ResourceManager.GetObject("ubi3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ubi4 {
+            get {
+                object obj = ResourceManager.GetObject("ubi4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

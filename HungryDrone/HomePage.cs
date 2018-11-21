@@ -7,6 +7,7 @@ using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using System.Runtime.InteropServices;
+using System.Linq;
 
 namespace HungryDrone
 {
@@ -25,23 +26,31 @@ namespace HungryDrone
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            mostrarLogo();
+            
         }
 
-        private void mostrarLogo()
+       
+        private void AbrirFormInPanel<MiForm>() where MiForm : Form, new()
         {
-            AbrirFormInPanel(new formLogo());
-        }
-        private void AbrirFormInPanel(object FormHijo)
-        {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = FormHijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
+            Form formulario;
+            formulario = panelContenedor.Controls.OfType<MiForm>().FirstOrDefault();
+            if (formulario==null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(formulario);
+                panelContenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+
+            }
+            else
+            {
+                formulario.BringToFront();
+            }
+               
         }
 
 
@@ -49,22 +58,22 @@ namespace HungryDrone
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new formInicio());
-            panelMenuLat.Enabled = false;
+            AbrirFormInPanel<formInicio>();
+            panelMenuLat.Enabled = true;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
         private void btnMenu2_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormMenu());
-            panelMenuLat.Enabled = false;
+            AbrirFormInPanel<FormMenu>();
+            panelMenuLat.Enabled = true;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormControlLogIn());
-            panelMenuLat.Enabled = false;
+            AbrirFormInPanel<FormControlLogIn>();
+            panelMenuLat.Enabled = true;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
@@ -77,7 +86,7 @@ namespace HungryDrone
             {
                 panelMenuLat.Width = 80;
                 panelContenedor.Enabled = true;
-                panelMenuLat.Enabled = false;
+                panelMenuLat.Enabled = true;
             }
             else
             {
