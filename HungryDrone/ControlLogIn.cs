@@ -35,12 +35,13 @@ namespace HungryDrone
                     if (txtbPass.Text == password && (txtbUser.Text == user1 || txtbUser.Text == user2 || txtbUser.Text == user3))
                     {
                         formCheckDrone formchecardrone = new formCheckDrone();
-                        AddOwnedForm(formchecardrone);
+                        /*AddOwnedForm(formchecardrone);
                         formchecardrone.FormBorderStyle = FormBorderStyle.None;
                         formchecardrone.TopLevel = false;
                         formchecardrone.Dock = DockStyle.Fill;
                         this.Controls.Add(formchecardrone);
                         this.Tag = formchecardrone;
+                        */
                         formchecardrone.BringToFront();
                         formchecardrone.Show();
                     }
