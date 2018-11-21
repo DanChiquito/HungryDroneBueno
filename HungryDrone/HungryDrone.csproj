@@ -51,7 +51,7 @@
       <HintPath>..\packages\GMap.NET.Windows.1.8.5\lib\net40\GMap.NET.WindowsPresentation.dll</HintPath>
     </Reference>
     <Reference Include="ManejaProducto">
-      <HintPath>..\..\..\..\source\repos\HungryDrone\ManejaProducto.dll</HintPath>
+      <HintPath>..\ManejaProducto.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -147,19 +147,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -191,22 +191,7 @@
     <None Include="Resources\btnmenu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hochos2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\chuchi.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lirusisa.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pastas.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pizzacapri.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ham1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cubiertas.png" />
@@ -227,10 +212,31 @@
     <None Include="Resources\persona1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Quesadillas.png" />
+    <None Include="Resources\LOGO11.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LOGO11.png" />
+    <None Include="Resources\jochos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizzaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastii.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burrito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sopes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\torta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quess.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets')" />

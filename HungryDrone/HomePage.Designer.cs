@@ -168,7 +168,6 @@
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAdmin.Image = global::HungryDrone.Properties.Resources.prson;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdmin.Location = new System.Drawing.Point(22, 343);
             this.btnAdmin.Name = "btnAdmin";

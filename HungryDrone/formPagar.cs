@@ -8,7 +8,7 @@ namespace HungryDrone
     {
         PagoTarjeta tarjeta;
 
-        public FormPagar(float total, byte hotdogs, byte sushi, byte pizza, byte pasta, byte burro, byte burguer)
+        public FormPagar(float total, byte torta,byte gringas, byte sopes, byte hotdogs, byte sushi, byte pizza, byte pasta, byte burro, byte burguer)
         {
             InitializeComponent();
             
