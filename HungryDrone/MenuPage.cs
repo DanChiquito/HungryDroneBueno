@@ -9,6 +9,13 @@ namespace HungryDrone
     public partial class FormMenu : Form
     {
         #region Atributos
+        string nomUsuario1;
+
+        double lat1;
+
+        double lng1;
+
+        decimal cantidadproductos;
 
         Producto Gringa = new Producto("Gringa de chorizo", 70 , true);
 
@@ -28,13 +35,16 @@ namespace HungryDrone
 
         Producto Sopes = new Producto("Sopes de pollo", 80, true);
 
-        decimal cantidadproductos;
+        
         #endregion
 
         #region Constructor
-        public FormMenu()
+        public FormMenu(string nomUsuario, double lat, double lng)
         {
             InitializeComponent();
+            nomUsuario1 = nomUsuario;
+            lat1 = lat;
+            lng1 = lng;
             
         }
         #endregion
@@ -101,7 +111,7 @@ namespace HungryDrone
                     byte gringa = (byte)cantidadGringas.Value;
                     byte sopes = (byte)cantidadSopes.Value;
 
-                    FormPagar formPagar = new FormPagar(Total,torta,gringa,sopes, hotdog, sushi, pizza, pasta , burrito, burguer);
+                    FormPagar formPagar = new FormPagar(nomUsuario1, lat1, lng1, Total,torta,gringa,sopes, hotdog, sushi, pizza, pasta , burrito, burguer);
                     AddOwnedForm(formPagar);
                     formPagar.FormBorderStyle = FormBorderStyle.None;
                     formPagar.TopLevel = false;
