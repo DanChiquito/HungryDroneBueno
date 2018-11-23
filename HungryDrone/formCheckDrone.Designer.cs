@@ -39,14 +39,18 @@
             this.lbAlt = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.conectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbPuertos = new System.Windows.Forms.ToolStripComboBox();
+            this.actualizarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(290, 60);
+            this.label2.Location = new System.Drawing.Point(28, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 1;
@@ -55,7 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(290, 125);
+            this.label1.Location = new System.Drawing.Point(28, 234);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 17);
             this.label1.TabIndex = 1;
@@ -64,7 +68,7 @@
             // lbLat
             // 
             this.lbLat.AutoSize = true;
-            this.lbLat.Location = new System.Drawing.Point(290, 86);
+            this.lbLat.Location = new System.Drawing.Point(28, 195);
             this.lbLat.Name = "lbLat";
             this.lbLat.Size = new System.Drawing.Size(51, 17);
             this.lbLat.TabIndex = 1;
@@ -73,7 +77,7 @@
             // lbLong
             // 
             this.lbLong.AutoSize = true;
-            this.lbLong.Location = new System.Drawing.Point(290, 150);
+            this.lbLong.Location = new System.Drawing.Point(28, 259);
             this.lbLong.Name = "lbLong";
             this.lbLong.Size = new System.Drawing.Size(63, 17);
             this.lbLong.TabIndex = 1;
@@ -82,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(290, 189);
+            this.label3.Location = new System.Drawing.Point(28, 298);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 1;
@@ -91,7 +95,7 @@
             // lbVel
             // 
             this.lbVel.AutoSize = true;
-            this.lbVel.Location = new System.Drawing.Point(290, 214);
+            this.lbVel.Location = new System.Drawing.Point(28, 323);
             this.lbVel.Name = "lbVel";
             this.lbVel.Size = new System.Drawing.Size(70, 17);
             this.lbVel.TabIndex = 1;
@@ -100,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(290, 252);
+            this.label4.Location = new System.Drawing.Point(28, 361);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 1;
@@ -109,7 +113,7 @@
             // lbAlt
             // 
             this.lbAlt.AutoSize = true;
-            this.lbAlt.Location = new System.Drawing.Point(290, 277);
+            this.lbAlt.Location = new System.Drawing.Point(28, 386);
             this.lbAlt.Name = "lbAlt";
             this.lbAlt.Size = new System.Drawing.Size(45, 17);
             this.lbAlt.TabIndex = 1;
@@ -118,9 +122,12 @@
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.conectarToolStripMenuItem,
+            this.actualizarPedidosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1333, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1459, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -133,7 +140,7 @@
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemmory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(507, 60);
+            this.gMapControl1.Location = new System.Drawing.Point(564, 59);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
             this.gMapControl1.MinZoom = 2;
@@ -147,24 +154,50 @@
             this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(773, 437);
+            this.gMapControl1.Size = new System.Drawing.Size(883, 456);
             this.gMapControl1.TabIndex = 3;
             this.gMapControl1.Zoom = 0D;
             // 
-            // dataGridView1
+            // panel1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 125);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 567);
-            this.dataGridView1.TabIndex = 4;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Location = new System.Drawing.Point(31, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(430, 113);
+            this.panel1.TabIndex = 8;
+            // 
+            // conectarToolStripMenuItem
+            // 
+            this.conectarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.puertosToolStripMenuItem});
+            this.conectarToolStripMenuItem.Name = "conectarToolStripMenuItem";
+            this.conectarToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.conectarToolStripMenuItem.Text = "Conectar";
+            // 
+            // puertosToolStripMenuItem
+            // 
+            this.puertosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cbPuertos});
+            this.puertosToolStripMenuItem.Name = "puertosToolStripMenuItem";
+            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.puertosToolStripMenuItem.Text = "Puertos";
+            // 
+            // cbPuertos
+            // 
+            this.cbPuertos.Name = "cbPuertos";
+            this.cbPuertos.Size = new System.Drawing.Size(121, 28);
+            // 
+            // actualizarPedidosToolStripMenuItem
+            // 
+            this.actualizarPedidosToolStripMenuItem.Name = "actualizarPedidosToolStripMenuItem";
+            this.actualizarPedidosToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.actualizarPedidosToolStripMenuItem.Text = "Actualizar Pedidos";
             // 
             // formCheckDrone
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1333, 773);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1459, 800);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.lbAlt);
             this.Controls.Add(this.lbVel);
@@ -180,7 +213,8 @@
             this.Name = "formCheckDrone";
             this.Text = "Drone Control (Administrators Only)";
             this.Load += new System.EventHandler(this.formCheckDrone_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,6 +232,10 @@
         private System.Windows.Forms.Label lbAlt;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem conectarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puertosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox cbPuertos;
+        private System.Windows.Forms.ToolStripMenuItem actualizarPedidosToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }

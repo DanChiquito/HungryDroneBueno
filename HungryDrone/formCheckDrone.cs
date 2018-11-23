@@ -33,6 +33,8 @@ namespace HungryDrone
 
         private void formCheckDrone_Load(object sender, EventArgs e)
         {
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true;
