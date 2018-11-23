@@ -15,39 +15,6 @@ namespace HungryDrone
         double lng1;
 
         decimal cantidadproductos;
-
-        Producto Gringa = new Producto("Gringa de chorizo", 70 , true);
-
-        Producto Torta = new Producto("Torta loca", 65, true);
-
-        Producto HotDog = new Producto("Hot Dog Campesino", 35 , true);
-
-        Producto Sushi = new Producto("Sushi con huevos de pescado", 130, true);
-
-        Producto Pizza = new Producto("Pizza Capricciosa", 220, true);
-
-        Producto Pasta = new Producto("Pasta con salmon", 170, true);
-
-        Producto Hamburguesa = new Producto("HungryBurguer", 95, true);
-
-        Producto Burros = new Producto("Burros Supremos", 120, true);
-
-        Producto Sopes = new Producto("Sopes de pollo", 80, true);
-
-        
-        #endregion
-
-        #region Constructor
-        public FormMenu(string nomUsuario, double lat, double lng)
-        {
-            InitializeComponent();
-            nomUsuario1 = nomUsuario;
-            lat1 = lat;
-            lng1 = lng;
-            
-        {  
-        
-        decimal cantidadproductos;
         Producto HotDog;
         Producto torta;
         Producto gringa;
@@ -57,9 +24,18 @@ namespace HungryDrone
         Producto Hambu;
         Producto Burros;
         Producto Sopes;
-        public FormMenu()
+
+
+        #endregion
+
+        #region Constructor
+        public FormMenu(string nomUsuario, double lat, double lng)
+
         {
             InitializeComponent();
+            nomUsuario1 = nomUsuario;
+            lat1 = lat;
+            lng1 = lng;
             #region productos
             #region torta
             torta.ingredientes = new Ingrediente[7];
@@ -161,6 +137,9 @@ namespace HungryDrone
             #endregion
             #endregion
         }
+        #endregion
+
+
 
         #region Estructuras
 
