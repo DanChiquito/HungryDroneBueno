@@ -16,5 +16,10 @@ namespace HungryDrone
         {
             InitializeComponent();
         }
+
+        private void formLogo_Load(object sender, EventArgs e)
+        {
+            lbHora.Text = System.DateTime.Now.ToString("h:mm:ss");
+        }
     }
 }

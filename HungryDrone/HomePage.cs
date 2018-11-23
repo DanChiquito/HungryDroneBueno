@@ -13,7 +13,7 @@ namespace HungryDrone
 {
     public partial class HomePage : Form
     {
-
+        FormPagar formpagar;
         public HomePage()
         {
             InitializeComponent();
@@ -23,13 +23,7 @@ namespace HungryDrone
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-       
+   
         private void AbrirFormInPanel<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
@@ -65,7 +59,7 @@ namespace HungryDrone
         }
         private void btnMenu2_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel<FormMenu>();
+            //AbrirFormInPanel<FormMenu>();
             panelMenuLat.Enabled = true;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
@@ -117,6 +111,10 @@ namespace HungryDrone
             SendMessage(this.Handle,0x112,0xf012,0);
         }
 
-       
+        private void horaFeha_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text = System.DateTime.Now.ToLongTimeString();
+            lbFecha.Text = System.DateTime.Now.ToLongDateString();
+        }
     }
 }

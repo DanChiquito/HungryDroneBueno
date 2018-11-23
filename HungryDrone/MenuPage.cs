@@ -6,7 +6,47 @@ using System.Windows.Forms;
 namespace HungryDrone
 {
     public partial class FormMenu : Form
-    {  
+    {
+        #region Atributos
+        string nomUsuario1;
+
+        double lat1;
+
+        double lng1;
+
+        decimal cantidadproductos;
+
+        Producto Gringa = new Producto("Gringa de chorizo", 70 , true);
+
+        Producto Torta = new Producto("Torta loca", 65, true);
+
+        Producto HotDog = new Producto("Hot Dog Campesino", 35 , true);
+
+        Producto Sushi = new Producto("Sushi con huevos de pescado", 130, true);
+
+        Producto Pizza = new Producto("Pizza Capricciosa", 220, true);
+
+        Producto Pasta = new Producto("Pasta con salmon", 170, true);
+
+        Producto Hamburguesa = new Producto("HungryBurguer", 95, true);
+
+        Producto Burros = new Producto("Burros Supremos", 120, true);
+
+        Producto Sopes = new Producto("Sopes de pollo", 80, true);
+
+        
+        #endregion
+
+        #region Constructor
+        public FormMenu(string nomUsuario, double lat, double lng)
+        {
+            InitializeComponent();
+            nomUsuario1 = nomUsuario;
+            lat1 = lat;
+            lng1 = lng;
+            
+        {  
+        
         decimal cantidadproductos;
         Producto HotDog;
         Producto torta;
@@ -200,7 +240,7 @@ namespace HungryDrone
                     byte gringa = (byte)cantidadGringas.Value;
                     byte sopes = (byte)cantidadSopes.Value;
 
-                    FormPagar formPagar = new FormPagar(Total,torta,gringa,sopes, hotdog, sushi, pizza, pasta , burrito, burguer);
+                    FormPagar formPagar = new FormPagar(nomUsuario1, lat1, lng1, Total,torta,gringa,sopes, hotdog, sushi, pizza, pasta , burrito, burguer);
                     AddOwnedForm(formPagar);
                     formPagar.FormBorderStyle = FormBorderStyle.None;
                     formPagar.TopLevel = false;
