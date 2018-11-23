@@ -33,6 +33,7 @@
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnIngredGringa = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.lbprecioGringas = new System.Windows.Forms.Label();
@@ -123,6 +124,7 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.btnIngredGringa);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.lbprecioGringas);
@@ -172,6 +174,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(542, 417);
             this.panel2.TabIndex = 15;
+            // 
+            // btnIngredGringa
+            // 
+            this.btnIngredGringa.BackColor = System.Drawing.Color.Transparent;
+            this.btnIngredGringa.FlatAppearance.BorderSize = 0;
+            this.btnIngredGringa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnIngredGringa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnIngredGringa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngredGringa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngredGringa.ForeColor = System.Drawing.Color.Black;
+            this.btnIngredGringa.Image = global::HungryDrone.Properties.Resources.onion;
+            this.btnIngredGringa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIngredGringa.Location = new System.Drawing.Point(405, 133);
+            this.btnIngredGringa.Name = "btnIngredGringa";
+            this.btnIngredGringa.Size = new System.Drawing.Size(91, 35);
+            this.btnIngredGringa.TabIndex = 92;
+            this.btnIngredGringa.Text = "Ingredientes";
+            this.btnIngredGringa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIngredGringa.UseVisualStyleBackColor = false;
             // 
             // label25
             // 
@@ -874,6 +895,7 @@
         private System.Windows.Forms.Label lbprecioGringas;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.NumericUpDown cantidadGringas;
+        private System.Windows.Forms.Button btnIngredGringa;
     }
 }
 
