@@ -209,20 +209,23 @@
             // verificarToolStripMenuItem
             // 
             this.verificarToolStripMenuItem.Name = "verificarToolStripMenuItem";
-            this.verificarToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.verificarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.verificarToolStripMenuItem.Text = "Verificar";
+            this.verificarToolStripMenuItem.Click += new System.EventHandler(this.verificarToolStripMenuItem_Click);
             // 
             // conectarToolStripMenuItem1
             // 
             this.conectarToolStripMenuItem1.Name = "conectarToolStripMenuItem1";
-            this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
+            this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.conectarToolStripMenuItem1.Text = "Conectar";
+            this.conectarToolStripMenuItem1.Click += new System.EventHandler(this.conectarToolStripMenuItem1_Click);
             // 
             // actualizarPedidosToolStripMenuItem
             // 
             this.actualizarPedidosToolStripMenuItem.Name = "actualizarPedidosToolStripMenuItem";
             this.actualizarPedidosToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.actualizarPedidosToolStripMenuItem.Text = "Actualizar Pedidos";
+            this.actualizarPedidosToolStripMenuItem.Click += new System.EventHandler(this.actualizarPedidosToolStripMenuItem_Click);
             // 
             // gMapControl1
             // 
@@ -360,6 +363,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Finalizar Entrega";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox2
             // 
@@ -527,6 +531,7 @@
             // timer1
             // 
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // formCheckDrone
             // 
