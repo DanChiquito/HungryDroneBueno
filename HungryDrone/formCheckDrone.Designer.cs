@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCheckDrone));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +42,8 @@
             this.conectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cbPuertos = new System.Windows.Forms.ToolStripComboBox();
+            this.verificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conectarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -55,11 +58,22 @@
             this.btnIniciar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.verificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.conectarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.lbDistancia = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbForward = new System.Windows.Forms.PictureBox();
+            this.pbBackward = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pbLeft = new System.Windows.Forms.PictureBox();
+            this.pbRight = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pbUp = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pbDown = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
@@ -70,6 +84,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbVertical)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLateral)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForward)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackward)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -172,13 +198,25 @@
             this.puertosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cbPuertos});
             this.puertosToolStripMenuItem.Name = "puertosToolStripMenuItem";
-            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
             this.puertosToolStripMenuItem.Text = "Puertos";
             // 
             // cbPuertos
             // 
             this.cbPuertos.Name = "cbPuertos";
             this.cbPuertos.Size = new System.Drawing.Size(121, 28);
+            // 
+            // verificarToolStripMenuItem
+            // 
+            this.verificarToolStripMenuItem.Name = "verificarToolStripMenuItem";
+            this.verificarToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.verificarToolStripMenuItem.Text = "Verificar";
+            // 
+            // conectarToolStripMenuItem1
+            // 
+            this.conectarToolStripMenuItem1.Name = "conectarToolStripMenuItem1";
+            this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
+            this.conectarToolStripMenuItem1.Text = "Conectar";
             // 
             // actualizarPedidosToolStripMenuItem
             // 
@@ -223,7 +261,7 @@
             // pb1
             // 
             this.pb1.Image = ((System.Drawing.Image)(resources.GetObject("pb1.Image")));
-            this.pb1.Location = new System.Drawing.Point(47, 453);
+            this.pb1.Location = new System.Drawing.Point(337, 444);
             this.pb1.Name = "pb1";
             this.pb1.Size = new System.Drawing.Size(158, 158);
             this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -233,7 +271,7 @@
             // pb2
             // 
             this.pb2.Image = ((System.Drawing.Image)(resources.GetObject("pb2.Image")));
-            this.pb2.Location = new System.Drawing.Point(47, 453);
+            this.pb2.Location = new System.Drawing.Point(337, 444);
             this.pb2.Name = "pb2";
             this.pb2.Size = new System.Drawing.Size(158, 158);
             this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +282,7 @@
             // pb3
             // 
             this.pb3.Image = ((System.Drawing.Image)(resources.GetObject("pb3.Image")));
-            this.pb3.Location = new System.Drawing.Point(47, 453);
+            this.pb3.Location = new System.Drawing.Point(337, 444);
             this.pb3.Name = "pb3";
             this.pb3.Size = new System.Drawing.Size(158, 158);
             this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -255,7 +293,7 @@
             // pb4
             // 
             this.pb4.Image = ((System.Drawing.Image)(resources.GetObject("pb4.Image")));
-            this.pb4.Location = new System.Drawing.Point(47, 453);
+            this.pb4.Location = new System.Drawing.Point(337, 444);
             this.pb4.Name = "pb4";
             this.pb4.Size = new System.Drawing.Size(158, 158);
             this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -266,7 +304,7 @@
             // pb5
             // 
             this.pb5.Image = ((System.Drawing.Image)(resources.GetObject("pb5.Image")));
-            this.pb5.Location = new System.Drawing.Point(47, 453);
+            this.pb5.Location = new System.Drawing.Point(337, 444);
             this.pb5.Name = "pb5";
             this.pb5.Size = new System.Drawing.Size(158, 158);
             this.pb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -277,7 +315,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(47, 592);
+            this.pictureBox1.Location = new System.Drawing.Point(337, 583);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 158);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -287,7 +325,7 @@
             // pbVertical
             // 
             this.pbVertical.Image = ((System.Drawing.Image)(resources.GetObject("pbVertical.Image")));
-            this.pbVertical.Location = new System.Drawing.Point(348, 323);
+            this.pbVertical.Location = new System.Drawing.Point(621, 579);
             this.pbVertical.Name = "pbVertical";
             this.pbVertical.Size = new System.Drawing.Size(158, 158);
             this.pbVertical.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -297,7 +335,7 @@
             // pbLateral
             // 
             this.pbLateral.Image = ((System.Drawing.Image)(resources.GetObject("pbLateral.Image")));
-            this.pbLateral.Location = new System.Drawing.Point(657, 592);
+            this.pbLateral.Location = new System.Drawing.Point(1216, 579);
             this.pbLateral.Name = "pbLateral";
             this.pbLateral.Size = new System.Drawing.Size(158, 158);
             this.pbLateral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -306,18 +344,19 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(1075, 566);
+            this.btnIniciar.Location = new System.Drawing.Point(56, 529);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(224, 73);
+            this.btnIniciar.Size = new System.Drawing.Size(199, 73);
             this.btnIniciar.TabIndex = 10;
             this.btnIniciar.Text = "Iniciar Entrega";
             this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1075, 677);
+            this.button1.Location = new System.Drawing.Point(56, 640);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 73);
+            this.button1.Size = new System.Drawing.Size(199, 73);
             this.button1.TabIndex = 10;
             this.button1.Text = "Finalizar Entrega";
             this.button1.UseVisualStyleBackColor = true;
@@ -325,29 +364,17 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(348, 592);
+            this.pictureBox2.Location = new System.Drawing.Point(916, 579);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(158, 158);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // verificarToolStripMenuItem
-            // 
-            this.verificarToolStripMenuItem.Name = "verificarToolStripMenuItem";
-            this.verificarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.verificarToolStripMenuItem.Text = "Verificar";
-            // 
-            // conectarToolStripMenuItem1
-            // 
-            this.conectarToolStripMenuItem1.Name = "conectarToolStripMenuItem1";
-            this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
-            this.conectarToolStripMenuItem1.Text = "Conectar";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 433);
+            this.label5.Location = new System.Drawing.Point(326, 424);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 17);
             this.label5.TabIndex = 1;
@@ -356,7 +383,7 @@
             // lbDistancia
             // 
             this.lbDistancia.AutoSize = true;
-            this.lbDistancia.Location = new System.Drawing.Point(160, 433);
+            this.lbDistancia.Location = new System.Drawing.Point(437, 424);
             this.lbDistancia.Name = "lbDistancia";
             this.lbDistancia.Size = new System.Drawing.Size(16, 17);
             this.lbDistancia.TabIndex = 1;
@@ -365,16 +392,158 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(189, 433);
+            this.label6.Location = new System.Drawing.Point(472, 424);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 17);
             this.label6.TabIndex = 1;
             this.label6.Text = "[cm]";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(672, 724);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(58, 77);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(672, 516);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(58, 77);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pbForward
+            // 
+            this.pbForward.Image = ((System.Drawing.Image)(resources.GetObject("pbForward.Image")));
+            this.pbForward.Location = new System.Drawing.Point(672, 516);
+            this.pbForward.Name = "pbForward";
+            this.pbForward.Size = new System.Drawing.Size(58, 77);
+            this.pbForward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbForward.TabIndex = 11;
+            this.pbForward.TabStop = false;
+            this.pbForward.Visible = false;
+            // 
+            // pbBackward
+            // 
+            this.pbBackward.Image = ((System.Drawing.Image)(resources.GetObject("pbBackward.Image")));
+            this.pbBackward.Location = new System.Drawing.Point(672, 724);
+            this.pbBackward.Name = "pbBackward";
+            this.pbBackward.Size = new System.Drawing.Size(58, 77);
+            this.pbBackward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBackward.TabIndex = 11;
+            this.pbBackward.TabStop = false;
+            this.pbBackward.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(851, 628);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(77, 58);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(1065, 628);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(77, 58);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 11;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pbLeft
+            // 
+            this.pbLeft.Image = ((System.Drawing.Image)(resources.GetObject("pbLeft.Image")));
+            this.pbLeft.Location = new System.Drawing.Point(851, 628);
+            this.pbLeft.Name = "pbLeft";
+            this.pbLeft.Size = new System.Drawing.Size(77, 58);
+            this.pbLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLeft.TabIndex = 11;
+            this.pbLeft.TabStop = false;
+            this.pbLeft.Visible = false;
+            // 
+            // pbRight
+            // 
+            this.pbRight.Image = ((System.Drawing.Image)(resources.GetObject("pbRight.Image")));
+            this.pbRight.Location = new System.Drawing.Point(1065, 628);
+            this.pbRight.Name = "pbRight";
+            this.pbRight.Size = new System.Drawing.Size(77, 58);
+            this.pbRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRight.TabIndex = 11;
+            this.pbRight.TabStop = false;
+            this.pbRight.Visible = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(1265, 525);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(58, 77);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 11;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pbUp
+            // 
+            this.pbUp.Image = ((System.Drawing.Image)(resources.GetObject("pbUp.Image")));
+            this.pbUp.Location = new System.Drawing.Point(1265, 525);
+            this.pbUp.Name = "pbUp";
+            this.pbUp.Size = new System.Drawing.Size(58, 77);
+            this.pbUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUp.TabIndex = 11;
+            this.pbUp.TabStop = false;
+            this.pbUp.Visible = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(1265, 724);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(58, 77);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 11;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pbDown
+            // 
+            this.pbDown.Image = ((System.Drawing.Image)(resources.GetObject("pbDown.Image")));
+            this.pbDown.Location = new System.Drawing.Point(1265, 724);
+            this.pbDown.Name = "pbDown";
+            this.pbDown.Size = new System.Drawing.Size(58, 77);
+            this.pbDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDown.TabIndex = 11;
+            this.pbDown.TabStop = false;
+            this.pbDown.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // formCheckDrone
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1459, 800);
+            this.Controls.Add(this.pbUp);
+            this.Controls.Add(this.pbForward);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pbRight);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pbLeft);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pbDown);
+            this.Controls.Add(this.pbBackward);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.pbLateral);
@@ -416,6 +585,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbVertical)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLateral)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForward)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackward)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +635,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbDistancia;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pbForward;
+        private System.Windows.Forms.PictureBox pbBackward;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pbLeft;
+        private System.Windows.Forms.PictureBox pbRight;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pbUp;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pbDown;
+        private System.Windows.Forms.Timer timer1;
     }
 }
