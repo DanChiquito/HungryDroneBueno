@@ -59,7 +59,16 @@ namespace HungryDrone
         }
         private void btnMenu2_Click(object sender, EventArgs e)
         {
-            //AbrirFormInPanel<FormMenu>();
+            FormMenu menu = new FormMenu("", 0, 0);
+            AddOwnedForm(menu);
+            menu.FormBorderStyle = FormBorderStyle.None;
+            menu.TopLevel = false;
+            menu.Dock = DockStyle.Fill;
+            this.Controls.Add(menu);
+            this.Tag = menu;
+            menu.BringToFront();
+            menu.Show();
+
             panelMenuLat.Enabled = true;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
