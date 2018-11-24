@@ -26,9 +26,10 @@ namespace HungryDrone
         double LatDestino = 19.356543;
         double LngDestino = -99.564586;
 
-        public formCheckDrone()
+        public formCheckDrone(string nombre)
         {
             InitializeComponent();
+            label2.Text = nombre;
         }
 
         private void formCheckDrone_Load(object sender, EventArgs e)

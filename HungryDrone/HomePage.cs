@@ -13,7 +13,23 @@ namespace HungryDrone
 {
     public partial class HomePage : Form
     {
-        FormPagar formpagar;
+        public string nomUsuario;
+        public double lat;
+        public double lng;
+        public float total;
+        public byte torta;
+        public byte gringas;
+        public byte sopes;
+        public byte hotdogs;
+        public byte sushi;
+        public byte pizza;
+        public byte pasta;
+        public byte burro;
+        public byte burguer;
+
+       
+
+
         public HomePage()
         {
             InitializeComponent();
@@ -52,21 +68,48 @@ namespace HungryDrone
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel<formInicio>();
+            formInicio forminicio = new formInicio(this);
+            AddOwnedForm(forminicio);
+            forminicio.FormBorderStyle = FormBorderStyle.None;
+            forminicio.TopLevel = false;
+            forminicio.Dock = DockStyle.Fill;
+            this.Controls.Add(forminicio);
+            this.Tag = forminicio;
+            forminicio.BringToFront();
+            forminicio.Show();
+
             panelMenuLat.Enabled = true;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
         private void btnMenu2_Click(object sender, EventArgs e)
         {
-            //AbrirFormInPanel<FormMenu>();
+            FormMenu formMenu = new FormMenu(this);
+            AddOwnedForm(formMenu);
+            formMenu.FormBorderStyle = FormBorderStyle.None;
+            formMenu.TopLevel = false;
+            formMenu.Dock = DockStyle.Fill;
+            this.Controls.Add(formMenu);
+            this.Tag = formMenu;
+            formMenu.BringToFront();
+            formMenu.Show();
+
             panelMenuLat.Enabled = true;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel<FormControlLogIn>();
+            FormControlLogIn formPass = new FormControlLogIn(this);
+            AddOwnedForm(formPass);
+            formPass.FormBorderStyle = FormBorderStyle.None;
+            formPass.TopLevel = false;
+            formPass.Dock = DockStyle.Fill;
+            this.Controls.Add(formPass);
+            this.Tag = formPass;
+            formPass.BringToFront();
+            formPass.Show();
+
             panelMenuLat.Enabled = true;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;

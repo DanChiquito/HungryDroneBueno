@@ -12,10 +12,14 @@ namespace HungryDrone
 {
     public partial class FormDatosUsuarioFinal : Form
     {
-        public FormDatosUsuarioFinal(string nombre, double lat, double lng, float total, byte torta, byte gringas, byte sopes, byte hotdogs, byte sushi, byte pizza, byte pasta, byte burro, byte burguer)
+        HomePage home;
+
+        public FormDatosUsuarioFinal(HomePage homePage)
         {
             InitializeComponent();
-            lblUsuario.Text = nombre;
+            home = homePage;
+            lblUsuario.Text = home.nomUsuario;
+            /*
             lblTorta.Text = torta.ToString();
             lblGringa.Text = gringas.ToString();
             lblSope.Text = sopes.ToString();
@@ -25,6 +29,7 @@ namespace HungryDrone
             lblPasta.Text = pasta.ToString();
             lblBurro.Text = burro.ToString();
             lblBurguer.Text = burguer.ToString();
+            */
         }
 
         
