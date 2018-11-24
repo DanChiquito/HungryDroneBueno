@@ -27,7 +27,8 @@ namespace HungryDrone
         double LngDrone = -99.595734;  //Coordenadas Que irá leeyendo del puerto serial de arduino
         double LatDestino = 19.356543;
         double LngDestino = -99.564586;
-        int waittime = 0;
+        float X;
+        float Y;
         string rawdata;
 
         public formCheckDrone()
@@ -36,7 +37,9 @@ namespace HungryDrone
 
             try
             {
+                serialport = new SerialPort();
                 String[] puertos = SerialPort.GetPortNames();
+                Array.Sort(puertos);
                 cbPuertos.Items.AddRange(puertos);
             }
             catch(IOException error)
@@ -64,7 +67,14 @@ namespace HungryDrone
 
             #region Drone_Marker
             markerOverlay = new GMapOverlay("HungryDrone"); //SI FUNCIONA DEBERÍA DE IR EN EL TIMER
-            
+            marker = new GMarkerArrow(new PointLatLng(LatDrone, LngDrone));
+            marker.ToolTipText = "Drone";
+            marker.ToolTip.Fill = Brushes.Black;
+            marker.ToolTip.Foreground = Brushes.White;
+            marker.ToolTip.Stroke = Pens.Black;
+            marker.Bearing = 0; // Rotation angle
+            marker.Fill = new SolidBrush(Color.FromArgb(155, Color.Red)); // Arrow color
+            markerOverlay.Markers.Add(marker);
             #endregion
 
             #region Destino_Marker
@@ -76,8 +86,6 @@ namespace HungryDrone
 
             gMapControl1.Overlays.Add(markerOverlay);
 
-            //FALTA AGERGAR MARCADOR PERSONALIZADO Y QUE GIRE CON RESPECTO A LA INFORMACIÓN RECIBIDA POR SERIAL PORT
-
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -88,7 +96,8 @@ namespace HungryDrone
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             timer1.Start();
-            waittime = 0;
+            serialport.Write(" ");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,38 +107,38 @@ namespace HungryDrone
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(waittime > 5)
+            
+            rawdata = serialport.ReadLine();
+            label7.Text = rawdata;
+            
+            #region Variables
+            string[] data = rawdata.Split(',');
+            if(data[0] != "************")
             {
-                try
-                {
-                    rawdata = serialport.ReadLine();
-                    
-                }
-                catch(IOException error)
-                {
-                    MessageBox.Show("Error: " + error.Message);
-                }
-
-                #region Variables
-                string[] data = rawdata.Split(',');
                 LatDrone = double.Parse(data[0]);
                 LngDrone = double.Parse(data[1]);
-                lbLat.Text = data[0];
-                lbLong.Text = data[1];
-                lbVel.Text = data[2];
-                lbAlt.Text = data[3];
-                lbDistancia.Text = data[6];
-                int d = int.Parse(data[6]);
+            }
+            
+            lbLat.Text = data[0];
+            lbLong.Text = data[1];
+            lbVel.Text = data[2];
+            lbAlt.Text = data[3];
+            X = float.Parse(data[4]);
+            Y = float.Parse(data[5]);
+            label7.Text = X.ToString();
+            label8.Text = Y.ToString();
+            lbDistancia.Text = data[6];
+            int d = int.Parse(data[6]);
 
                 #endregion
-
+            
                 #region PictureBox_Arriba/Abajo
-                if (int.Parse(data[4]) < -2)
+                if (X < -2)
                 {
                     pbForward.Visible = true;
                     pbBackward.Visible = false;
                 }
-                else if (int.Parse(data[4]) > 2)
+                else if (X > 2)
                 {
                     pbForward.Visible = false;
                     pbBackward.Visible = true;
@@ -142,12 +151,12 @@ namespace HungryDrone
                 #endregion
 
                 #region PictureBox_Der/Izq
-                if (int.Parse(data[5]) < -2)
+                if (Y < -2)
                 {
                     pbRight.Visible = true;
                     pbLeft.Visible = false;
                 }
-                else if (int.Parse(data[5]) > 2)
+                else if (Y > 2)
                 {
                     pbRight.Visible = false;
                     pbLeft.Visible = true;
@@ -158,9 +167,9 @@ namespace HungryDrone
                     pbLeft.Visible = false;
                 }
                 #endregion
-
+                
                 #region PictureBox Distancia
-                if (d > 400 && d < 500)
+                if (d >= 250 && d < 300)
                 {
                     pb1.Visible = true;
                     pb2.Visible = false;
@@ -169,7 +178,7 @@ namespace HungryDrone
                     pb4.Visible = false;
                     pb5.Visible = false;
                 }
-                else if (d > 300 && d <= 400)
+                else if (d >= 200 && d < 250)
                 {
                     pb1.Visible = false;
                     pb2.Visible = true;
@@ -178,7 +187,7 @@ namespace HungryDrone
                     pb4.Visible = false;
                     pb5.Visible = false;
                 }
-                else if (d > 200 && d < 300)
+                else if (d >= 150 && d < 200)
                 {
                     pb1.Visible = false;
                     pb2.Visible = false;
@@ -187,7 +196,7 @@ namespace HungryDrone
                     pb4.Visible = false;
                     pb5.Visible = false;
                 }
-                else if (d > 100 && d < 200)
+                else if (d >= 100 && d < 250)
                 {
                     pb1.Visible = false;
                     pb2.Visible = false;
@@ -196,7 +205,7 @@ namespace HungryDrone
                     pb4.Visible = false;
                     pb5.Visible = false;
                 }
-                else if (d > 50 && d < 100)
+                else if (d >= 50 && d < 100)
                 {
                     pb1.Visible = false;
                     pb2.Visible = false;
@@ -224,23 +233,18 @@ namespace HungryDrone
                         pb5.Visible = false;
                 }
                 #endregion
+                
 
                 #region Actualizar_GPS
                 marker = new GMarkerArrow(new PointLatLng(LatDrone, LngDrone));
-                marker.ToolTipText = "Drone";
-                marker.ToolTip.Fill = Brushes.Black;
-                marker.ToolTip.Foreground = Brushes.White;
-                marker.ToolTip.Stroke = Pens.Black;
-                marker.Bearing = 90; // Rotation angle
-                marker.Fill = new SolidBrush(Color.FromArgb(155, Color.Red)); // Arrow color
-                markerOverlay.Markers.Add(marker); //Agregamos al mapa
-                gMapControl1.Overlays.Add(markerOverlay);
+            markerOverlay.Markers.Add(marker);
+            marker.Bearing = marker.Bearing + 1;
                 gMapControl1.Zoom = gMapControl1.Zoom + 1;
                 gMapControl1.Zoom = gMapControl1.Zoom - 1;
 
                 #endregion
-
-            }
+                
+            
 
         }
 
@@ -274,6 +278,9 @@ namespace HungryDrone
             }
         }
 
-        
+        private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            serialport.Close();
+        }
     }
 }

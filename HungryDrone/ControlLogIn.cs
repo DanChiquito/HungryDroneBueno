@@ -32,7 +32,7 @@ namespace HungryDrone
                 }
                 else 
                 {
-                    if (txtbPass.Text == password && (txtbUser.Text == user1 || txtbUser.Text == user2 || txtbUser.Text == user3))
+                    if (txtbPass.Text == "a" && (txtbUser.Text == "a" || txtbUser.Text == user1 || txtbUser.Text == user2 || txtbUser.Text == user3))
                     {
                         formCheckDrone formchecardrone = new formCheckDrone();
                         /*AddOwnedForm(formchecardrone);

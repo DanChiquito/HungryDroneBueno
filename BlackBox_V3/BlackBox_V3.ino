@@ -72,6 +72,10 @@ void setup() {
 //////////////////////////////////////LOOP/////////////////////////////////////
 
 void loop() {
+  
+}
+
+void serialEvent(){
   data = "";
   //GPS
   if(gps.location.isValid() && gps.altitude.isValid() && gps.speed.isValid())
@@ -121,9 +125,8 @@ void loop() {
 
   Serial.println(data);
 
-  smartDelay(1000);
+  smartDelay(500);
 }
-
 //////////////////////////////////Funciones//////////////////////////////////////
 
 static void smartDelay(unsigned long ms)

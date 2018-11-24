@@ -44,6 +44,7 @@
             this.cbPuertos = new System.Windows.Forms.ToolStripComboBox();
             this.verificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conectarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -74,6 +75,8 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pbDown = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
@@ -188,7 +191,8 @@
             this.conectarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.puertosToolStripMenuItem,
             this.verificarToolStripMenuItem,
-            this.conectarToolStripMenuItem1});
+            this.conectarToolStripMenuItem1,
+            this.desconectarToolStripMenuItem});
             this.conectarToolStripMenuItem.Name = "conectarToolStripMenuItem";
             this.conectarToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.conectarToolStripMenuItem.Text = "Conectar";
@@ -198,7 +202,7 @@
             this.puertosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cbPuertos});
             this.puertosToolStripMenuItem.Name = "puertosToolStripMenuItem";
-            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.puertosToolStripMenuItem.Text = "Puertos";
             // 
             // cbPuertos
@@ -209,16 +213,23 @@
             // verificarToolStripMenuItem
             // 
             this.verificarToolStripMenuItem.Name = "verificarToolStripMenuItem";
-            this.verificarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.verificarToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.verificarToolStripMenuItem.Text = "Verificar";
             this.verificarToolStripMenuItem.Click += new System.EventHandler(this.verificarToolStripMenuItem_Click);
             // 
             // conectarToolStripMenuItem1
             // 
             this.conectarToolStripMenuItem1.Name = "conectarToolStripMenuItem1";
-            this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(166, 26);
             this.conectarToolStripMenuItem1.Text = "Conectar";
             this.conectarToolStripMenuItem1.Click += new System.EventHandler(this.conectarToolStripMenuItem1_Click);
+            // 
+            // desconectarToolStripMenuItem
+            // 
+            this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
+            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.desconectarToolStripMenuItem.Text = "Desconectar";
+            this.desconectarToolStripMenuItem.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
             // actualizarPedidosToolStripMenuItem
             // 
@@ -387,7 +398,7 @@
             // lbDistancia
             // 
             this.lbDistancia.AutoSize = true;
-            this.lbDistancia.Location = new System.Drawing.Point(437, 424);
+            this.lbDistancia.Location = new System.Drawing.Point(433, 424);
             this.lbDistancia.Name = "lbDistancia";
             this.lbDistancia.Size = new System.Drawing.Size(16, 17);
             this.lbDistancia.TabIndex = 1;
@@ -530,13 +541,33 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(364, 233);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(364, 275);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 17);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "label7";
             // 
             // formCheckDrone
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1459, 800);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.pbUp);
             this.Controls.Add(this.pbForward);
             this.Controls.Add(this.pictureBox7);
@@ -653,5 +684,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pbDown;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ToolStripMenuItem desconectarToolStripMenuItem;
     }
 }
