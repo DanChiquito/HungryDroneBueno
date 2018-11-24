@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Demo.WindowsForms.CustomMarkers;
 using System.IO;
 using System.IO.Ports;
 
@@ -19,14 +16,15 @@ namespace HungryDrone
 {
     public partial class formCheckDrone : Form
     {
-        GMarkerGoogle marker; //Será el marcador de la ubicación de HungryDrone
         GMarkerGoogle destino;
         GMapOverlay markerOverlay;
+        GMarkerArrow marker;
+
 
         SerialPort serialport;
 
-        double LatDrone;
-        double LngDrone;  //Coordenadas Que irá leeyendo del puerto serial de arduino
+        double LatDrone = 19.334633;
+        double LngDrone = -99.595734;  //Coordenadas Que irá leeyendo del puerto serial de arduino
         double LatDestino = 19.356543;
         double LngDestino = -99.564586;
         int waittime = 0;
@@ -65,9 +63,8 @@ namespace HungryDrone
             #endregion
 
             #region Drone_Marker
-            markerOverlay = new GMapOverlay("HungryDrone");
-            marker = new GMarkerGoogle(new PointLatLng(LatDrone, LngDrone), GMarkerGoogleType.blue_dot);
-            markerOverlay.Markers.Add(marker); //Agregamos al mapa
+            markerOverlay = new GMapOverlay("HungryDrone"); //SI FUNCIONA DEBERÍA DE IR EN EL TIMER
+            
             #endregion
 
             #region Destino_Marker
@@ -79,6 +76,7 @@ namespace HungryDrone
 
             gMapControl1.Overlays.Add(markerOverlay);
 
+            //FALTA AGERGAR MARCADOR PERSONALIZADO Y QUE GIRE CON RESPECTO A LA INFORMACIÓN RECIBIDA POR SERIAL PORT
 
         }
 
@@ -227,12 +225,23 @@ namespace HungryDrone
                 }
                 #endregion
 
+                #region Actualizar_GPS
+                marker = new GMarkerArrow(new PointLatLng(LatDrone, LngDrone));
+                marker.ToolTipText = "Drone";
+                marker.ToolTip.Fill = Brushes.Black;
+                marker.ToolTip.Foreground = Brushes.White;
+                marker.ToolTip.Stroke = Pens.Black;
+                marker.Bearing = 90; // Rotation angle
+                marker.Fill = new SolidBrush(Color.FromArgb(155, Color.Red)); // Arrow color
+                markerOverlay.Markers.Add(marker); //Agregamos al mapa
+                gMapControl1.Overlays.Add(markerOverlay);
+                gMapControl1.Zoom = gMapControl1.Zoom + 1;
+                gMapControl1.Zoom = gMapControl1.Zoom - 1;
 
-                //FALTA ACTUALIZAR EL MAPA CON LA UBICACION DEL DRONE CADA SEGUNDO
-                //SEGUN LO LEIDO PARA ACTUALIZAR EL MAPA SOLO SE HACE ZOOM IN Y ZOOM OUT
+                #endregion
 
             }
-            
+
         }
 
         private void actualizarPedidosToolStripMenuItem_Click(object sender, EventArgs e)

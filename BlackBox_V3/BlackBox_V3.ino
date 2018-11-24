@@ -20,7 +20,8 @@ int status;
 const int Trigger = 2;   //Pin digital 2 para el Trigger del sensor
 const int Echo = 3;   //Pin digital 3 para el Echo del sensor
 
-
+int lt1;
+int ln1;
 String lt;
 String ln;
 String s;
@@ -75,8 +76,10 @@ void loop() {
   //GPS
   if(gps.location.isValid() && gps.altitude.isValid() && gps.speed.isValid())
   {
-    lt = gps.location.lat();
-    ln = gps.location.lng();
+    lt1 = gps.location.lat()*1000000;
+    ln1 = gps.location.lng()*1000000;
+    lt = lt1/1000000;
+    ln = ln1/1000000;
     s = gps.speed.mps();
   }
   else{
@@ -84,7 +87,6 @@ void loop() {
     ln = "************";
     s = "************";
   }
-  smartDelay(1000);
 
   //BPM
   alt = bmp.readAltitude(P0);
@@ -98,6 +100,10 @@ void loop() {
   
   t = pulseIn(Echo, HIGH); //obtenemos el ancho del pulso
   d = t/59;             //escalamos el tiempo a una distancia en cm
+
+  if(d >= 500 || d<=0){
+    d = 1000;
+  }
 
   //GYRO
   IMU.readSensor();
@@ -114,7 +120,8 @@ void loop() {
   data = data + d;
 
   Serial.println(data);
-  
+
+  smartDelay(1000);
 }
 
 //////////////////////////////////Funciones//////////////////////////////////////
