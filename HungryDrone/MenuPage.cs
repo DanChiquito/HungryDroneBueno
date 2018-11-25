@@ -10,7 +10,6 @@ namespace HungryDrone
         #region Atributos
 
         decimal cantidadproductos;
-        string nomUsuario;
         HomePage home;
         Producto HotDog;
         Producto torta;
@@ -31,7 +30,6 @@ namespace HungryDrone
         {
             InitializeComponent();
             home = homePage;
-            nomUsuario = home.nomUsuario;
             #region productos
             #region torta
             torta.ingredientes = new Ingrediente[7];
@@ -196,14 +194,15 @@ namespace HungryDrone
             float Total = totGringas + totTorta + totBurros + totHotDog + totSushi + totPizza + totPasta +totSopes + totHambu;
             home.total = Total;
 
+
             try
             {
-                if (cantidadproductos == 0 || nomUsuario == "")
+                if (cantidadproductos == 0)
                 {
                     throw new ApplicationException("No se ha seleccionado ningún producto");
                 }
                 else
-                { 
+                {
                     home.hotdogs = (byte)cantidadHotDog.Value;
                     home.sushi = (byte)cantidadSushi.Value;
                     home.pizza = (byte)cantidadPizza.Value;
@@ -231,10 +230,6 @@ namespace HungryDrone
             catch(ApplicationException error)
             {
                 errorProv.SetError(btnPagar, error.Message);
-                if (home.nomUsuario == "")
-                {
-                    MessageBox.Show("Rebisa que hayas puesto tu direccion y nombre en el boton Inicio", "No tenemos tus datos", 0, MessageBoxIcon.Exclamation);
-                }
             }
 
         }

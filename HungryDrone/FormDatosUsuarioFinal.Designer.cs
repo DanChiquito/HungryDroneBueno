@@ -334,7 +334,7 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 10);
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(578, 497);
+            this.ClientSize = new System.Drawing.Size(599, 497);
             this.Controls.Add(this.lblPasta);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.lblPizza);

@@ -68,22 +68,20 @@ namespace HungryDrone
                     }
 
                     tarjeta = new PagoTarjeta(mskNumero.Text, mskFecha.Text, mskCvv.Text, txtbNombre.Text);
-                    
+                    MessageBox.Show("Procesando pago...", "Espere un momento", 0, MessageBoxIcon.Asterisk);
 
                    
                     if (tarjeta.Tarjeta())
                     {
-                        MessageBox.Show("Procesando pago...", "Espere un momento", 0, MessageBoxIcon.Asterisk);
                         FormDatosUsuarioFinal formUsuarioFinal = new FormDatosUsuarioFinal(home);
-                        //FormFinalUser formUsuarioFinal = new FormFinalUser();
                         AddOwnedForm(formUsuarioFinal);
                         formUsuarioFinal.FormBorderStyle = FormBorderStyle.None;
                         formUsuarioFinal.TopLevel = false;
                         formUsuarioFinal.Dock = DockStyle.Fill;
                         this.Controls.Add(formUsuarioFinal);
                         this.Tag = formUsuarioFinal;
-                        formUsuarioFinal.Show();
                         formUsuarioFinal.BringToFront();
+                        formUsuarioFinal.Show();
                     }
                     else
                     {
