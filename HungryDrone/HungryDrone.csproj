@@ -109,6 +109,7 @@
     <Compile Include="formPagar.Designer.cs">
       <DependentUpon>formPagar.cs</DependentUpon>
     </Compile>
+    <Compile Include="GMarkerArrow.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
