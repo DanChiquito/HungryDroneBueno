@@ -39,11 +39,11 @@
             this.lbAlt = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.conectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.puertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPuertos = new System.Windows.Forms.ToolStripMenuItem();
             this.cbPuertos = new System.Windows.Forms.ToolStripComboBox();
-            this.verificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.conectarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnVerificar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnConectar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDesconectar = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.pb1 = new System.Windows.Forms.PictureBox();
@@ -182,47 +182,48 @@
             // conectarToolStripMenuItem
             // 
             this.conectarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.puertosToolStripMenuItem,
-            this.verificarToolStripMenuItem,
-            this.conectarToolStripMenuItem1,
-            this.desconectarToolStripMenuItem});
+            this.btnPuertos,
+            this.btnVerificar,
+            this.btnConectar,
+            this.btnDesconectar});
             this.conectarToolStripMenuItem.Name = "conectarToolStripMenuItem";
             this.conectarToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.conectarToolStripMenuItem.Text = "Conectar";
             // 
-            // puertosToolStripMenuItem
+            // btnPuertos
             // 
-            this.puertosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnPuertos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cbPuertos});
-            this.puertosToolStripMenuItem.Name = "puertosToolStripMenuItem";
-            this.puertosToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
-            this.puertosToolStripMenuItem.Text = "Puertos";
+            this.btnPuertos.Name = "btnPuertos";
+            this.btnPuertos.Size = new System.Drawing.Size(216, 26);
+            this.btnPuertos.Text = "Puertos";
             // 
             // cbPuertos
             // 
             this.cbPuertos.Name = "cbPuertos";
             this.cbPuertos.Size = new System.Drawing.Size(121, 28);
             // 
-            // verificarToolStripMenuItem
+            // btnVerificar
             // 
-            this.verificarToolStripMenuItem.Name = "verificarToolStripMenuItem";
-            this.verificarToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
-            this.verificarToolStripMenuItem.Text = "Verificar";
-            this.verificarToolStripMenuItem.Click += new System.EventHandler(this.verificarToolStripMenuItem_Click);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(216, 26);
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.Click += new System.EventHandler(this.verificarToolStripMenuItem_Click);
             // 
-            // conectarToolStripMenuItem1
+            // btnConectar
             // 
-            this.conectarToolStripMenuItem1.Name = "conectarToolStripMenuItem1";
-            this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(166, 26);
-            this.conectarToolStripMenuItem1.Text = "Conectar";
-            this.conectarToolStripMenuItem1.Click += new System.EventHandler(this.conectarToolStripMenuItem1_Click);
+            this.btnConectar.Name = "btnConectar";
+            this.btnConectar.Size = new System.Drawing.Size(216, 26);
+            this.btnConectar.Text = "Conectar";
+            this.btnConectar.Click += new System.EventHandler(this.conectarToolStripMenuItem1_Click);
             // 
-            // desconectarToolStripMenuItem
+            // btnDesconectar
             // 
-            this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
-            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
-            this.desconectarToolStripMenuItem.Text = "Desconectar";
-            this.desconectarToolStripMenuItem.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
+            this.btnDesconectar.Enabled = false;
+            this.btnDesconectar.Name = "btnDesconectar";
+            this.btnDesconectar.Size = new System.Drawing.Size(216, 26);
+            this.btnDesconectar.Text = "Desconectar";
+            this.btnDesconectar.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
             // actualizarPedidosToolStripMenuItem
             // 
@@ -499,10 +500,10 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Productos,
             this.Cantidad});
-            this.dataGridView1.Location = new System.Drawing.Point(28, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(245, 95);
+            this.dataGridView1.Size = new System.Drawing.Size(245, 122);
             this.dataGridView1.TabIndex = 13;
             // 
             // Productos
@@ -635,7 +636,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
         private System.Windows.Forms.ToolStripMenuItem conectarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem puertosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnPuertos;
         private System.Windows.Forms.ToolStripComboBox cbPuertos;
         private System.Windows.Forms.ToolStripMenuItem actualizarPedidosToolStripMenuItem;
         private System.Windows.Forms.PictureBox pb1;
@@ -646,8 +647,8 @@
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ToolStripMenuItem verificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem conectarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem btnVerificar;
+        private System.Windows.Forms.ToolStripMenuItem btnConectar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbDistancia;
         private System.Windows.Forms.Label label6;
@@ -663,7 +664,7 @@
         private System.Windows.Forms.PictureBox pbUp;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pbDown;
-        private System.Windows.Forms.ToolStripMenuItem desconectarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnDesconectar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Productos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;

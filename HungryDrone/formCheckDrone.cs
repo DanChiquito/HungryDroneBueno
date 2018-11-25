@@ -23,21 +23,27 @@ namespace HungryDrone
 
         bool rep = true;
 
-
         SerialPort serialport;
 
-        double LatDrone = 19.334633;
-        double LngDrone = -99.595734;  //Coordenadas Que irá leeyendo del puerto serial de arduino
-        double LatDestino = 19.356543;
-        double LngDestino = -99.564586;
+        HomePage home;
+
+        double LatDrone = 19.3316664;
+        double LngDrone = -99.1869205;  //Coordenadas Que irá leeyendo del puerto serial de arduino
+        double LatDestino;
+        double LngDestino;
+        float alt;
         float X;
         float Y;
         string rawdata;
 
-        public formCheckDrone(string nombre)
+        public formCheckDrone(HomePage homepage)
         {
             InitializeComponent();
-            label2.Text = nombre;
+            home = homepage;
+            LatDestino = home.lat;
+            LngDestino = home.lng;
+            
+
 
             try
             {
@@ -105,7 +111,10 @@ namespace HungryDrone
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            
+            btnPuertos.Enabled = false;
+            btnVerificar.Enabled = false;
+            btnConectar.Enabled = false;
+            btnDesconectar.Enabled = true;
             try
             {
                 rep = true;
@@ -123,6 +132,8 @@ namespace HungryDrone
         private void LeerDatos()
         {
             serialport.Write(" ");
+            bool una = true;
+            
             while (rep)
             {
                 try
@@ -130,6 +141,7 @@ namespace HungryDrone
                     rawdata = serialport.ReadLine();
 
                     #region Variables
+                    int d;
                     string[] data = rawdata.Split(',');
                     if (data[0] != "************")
                     {
@@ -144,54 +156,86 @@ namespace HungryDrone
                     X = float.Parse(data[4]);
                     Y = float.Parse(data[5]);
                     lbDistancia.Text = data[6];
-                    int d = int.Parse(data[6]);
-
-                    #endregion
-
-                    #region PictureBox_Arriba/Abajo
-                    if (X < -2)
+                    if(int.Parse(data[6]) < 1000 && int.Parse(data[6]) > 0)
                     {
-                        pbForward.Visible = true;
-                        pbBackward.Visible = false;
-                    }
-                    else if (X > 2)
-                    {
-                        pbForward.Visible = false;
-                        pbBackward.Visible = true;
+                        d = int.Parse(data[6]);
+                        lbDistancia.Text = data[6];
                     }
                     else
                     {
-                        pbForward.Visible = false;
-                        pbBackward.Visible = false;
+                        lbDistancia.Text = "No object";
+                        d = 2000;
+                    }
+
+
+                    #endregion
+
+                    #region CorrerUnaVez
+                    if (una)
+                    {
+                        alt = float.Parse(data[3]);
+                        una = false;
+                    }
+                    #endregion
+
+                    #region PictureBox_Adelante/Atras
+                    if (X < -2)
+                    {
+                        var updateAction = new Action(() => { pbForward.Visible = true; });
+                        pbForward.Invoke(updateAction);
+                        var updateAction2 = new Action(() => { pbBackward.Visible = false; });
+                        pbBackward.Invoke(updateAction2);
+                    }
+                    else if (X > 2)
+                    {
+                        var updateAction = new Action(() => { pbForward.Visible = false; });
+                        pbForward.Invoke(updateAction);
+                        var updateAction2 = new Action(() => { pbBackward.Visible = true; });
+                        pbBackward.Invoke(updateAction2);
+                    }
+                    else
+                    {
+                        var updateAction = new Action(() => { pbForward.Visible = false; });
+                        pbForward.Invoke(updateAction);
+                        var updateAction2 = new Action(() => { pbBackward.Visible = false; });
+                        pbBackward.Invoke(updateAction2);
                     }
                     #endregion
 
                     #region PictureBox_Der/Izq
                     if (Y < -2)
                     {
-                        pbRight.Visible = true;
-                        pbLeft.Visible = false;
+                        var updateAction = new Action(() => { pbRight.Visible = true; });
+                        pbRight.Invoke(updateAction);
+                        var updateAction2 = new Action(() => { pbLeft.Visible = false; });
+                        pbLeft.Invoke(updateAction2);
                     }
                     else if (Y > 2)
                     {
-                        pbRight.Visible = false;
-                        pbLeft.Visible = true;
+                        var updateAction = new Action(() => { pbRight.Visible = false; ; });
+                        pbRight.Invoke(updateAction);
+                        var updateAction2 = new Action(() => { pbLeft.Visible = true; });
+                        pbLeft.Invoke(updateAction2);
                     }
                     else
                     {
-                        pbRight.Visible = false;
-                        pbLeft.Visible = false;
+                        var updateAction = new Action(() => { pbRight.Visible = false; });
+                        pbRight.Invoke(updateAction);
+                        var updateAction2 = new Action(() => { pbLeft.Visible = false; });
+                        pbLeft.Invoke(updateAction2);
                     }
                     #endregion
 
                     #region PictureBox Distancia
                     if (d > 0 && d < 400)
                     {
-                        pb5.Visible = true;
+                        var updateAction = new Action(() => { pb5.Visible = true; });
+                        pb5.Invoke(updateAction);
                     }
                     else
                     {
-                        pb5.Visible = false;
+                        var updateAction = new Action(() => { pb5.Visible = false; });
+                        pb5.Invoke(updateAction);
                     }
                     #endregion
 
@@ -204,6 +248,33 @@ namespace HungryDrone
                     gMapControl1.Zoom = gMapControl1.Zoom - 1;
 
                     #endregion
+
+                    #region PictureBox_Arriba/Abajo
+                    if(float.Parse(data[3]) > alt + 1)
+                    {
+                        var updateAction = new Action(() => { pbUp.Visible = true; });
+                        pbUp.Invoke(updateAction);
+                        var updateAction2 = new Action(() => { pbDown.Visible = false; });
+                        pbDown.Invoke(updateAction2);
+                    }
+                    else if (float.Parse(data[3]) < alt - 1)
+                    {
+                        var updateAction = new Action(() => { pbUp.Visible = false; });
+                        pbUp.Invoke(updateAction);
+                        var updateAction2 = new Action(() => { pbDown.Visible = true; });
+                        pbDown.Invoke(updateAction2);
+                    }
+                    else
+                    {
+                        var updateAction = new Action(() => { pbUp.Visible = false; });
+                        pbUp.Invoke(updateAction);
+                        var updateAction2 = new Action(() => { pbDown.Visible = false; });
+                        pbDown.Invoke(updateAction2);
+                    }
+
+
+                    alt = float.Parse(data[3]);
+                    #endregion
                 }
                 catch (IOException error)
                 {
@@ -215,6 +286,10 @@ namespace HungryDrone
 
         private void button1_Click(object sender, EventArgs e)
         {
+            btnPuertos.Enabled = true;
+            btnVerificar.Enabled = true;
+            btnConectar.Enabled = true;
+            btnDesconectar.Enabled = false;
             try
             {
                 rep = false;
