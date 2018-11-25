@@ -34,11 +34,13 @@
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.label = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
             this.horaFeha = new System.Windows.Forms.Timer(this.components);
+            this.ptbOpen = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ptbClosed = new System.Windows.Forms.PictureBox();
             this.btnMenuLat = new System.Windows.Forms.PictureBox();
             this.btnMinim = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -47,13 +49,11 @@
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnMenu2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label = new System.Windows.Forms.Label();
-            this.lbCerrado = new System.Windows.Forms.Label();
-            this.lbAbierto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.panel3.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbOpen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbClosed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenuLat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -94,49 +94,71 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.White;
-            this.panelContenedor.Controls.Add(this.lbAbierto);
-            this.panelContenedor.Controls.Add(this.lbCerrado);
+            this.panelContenedor.BackColor = System.Drawing.Color.Black;
+            this.panelContenedor.Controls.Add(this.ptbOpen);
             this.panelContenedor.Controls.Add(this.label);
             this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.lbFecha);
             this.panelContenedor.Controls.Add(this.lbHora);
-            this.panelContenedor.Controls.Add(this.pictureBox3);
+            this.panelContenedor.Controls.Add(this.ptbClosed);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(200, 53);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(450, 497);
             this.panelContenedor.TabIndex = 8;
             // 
+            // label
+            // 
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.DarkGray;
+            this.label.Location = new System.Drawing.Point(158, 146);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(149, 57);
+            this.label.TabIndex = 11;
+            this.label.Text = "Horario de servicio:\r\n6:00 am - 11:00 pm";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lbFecha
             // 
-            this.lbFecha.AutoSize = true;
-            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFecha.ForeColor = System.Drawing.Color.Black;
-            this.lbFecha.Location = new System.Drawing.Point(90, 290);
+            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.ForeColor = System.Drawing.Color.White;
+            this.lbFecha.Location = new System.Drawing.Point(23, 45);
             this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(37, 13);
+            this.lbFecha.Size = new System.Drawing.Size(411, 26);
             this.lbFecha.TabIndex = 9;
             this.lbFecha.Text = "Fecha";
+            this.lbFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbHora
             // 
-            this.lbHora.AutoSize = true;
-            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.ForeColor = System.Drawing.Color.Black;
-            this.lbHora.Location = new System.Drawing.Point(288, 290);
+            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHora.ForeColor = System.Drawing.Color.White;
+            this.lbHora.Location = new System.Drawing.Point(25, 71);
             this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(30, 13);
+            this.lbHora.Size = new System.Drawing.Size(409, 55);
             this.lbHora.TabIndex = 9;
             this.lbHora.Text = "Hora";
+            this.lbHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // horaFeha
             // 
             this.horaFeha.Enabled = true;
             this.horaFeha.Tick += new System.EventHandler(this.horaFeha_Tick);
             // 
+            // ptbOpen
+            // 
+            this.ptbOpen.Image = global::HungryDrone.Properties.Resources.open;
+            this.ptbOpen.Location = new System.Drawing.Point(161, 242);
+            this.ptbOpen.Name = "ptbOpen";
+            this.ptbOpen.Size = new System.Drawing.Size(128, 128);
+            this.ptbOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbOpen.TabIndex = 14;
+            this.ptbOpen.TabStop = false;
+            // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
             this.label1.Image = global::HungryDrone.Properties.Resources.original;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,19 +169,20 @@
             this.label1.Text = "Hungry Drone 2018";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // ptbClosed
             // 
-            this.pictureBox3.Image = global::HungryDrone.Properties.Resources.LOGO111;
-            this.pictureBox3.Location = new System.Drawing.Point(80, 181);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(284, 97);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.ptbClosed.Image = global::HungryDrone.Properties.Resources.closed;
+            this.ptbClosed.Location = new System.Drawing.Point(161, 242);
+            this.ptbClosed.Name = "ptbClosed";
+            this.ptbClosed.Size = new System.Drawing.Size(128, 128);
+            this.ptbClosed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbClosed.TabIndex = 0;
+            this.ptbClosed.TabStop = false;
             // 
             // btnMenuLat
             // 
             this.btnMenuLat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuLat.Enabled = false;
             this.btnMenuLat.Image = global::HungryDrone.Properties.Resources.btnmenu;
             this.btnMenuLat.Location = new System.Drawing.Point(6, 12);
             this.btnMenuLat.Name = "btnMenuLat";
@@ -274,37 +297,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // label
-            // 
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.Black;
-            this.label.Location = new System.Drawing.Point(174, 149);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(101, 29);
-            this.label.TabIndex = 11;
-            this.label.Text = "Horario de servicio:\r\n6:00 am - 11:00 pm";
-            // 
-            // lbCerrado
-            // 
-            this.lbCerrado.AutoSize = true;
-            this.lbCerrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCerrado.Location = new System.Drawing.Point(198, 326);
-            this.lbCerrado.Name = "lbCerrado";
-            this.lbCerrado.Size = new System.Drawing.Size(57, 16);
-            this.lbCerrado.TabIndex = 12;
-            this.lbCerrado.Text = "Cerrado";
-            // 
-            // lbAbierto
-            // 
-            this.lbAbierto.AutoSize = true;
-            this.lbAbierto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAbierto.ForeColor = System.Drawing.Color.Green;
-            this.lbAbierto.Location = new System.Drawing.Point(198, 326);
-            this.lbAbierto.Name = "lbAbierto";
-            this.lbAbierto.Size = new System.Drawing.Size(51, 16);
-            this.lbAbierto.TabIndex = 13;
-            this.lbAbierto.Text = "Abierto";
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -328,7 +320,8 @@
             this.panel3.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbOpen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbClosed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenuLat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -351,14 +344,13 @@
         private System.Windows.Forms.Button btnMenu2;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Label lbHora;
         private System.Windows.Forms.Timer horaFeha;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbAbierto;
-        private System.Windows.Forms.Label lbCerrado;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.PictureBox ptbClosed;
+        private System.Windows.Forms.PictureBox ptbOpen;
     }
 }
 

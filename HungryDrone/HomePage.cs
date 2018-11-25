@@ -68,6 +68,7 @@ namespace HungryDrone
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
+            btnMenuLat.Enabled = true;
             formInicio forminicio = new formInicio(this);
             AddOwnedForm(forminicio);
             forminicio.FormBorderStyle = FormBorderStyle.None;
@@ -84,6 +85,7 @@ namespace HungryDrone
         }
         private void btnMenu2_Click(object sender, EventArgs e)
         {
+            btnMenuLat.Enabled = true;
             FormMenu formMenu = new FormMenu(this);
             AddOwnedForm(formMenu);
             formMenu.FormBorderStyle = FormBorderStyle.None;
@@ -101,6 +103,7 @@ namespace HungryDrone
         }
         private void btnAdmin_Click(object sender, EventArgs e)
         {
+            btnMenuLat.Enabled = true;
             FormControlLogIn formPass = new FormControlLogIn(this);
             AddOwnedForm(formPass);
             formPass.FormBorderStyle = FormBorderStyle.None;
@@ -129,7 +132,7 @@ namespace HungryDrone
             else
             {
                 panelMenuLat.Width = 200;
-                panelContenedor.Enabled = false;
+                panelContenedor.Enabled = true;
                 panelMenuLat.Enabled = true;
             }
         }
@@ -157,22 +160,23 @@ namespace HungryDrone
 
         private void horaFeha_Tick(object sender, EventArgs e)
         {
-            
+
             lbHora.Text = System.DateTime.Now.ToString("HH:mm:ss");
             lbFecha.Text = System.DateTime.Now.ToLongDateString();
-            string []hora=lbHora.Text.Split(':');
-            
-               if(int.Parse(hora[0])<6 || int.Parse(hora[0]) > 23)
-               {
-                   lbCerrado.Visible = true;
-                   lbAbierto.Visible = false;
-               }
-                else
-                {
-                     lbAbierto.Visible = true;
-                     lbCerrado.Visible = false;
-                }
+            string[] hora = lbHora.Text.Split(':');
 
+            if (int.Parse(hora[0]) < 6 || int.Parse(hora[0]) > 22)
+            {
+                ptbClosed.Visible = true;
+                ptbOpen.Visible = false;
+                panelMenuLat.Enabled = false;
+                btnMenuLat.Enabled = false;
+            }
+            else
+            {
+                ptbOpen.Visible = true;
+                ptbClosed.Visible = false;
+            }
         }
     }
 }
