@@ -193,9 +193,9 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label15.Location = new System.Drawing.Point(23, 548);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(504, 39);
+            this.label15.Size = new System.Drawing.Size(515, 39);
             this.label15.TabIndex = 0;
-            this.label15.Text = "¡Gracias po elegir HungryDrone!";
+            this.label15.Text = "¡Gracias por elegir HungryDrone!";
             // 
             // label16
             // 

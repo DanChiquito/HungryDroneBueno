@@ -18,12 +18,14 @@ namespace HungryDrone
         double lngInicial = -99.1869205;
         GMarkerGoogle marker;
         GMapOverlay markerOverlay;
+        HomePage home;
         
         
 
-        public formInicio()
+        public formInicio(HomePage homepage)
         {
             InitializeComponent();
+            home = homepage;
         }
 
         private void formInicio_Load(object sender, EventArgs e)
@@ -73,7 +75,11 @@ namespace HungryDrone
                     }
                     else
                     {
-                        FormMenu formMenu = new FormMenu(txtbNombre.Text, lat, lng);
+                        home.nomUsuario = txtbNombre.Text;
+                        home.lat = lat;
+                        home.lng = lng;
+
+                        FormMenu formMenu = new FormMenu(home);
                         AddOwnedForm(formMenu);
                         formMenu.FormBorderStyle = FormBorderStyle.None;
                         formMenu.TopLevel = false;

@@ -8,13 +8,9 @@ namespace HungryDrone
     public partial class FormMenu : Form
     {
         #region Atributos
-        string nomUsuario1;
-
-        double lat1;
-
-        double lng1;
 
         decimal cantidadproductos;
+        HomePage home;
         Producto HotDog;
         Producto torta;
         Producto gringa;
@@ -29,13 +25,11 @@ namespace HungryDrone
         #endregion
 
         #region Constructor
-        public FormMenu(string nomUsuario, double lat, double lng)
+        public FormMenu(HomePage homePage)
 
         {
             InitializeComponent();
-            nomUsuario1 = nomUsuario;
-            lat1 = lat;
-            lng1 = lng;
+            home = homePage;
             #region productos
             #region torta
             torta.ingredientes = new Ingrediente[7];
@@ -197,7 +191,9 @@ namespace HungryDrone
             float totBurros = (byte)cantidadBurro.Value * Burros.precio;
             float totSopes = (byte)cantidadSopes.Value * Sopes.precio;
 
-            float Total = totGringas + totTorta + totBurros + totHotDog + totSushi + totPizza + totPasta + totHambu + totSopes;
+            float Total = totGringas + totTorta + totBurros + totHotDog + totSushi + totPizza + totPasta +totSopes + totHambu;
+            home.total = Total;
+
 
             try
             {
@@ -207,17 +203,17 @@ namespace HungryDrone
                 }
                 else
                 {
-                    byte hotdog = (byte)cantidadHotDog.Value;
-                    byte sushi = (byte)cantidadSushi.Value;
-                    byte pizza = (byte)cantidadPizza.Value;
-                    byte pasta = (byte)cantidadPasta.Value;
-                    byte burrito = (byte)cantidadBurro.Value;
-                    byte burguer = (byte)cantidadHambu.Value;
-                    byte torta = (byte)cantidadTorta.Value;
-                    byte gringa = (byte)cantidadGringas.Value;
-                    byte sopes = (byte)cantidadSopes.Value;
+                    home.hotdogs = (byte)cantidadHotDog.Value;
+                    home.sushi = (byte)cantidadSushi.Value;
+                    home.pizza = (byte)cantidadPizza.Value;
+                    home.pasta = (byte)cantidadPasta.Value;
+                    home.burro = (byte)cantidadBurro.Value;
+                    home.burguer = (byte)cantidadHambu.Value;
+                    home.torta = (byte)cantidadTorta.Value;
+                    home.gringas = (byte)cantidadGringas.Value;
+                    home.sopes = (byte)cantidadSopes.Value;
 
-                    FormPagar formPagar = new FormPagar(nomUsuario1, lat1, lng1, Total,torta,gringa,sopes, hotdog, sushi, pizza, pasta , burrito, burguer);
+                    FormPagar formPagar = new FormPagar(home);
                     AddOwnedForm(formPagar);
                     formPagar.FormBorderStyle = FormBorderStyle.None;
                     formPagar.TopLevel = false;

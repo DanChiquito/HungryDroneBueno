@@ -31,9 +31,10 @@ namespace HungryDrone
         float Y;
         string rawdata;
 
-        public formCheckDrone()
+        public formCheckDrone(string nombre)
         {
             InitializeComponent();
+            label2.Text = nombre;
 
             try
             {
@@ -46,7 +47,6 @@ namespace HungryDrone
             {
                 MessageBox.Show("Error: " + error.Message);
             }
-            
         }
 
         private void formCheckDrone_Load(object sender, EventArgs e)

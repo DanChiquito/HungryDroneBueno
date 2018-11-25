@@ -6,13 +6,16 @@ namespace HungryDrone
 {
     public partial class FormControlLogIn : Form
     {
+        HomePage home;
         private string password = "HungryDrone";
         private string user1 = "Daniel";
         private string user2 = "Nataly";
         private string user3 = "Itan";
-        public FormControlLogIn()
+
+        public FormControlLogIn(HomePage homepage)
         {
             InitializeComponent();
+            home = homepage;
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -34,14 +37,7 @@ namespace HungryDrone
                 {
                     if (txtbPass.Text == "a" && (txtbUser.Text == "a" || txtbUser.Text == user1 || txtbUser.Text == user2 || txtbUser.Text == user3))
                     {
-                        formCheckDrone formchecardrone = new formCheckDrone();
-                        /*AddOwnedForm(formchecardrone);
-                        formchecardrone.FormBorderStyle = FormBorderStyle.None;
-                        formchecardrone.TopLevel = false;
-                        formchecardrone.Dock = DockStyle.Fill;
-                        this.Controls.Add(formchecardrone);
-                        this.Tag = formchecardrone;
-                        */
+                        formCheckDrone formchecardrone = new formCheckDrone(home.nomUsuario);
                         formchecardrone.BringToFront();
                         formchecardrone.Show();
                     }
