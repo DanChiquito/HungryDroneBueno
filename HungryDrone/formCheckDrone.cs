@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Demo.WindowsForms.CustomMarkers;
 using System.IO;
 using System.IO.Ports;
+using System.Threading;
 
 using GMap.NET;
 using GMap.NET.MapProviders;
@@ -19,6 +20,8 @@ namespace HungryDrone
         GMarkerGoogle destino;
         GMapOverlay markerOverlay;
         GMarkerArrow marker;
+
+        bool rep = true;
 
 
         SerialPort serialport;
@@ -42,6 +45,10 @@ namespace HungryDrone
                 String[] puertos = SerialPort.GetPortNames();
                 Array.Sort(puertos);
                 cbPuertos.Items.AddRange(puertos);
+                int i1 = cbPuertos.Items.IndexOf("COM8");
+                int i2 = cbPuertos.Items.IndexOf("COM6");
+                cbPuertos.Items.RemoveAt(i1);
+                cbPuertos.Items.RemoveAt(i2);
             }
             catch(IOException error)
             {
@@ -101,119 +108,121 @@ namespace HungryDrone
             
             try
             {
-                timer1.Start();
-                serialport.Write(" ");
+                rep = true;
+                ThreadStart delegado = new ThreadStart(LeerDatos);
+                Thread hilo = new Thread(delegado);
+                hilo.Start();
             }
             catch(IOException error)
             {
                 MessageBox.Show("Error: " + error.Message);
             }
+            
+        }
 
+        private void LeerDatos()
+        {
+            serialport.Write(" ");
+            while (rep)
+            {
+                try
+                {
+                    rawdata = serialport.ReadLine();
+
+                    #region Variables
+                    string[] data = rawdata.Split(',');
+                    if (data[0] != "************")
+                    {
+                        LatDrone = double.Parse(data[0]);
+                        LngDrone = double.Parse(data[1]);
+                    }
+
+                    lbLat.Text = data[0];
+                    lbLong.Text = data[1];
+                    lbVel.Text = data[2];
+                    lbAlt.Text = data[3];
+                    X = float.Parse(data[4]);
+                    Y = float.Parse(data[5]);
+                    lbDistancia.Text = data[6];
+                    int d = int.Parse(data[6]);
+
+                    #endregion
+
+                    #region PictureBox_Arriba/Abajo
+                    if (X < -2)
+                    {
+                        pbForward.Visible = true;
+                        pbBackward.Visible = false;
+                    }
+                    else if (X > 2)
+                    {
+                        pbForward.Visible = false;
+                        pbBackward.Visible = true;
+                    }
+                    else
+                    {
+                        pbForward.Visible = false;
+                        pbBackward.Visible = false;
+                    }
+                    #endregion
+
+                    #region PictureBox_Der/Izq
+                    if (Y < -2)
+                    {
+                        pbRight.Visible = true;
+                        pbLeft.Visible = false;
+                    }
+                    else if (Y > 2)
+                    {
+                        pbRight.Visible = false;
+                        pbLeft.Visible = true;
+                    }
+                    else
+                    {
+                        pbRight.Visible = false;
+                        pbLeft.Visible = false;
+                    }
+                    #endregion
+
+                    #region PictureBox Distancia
+                    if (d > 0 && d < 400)
+                    {
+                        pb5.Visible = true;
+                    }
+                    else
+                    {
+                        pb5.Visible = false;
+                    }
+                    #endregion
+
+                    #region Actualizar_GPS
+                    marker = new GMarkerArrow(new PointLatLng(LatDrone, LngDrone));
+                    markerOverlay.Clear();
+                    markerOverlay.Markers.Add(destino);
+                    markerOverlay.Markers.Add(marker);
+                    gMapControl1.Zoom = gMapControl1.Zoom + 1;
+                    gMapControl1.Zoom = gMapControl1.Zoom - 1;
+
+                    #endregion
+                }
+                catch (IOException error)
+                {
+                    MessageBox.Show("Error: " + error.Message);
+                }
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                timer1.Stop();
+                rep = false;
             }
             catch(IOException error)
             {
                 MessageBox.Show("Error: " + error.Message);
             }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                rawdata = serialport.ReadLine();
-
-                #region Variables
-                string[] data = rawdata.Split(',');
-                if (data[0] != "************")
-                {
-                    LatDrone = double.Parse(data[0]);
-                    LngDrone = double.Parse(data[1]);
-                }
-
-                lbLat.Text = data[0];
-                lbLong.Text = data[1];
-                lbVel.Text = data[2];
-                lbAlt.Text = data[3];
-                X = float.Parse(data[4]);
-                Y = float.Parse(data[5]);
-                lbDistancia.Text = data[6];
-                int d = int.Parse(data[6]);
-
-                #endregion
-
-                #region PictureBox_Arriba/Abajo
-                if (X < -2)
-                {
-                    pbForward.Visible = true;
-                    pbBackward.Visible = false;
-                }
-                else if (X > 2)
-                {
-                    pbForward.Visible = false;
-                    pbBackward.Visible = true;
-                }
-                else
-                {
-                    pbForward.Visible = false;
-                    pbBackward.Visible = false;
-                }
-                #endregion
-
-                #region PictureBox_Der/Izq
-                if (Y < -2)
-                {
-                    pbRight.Visible = true;
-                    pbLeft.Visible = false;
-                }
-                else if (Y > 2)
-                {
-                    pbRight.Visible = false;
-                    pbLeft.Visible = true;
-                }
-                else
-                {
-                    pbRight.Visible = false;
-                    pbLeft.Visible = false;
-                }
-                #endregion
-
-                #region PictureBox Distancia
-                if (d > 0 && d < 400)
-                {
-                    pb5.Visible = true;
-                }
-                else
-                {
-                    pb5.Visible = false;
-                }
-                #endregion
-
-
-                #region Actualizar_GPS
-                marker = new GMarkerArrow(new PointLatLng(LatDrone, LngDrone));
-                markerOverlay.Clear();
-                markerOverlay.Markers.Add(destino);
-                markerOverlay.Markers.Add(marker);
-                gMapControl1.Zoom = gMapControl1.Zoom + 1;
-                gMapControl1.Zoom = gMapControl1.Zoom - 1;
-
-                #endregion
-            }
-            catch (IOException error)
-            {
-                MessageBox.Show("Error: " + error.Message);
-            }
-          
-                
-            
-
         }
 
         private void actualizarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -225,7 +234,7 @@ namespace HungryDrone
         {
             try
             {
-                if (cbPuertos.SelectedItem.ToString() == "")
+                if (cbPuertos.SelectedItem == null)
                 {
                     throw new ApplicationException("No ha seleccionado ningún puerto");
                 }
@@ -248,12 +257,11 @@ namespace HungryDrone
 
         private void conectarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            btnIniciar.Enabled = true;
-            button1.Enabled = true;
             try
             {
-
                 serialport.Open();
+                btnIniciar.Enabled = true;
+                button1.Enabled = true;
             }
             catch(IOException error)
             {
