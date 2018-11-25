@@ -79,7 +79,7 @@ namespace HungryDrone
             forminicio.BringToFront();
             forminicio.Show();
 
-            panelMenuLat.Enabled = true;
+            panelMenuLat.Enabled = false;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
@@ -97,7 +97,7 @@ namespace HungryDrone
             formMenu.Show();
 
 
-            panelMenuLat.Enabled = true;
+            panelMenuLat.Enabled = false;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
@@ -114,7 +114,7 @@ namespace HungryDrone
             formPass.BringToFront();
             formPass.Show();
 
-            panelMenuLat.Enabled = true;
+            panelMenuLat.Enabled = false;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
@@ -127,12 +127,12 @@ namespace HungryDrone
             {
                 panelMenuLat.Width = 80;
                 panelContenedor.Enabled = true;
-                panelMenuLat.Enabled = true;
+                panelMenuLat.Enabled = false;
             }
             else
             {
                 panelMenuLat.Width = 200;
-                panelContenedor.Enabled = true;
+                panelContenedor.Enabled = false;
                 panelMenuLat.Enabled = true;
             }
         }
