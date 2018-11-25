@@ -26,6 +26,8 @@ namespace HungryDrone
         {
             InitializeComponent();
             home = homepage;
+            lat = latInicial;
+            lng = lngInicial;
         }
 
         private void formInicio_Load(object sender, EventArgs e)

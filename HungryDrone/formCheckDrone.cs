@@ -25,7 +25,7 @@ namespace HungryDrone
 
 
         SerialPort serialport;
-
+        HomePage home;
         double LatDrone = 19.334633;
         double LngDrone = -99.595734;  //Coordenadas Que irá leeyendo del puerto serial de arduino
         double LatDestino = 19.356543;
@@ -34,10 +34,10 @@ namespace HungryDrone
         float Y;
         string rawdata;
 
-        public formCheckDrone(string nombre)
+        public formCheckDrone(HomePage homepage)
         {
             InitializeComponent();
-            label2.Text = nombre;
+            home = homepage;
 
             try
             {
