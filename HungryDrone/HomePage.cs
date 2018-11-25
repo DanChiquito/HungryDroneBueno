@@ -59,7 +59,16 @@ namespace HungryDrone
         }
         private void btnMenu2_Click(object sender, EventArgs e)
         {
-            //AbrirFormInPanel<FormMenu>();
+            FormMenu menu = new FormMenu("", 0, 0);
+            AddOwnedForm(menu);
+            menu.FormBorderStyle = FormBorderStyle.None;
+            menu.TopLevel = false;
+            menu.Dock = DockStyle.Fill;
+            this.Controls.Add(menu);
+            this.Tag = menu;
+            menu.BringToFront();
+            menu.Show();
+
             panelMenuLat.Enabled = true;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
@@ -113,8 +122,22 @@ namespace HungryDrone
 
         private void horaFeha_Tick(object sender, EventArgs e)
         {
-            lbHora.Text = System.DateTime.Now.ToLongTimeString();
+            
+            lbHora.Text = System.DateTime.Now.ToString("HH:mm:ss");
             lbFecha.Text = System.DateTime.Now.ToLongDateString();
+            string []hora=lbHora.Text.Split(':');
+            
+               if(int.Parse(hora[0])<6 || int.Parse(hora[0]) > 23)
+               {
+                   lbCerrado.Visible = true;
+                   lbAbierto.Visible = false;
+               }
+                else
+                {
+                     lbAbierto.Visible = true;
+                     lbCerrado.Visible = false;
+                }
+
         }
     }
 }
