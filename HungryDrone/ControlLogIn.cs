@@ -37,7 +37,7 @@ namespace HungryDrone
                 {
                     if (txtbPass.Text == "a" && (txtbUser.Text == "a" || txtbUser.Text == user1 || txtbUser.Text == user2 || txtbUser.Text == user3))
                     {
-                        formCheckDrone formchecardrone = new formCheckDrone(home.nomUsuario);
+                        formCheckDrone formchecardrone = new formCheckDrone(home);
                         formchecardrone.BringToFront();
                         formchecardrone.Show();
                     }
