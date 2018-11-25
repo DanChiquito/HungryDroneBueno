@@ -71,11 +71,7 @@ void setup() {
 
 //////////////////////////////////////LOOP/////////////////////////////////////
 
-void loop() {
-  
-}
-
-void serialEvent(){
+void loop(){
   data = "";
   //GPS
   if(gps.location.isValid() && gps.altitude.isValid() && gps.speed.isValid())

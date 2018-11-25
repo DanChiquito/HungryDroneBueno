@@ -47,11 +47,7 @@
             this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pb1 = new System.Windows.Forms.PictureBox();
-            this.pb2 = new System.Windows.Forms.PictureBox();
-            this.pb3 = new System.Windows.Forms.PictureBox();
-            this.pb4 = new System.Windows.Forms.PictureBox();
             this.pb5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbVertical = new System.Windows.Forms.PictureBox();
@@ -75,13 +71,15 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pbDown = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Productos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbLatDest = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbLongDest = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVertical)).BeginInit();
@@ -99,12 +97,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 169);
+            this.label2.Location = new System.Drawing.Point(25, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 1;
@@ -113,7 +112,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 234);
+            this.label1.Location = new System.Drawing.Point(25, 245);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 17);
             this.label1.TabIndex = 1;
@@ -122,25 +121,23 @@
             // lbLat
             // 
             this.lbLat.AutoSize = true;
-            this.lbLat.Location = new System.Drawing.Point(28, 195);
+            this.lbLat.Location = new System.Drawing.Point(25, 206);
             this.lbLat.Name = "lbLat";
-            this.lbLat.Size = new System.Drawing.Size(51, 17);
+            this.lbLat.Size = new System.Drawing.Size(0, 17);
             this.lbLat.TabIndex = 1;
-            this.lbLat.Text = "Latitud";
             // 
             // lbLong
             // 
             this.lbLong.AutoSize = true;
-            this.lbLong.Location = new System.Drawing.Point(28, 259);
+            this.lbLong.Location = new System.Drawing.Point(25, 270);
             this.lbLong.Name = "lbLong";
-            this.lbLong.Size = new System.Drawing.Size(63, 17);
+            this.lbLong.Size = new System.Drawing.Size(0, 17);
             this.lbLong.TabIndex = 1;
-            this.lbLong.Text = "Longitud";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 298);
+            this.label3.Location = new System.Drawing.Point(25, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 1;
@@ -149,16 +146,15 @@
             // lbVel
             // 
             this.lbVel.AutoSize = true;
-            this.lbVel.Location = new System.Drawing.Point(28, 323);
+            this.lbVel.Location = new System.Drawing.Point(25, 334);
             this.lbVel.Name = "lbVel";
-            this.lbVel.Size = new System.Drawing.Size(70, 17);
+            this.lbVel.Size = new System.Drawing.Size(0, 17);
             this.lbVel.TabIndex = 1;
-            this.lbVel.Text = "Velocidad";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 361);
+            this.label4.Location = new System.Drawing.Point(25, 372);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 1;
@@ -167,11 +163,10 @@
             // lbAlt
             // 
             this.lbAlt.AutoSize = true;
-            this.lbAlt.Location = new System.Drawing.Point(28, 386);
+            this.lbAlt.Location = new System.Drawing.Point(25, 397);
             this.lbAlt.Name = "lbAlt";
-            this.lbAlt.Size = new System.Drawing.Size(45, 17);
+            this.lbAlt.Size = new System.Drawing.Size(0, 17);
             this.lbAlt.TabIndex = 1;
-            this.lbAlt.Text = "Altura";
             // 
             // menuStrip1
             // 
@@ -264,14 +259,6 @@
             this.gMapControl1.TabIndex = 3;
             this.gMapControl1.Zoom = 0D;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(31, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 113);
-            this.panel1.TabIndex = 8;
-            // 
             // pb1
             // 
             this.pb1.Image = ((System.Drawing.Image)(resources.GetObject("pb1.Image")));
@@ -281,39 +268,6 @@
             this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb1.TabIndex = 9;
             this.pb1.TabStop = false;
-            // 
-            // pb2
-            // 
-            this.pb2.Image = ((System.Drawing.Image)(resources.GetObject("pb2.Image")));
-            this.pb2.Location = new System.Drawing.Point(337, 444);
-            this.pb2.Name = "pb2";
-            this.pb2.Size = new System.Drawing.Size(158, 158);
-            this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb2.TabIndex = 9;
-            this.pb2.TabStop = false;
-            this.pb2.Visible = false;
-            // 
-            // pb3
-            // 
-            this.pb3.Image = ((System.Drawing.Image)(resources.GetObject("pb3.Image")));
-            this.pb3.Location = new System.Drawing.Point(337, 444);
-            this.pb3.Name = "pb3";
-            this.pb3.Size = new System.Drawing.Size(158, 158);
-            this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb3.TabIndex = 9;
-            this.pb3.TabStop = false;
-            this.pb3.Visible = false;
-            // 
-            // pb4
-            // 
-            this.pb4.Image = ((System.Drawing.Image)(resources.GetObject("pb4.Image")));
-            this.pb4.Location = new System.Drawing.Point(337, 444);
-            this.pb4.Name = "pb4";
-            this.pb4.Size = new System.Drawing.Size(158, 158);
-            this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb4.TabIndex = 9;
-            this.pb4.TabStop = false;
-            this.pb4.Visible = false;
             // 
             // pb5
             // 
@@ -358,6 +312,7 @@
             // 
             // btnIniciar
             // 
+            this.btnIniciar.Enabled = false;
             this.btnIniciar.Location = new System.Drawing.Point(56, 529);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(199, 73);
@@ -368,6 +323,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(56, 640);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(199, 73);
@@ -407,7 +363,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(472, 424);
+            this.label6.Location = new System.Drawing.Point(484, 424);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 17);
             this.label6.TabIndex = 1;
@@ -541,33 +497,70 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 500;
+            this.timer1.Interval = 1030;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label7
+            // dataGridView1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(364, 233);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "label7";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Productos,
+            this.Cantidad});
+            this.dataGridView1.Location = new System.Drawing.Point(28, 54);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(245, 95);
+            this.dataGridView1.TabIndex = 13;
             // 
-            // label8
+            // Productos
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(364, 275);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 17);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "label7";
+            this.Productos.HeaderText = "Productos";
+            this.Productos.Name = "Productos";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(314, 54);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 17);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Latitud Destino";
+            // 
+            // lbLatDest
+            // 
+            this.lbLatDest.AutoSize = true;
+            this.lbLatDest.Location = new System.Drawing.Point(314, 80);
+            this.lbLatDest.Name = "lbLatDest";
+            this.lbLatDest.Size = new System.Drawing.Size(0, 17);
+            this.lbLatDest.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(314, 119);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(115, 17);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Longitud Destino";
+            // 
+            // lbLongDest
+            // 
+            this.lbLongDest.AutoSize = true;
+            this.lbLongDest.Location = new System.Drawing.Point(314, 144);
+            this.lbLongDest.Name = "lbLongDest";
+            this.lbLongDest.Size = new System.Drawing.Size(0, 17);
+            this.lbLongDest.TabIndex = 1;
             // 
             // formCheckDrone
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1459, 800);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pbUp);
             this.Controls.Add(this.pbForward);
             this.Controls.Add(this.pictureBox7);
@@ -587,11 +580,7 @@
             this.Controls.Add(this.pbVertical);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pb5);
-            this.Controls.Add(this.pb4);
-            this.Controls.Add(this.pb3);
-            this.Controls.Add(this.pb2);
             this.Controls.Add(this.pb1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lbDistancia);
@@ -600,8 +589,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbLongDest);
             this.Controls.Add(this.lbLong);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lbLatDest);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.lbLat);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
@@ -613,9 +606,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVertical)).EndInit();
@@ -633,6 +623,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -654,11 +645,7 @@
         private System.Windows.Forms.ToolStripMenuItem puertosToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox cbPuertos;
         private System.Windows.Forms.ToolStripMenuItem actualizarPedidosToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pb1;
-        private System.Windows.Forms.PictureBox pb2;
-        private System.Windows.Forms.PictureBox pb3;
-        private System.Windows.Forms.PictureBox pb4;
         private System.Windows.Forms.PictureBox pb5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbVertical;
@@ -684,8 +671,13 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pbDown;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ToolStripMenuItem desconectarToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Productos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbLatDest;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbLongDest;
     }
 }

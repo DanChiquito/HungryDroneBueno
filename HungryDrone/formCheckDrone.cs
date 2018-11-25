@@ -52,6 +52,9 @@ namespace HungryDrone
         private void formCheckDrone_Load(object sender, EventArgs e)
         {
 
+            lbLatDest.Text = LatDestino.ToString();
+            lbLongDest.Text = LngDestino.ToString();
+
             #region GMAP_Config
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
@@ -95,43 +98,56 @@ namespace HungryDrone
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            timer1.Start();
-            serialport.Write(" ");
+            
+            try
+            {
+                timer1.Start();
+                serialport.Write(" ");
+            }
+            catch(IOException error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            timer1.Stop();
+            try
+            {
+                timer1.Stop();
+            }
+            catch(IOException error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-            rawdata = serialport.ReadLine();
-            label7.Text = rawdata;
-            
-            #region Variables
-            string[] data = rawdata.Split(',');
-            if(data[0] != "************")
+            try
             {
-                LatDrone = double.Parse(data[0]);
-                LngDrone = double.Parse(data[1]);
-            }
-            
-            lbLat.Text = data[0];
-            lbLong.Text = data[1];
-            lbVel.Text = data[2];
-            lbAlt.Text = data[3];
-            X = float.Parse(data[4]);
-            Y = float.Parse(data[5]);
-            label7.Text = X.ToString();
-            label8.Text = Y.ToString();
-            lbDistancia.Text = data[6];
-            int d = int.Parse(data[6]);
+                rawdata = serialport.ReadLine();
+
+                #region Variables
+                string[] data = rawdata.Split(',');
+                if (data[0] != "************")
+                {
+                    LatDrone = double.Parse(data[0]);
+                    LngDrone = double.Parse(data[1]);
+                }
+
+                lbLat.Text = data[0];
+                lbLong.Text = data[1];
+                lbVel.Text = data[2];
+                lbAlt.Text = data[3];
+                X = float.Parse(data[4]);
+                Y = float.Parse(data[5]);
+                lbDistancia.Text = data[6];
+                int d = int.Parse(data[6]);
 
                 #endregion
-            
+
                 #region PictureBox_Arriba/Abajo
                 if (X < -2)
                 {
@@ -167,82 +183,34 @@ namespace HungryDrone
                     pbLeft.Visible = false;
                 }
                 #endregion
-                
+
                 #region PictureBox Distancia
-                if (d >= 250 && d < 300)
+                if (d > 0 && d < 400)
                 {
-                    pb1.Visible = true;
-                    pb2.Visible = false;
-                    pb3.Visible = false;
-                    pb4.Visible = false;
-                    pb4.Visible = false;
-                    pb5.Visible = false;
-                }
-                else if (d >= 200 && d < 250)
-                {
-                    pb1.Visible = false;
-                    pb2.Visible = true;
-                    pb3.Visible = false;
-                    pb4.Visible = false;
-                    pb4.Visible = false;
-                    pb5.Visible = false;
-                }
-                else if (d >= 150 && d < 200)
-                {
-                    pb1.Visible = false;
-                    pb2.Visible = false;
-                    pb3.Visible = true;
-                    pb4.Visible = false;
-                    pb4.Visible = false;
-                    pb5.Visible = false;
-                }
-                else if (d >= 100 && d < 250)
-                {
-                    pb1.Visible = false;
-                    pb2.Visible = false;
-                    pb3.Visible = false;
-                    pb4.Visible = true;
-                    pb4.Visible = false;
-                    pb5.Visible = false;
-                }
-                else if (d >= 50 && d < 100)
-                {
-                    pb1.Visible = false;
-                    pb2.Visible = false;
-                    pb3.Visible = false;
-                    pb4.Visible = false;
-                    pb4.Visible = true;
-                    pb5.Visible = false;
-                }
-                else if (d > 0 && d < 50)
-                {
-                    pb1.Visible = false;
-                    pb2.Visible = false;
-                    pb3.Visible = false;
-                    pb4.Visible = false;
-                    pb4.Visible = false;
                     pb5.Visible = true;
                 }
                 else
                 {
-                        pb1.Visible = false;
-                        pb2.Visible = false;
-                        pb3.Visible = false;
-                        pb4.Visible = false;
-                        pb4.Visible = false;
-                        pb5.Visible = false;
+                    pb5.Visible = false;
                 }
                 #endregion
-                
+
 
                 #region Actualizar_GPS
                 marker = new GMarkerArrow(new PointLatLng(LatDrone, LngDrone));
-            markerOverlay.Markers.Add(marker);
-            marker.Bearing = marker.Bearing + 1;
+                markerOverlay.Clear();
+                markerOverlay.Markers.Add(destino);
+                markerOverlay.Markers.Add(marker);
                 gMapControl1.Zoom = gMapControl1.Zoom + 1;
                 gMapControl1.Zoom = gMapControl1.Zoom - 1;
 
                 #endregion
+            }
+            catch (IOException error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+          
                 
             
 
@@ -257,8 +225,20 @@ namespace HungryDrone
         {
             try
             {
-                serialport.BaudRate = 9600;
-                serialport.PortName = cbPuertos.SelectedItem.ToString();
+                if (cbPuertos.SelectedItem.ToString() == "")
+                {
+                    throw new ApplicationException("No ha seleccionado ningún puerto");
+                }
+                else
+                {
+                    serialport.BaudRate = 9600;
+                    serialport.PortName = cbPuertos.SelectedItem.ToString();
+                }
+                
+            }
+            catch(ApplicationException error)
+            {
+                MessageBox.Show("Error: " + error.Message);
             }
             catch(IOException error)
             {
@@ -268,8 +248,11 @@ namespace HungryDrone
 
         private void conectarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            btnIniciar.Enabled = true;
+            button1.Enabled = true;
             try
             {
+
                 serialport.Open();
             }
             catch(IOException error)
@@ -280,7 +263,14 @@ namespace HungryDrone
 
         private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            serialport.Close();
+            try
+            {
+                serialport.Close();
+            }
+            catch(IOException error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
         }
     }
 }
