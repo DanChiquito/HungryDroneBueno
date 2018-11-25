@@ -130,6 +130,9 @@
   <data name="madera oscura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\madera oscura.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="chuchi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chuchi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,6 +202,9 @@
   <data name="pizzaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pizzaa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="original" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\original.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="persona1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\persona1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,19 +214,13 @@
   <data name="torta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\torta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
   <data name="btncerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btncerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="prson" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prson.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="original" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\original.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
+  <data name="open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cubiertas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cubiertas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-
 </root>
