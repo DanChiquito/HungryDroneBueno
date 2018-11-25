@@ -26,8 +26,11 @@ namespace HungryDrone
         {
             InitializeComponent();
             home = homepage;
+            lat = latInicial;
+            lng = lngInicial;
+            
         }
-
+        #region diseño del mapa
         private void formInicio_Load(object sender, EventArgs e)
         { 
 
@@ -49,6 +52,7 @@ namespace HungryDrone
 
             gMapControl1.Overlays.Add(markerOverlay);
         }
+        #endregion
 
         private void gMapControl1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -78,6 +82,7 @@ namespace HungryDrone
                         home.nomUsuario = txtbNombre.Text;
                         home.lat = lat;
                         home.lng = lng;
+                        
 
                         FormMenu formMenu = new FormMenu(home);
                         AddOwnedForm(formMenu);

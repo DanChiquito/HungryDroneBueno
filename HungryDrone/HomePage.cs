@@ -13,7 +13,7 @@ namespace HungryDrone
 {
     public partial class HomePage : Form
     {
-        public string nomUsuario;
+        public string nomUsuario = "";
         public double lat;
         public double lng;
         public float total;
@@ -78,9 +78,10 @@ namespace HungryDrone
             forminicio.BringToFront();
             forminicio.Show();
 
-            panelMenuLat.Enabled = true;
+            panelMenuLat.Enabled = false;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
+            
         }
         private void btnMenu2_Click(object sender, EventArgs e)
         {
@@ -94,8 +95,7 @@ namespace HungryDrone
             formMenu.BringToFront();
             formMenu.Show();
 
-
-            panelMenuLat.Enabled = true;
+            panelMenuLat.Enabled = false;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
@@ -111,7 +111,7 @@ namespace HungryDrone
             formPass.BringToFront();
             formPass.Show();
 
-            panelMenuLat.Enabled = true;
+            panelMenuLat.Enabled = false;
             panelMenuLat.Width = 80;
             panelContenedor.Enabled = true;
         }
@@ -124,7 +124,7 @@ namespace HungryDrone
             {
                 panelMenuLat.Width = 80;
                 panelContenedor.Enabled = true;
-                panelMenuLat.Enabled = true;
+                panelMenuLat.Enabled = false;
             }
             else
             {
@@ -162,7 +162,7 @@ namespace HungryDrone
             lbFecha.Text = System.DateTime.Now.ToLongDateString();
             string []hora=lbHora.Text.Split(':');
             
-               if(int.Parse(hora[0])<6 || int.Parse(hora[0]) > 23)
+               if(int.Parse(hora[0]) < 6 || int.Parse(hora[0]) > 23)
                {
                    lbCerrado.Visible = true;
                    lbAbierto.Visible = false;
