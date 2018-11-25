@@ -24,6 +24,7 @@ namespace HungryDrone
         bool rep = true;
 
         SerialPort serialport;
+        HomePage home;
 
         HomePage home;
 
@@ -42,12 +43,12 @@ namespace HungryDrone
             home = homepage;
             LatDestino = home.lat;
             LngDestino = home.lng;
-            
 
 
             try
             {
                 serialport = new SerialPort();
+
                 String[] puertos = SerialPort.GetPortNames();
                 Array.Sort(puertos);
                 cbPuertos.Items.AddRange(puertos);

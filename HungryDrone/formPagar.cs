@@ -57,7 +57,7 @@ namespace HungryDrone
             {
                 if ((txtbNombre.Text == "") || (mskNumero.Text == "") || (mskFecha.Text == "") || (mskCvv.Text == ""))
                 {
-                    throw new ApplicationException("No puede dejar algún campo vacío");
+                    throw new FormatException("No puede dejar algún campo vacío");
                 }
                 else
                 {
@@ -65,6 +65,11 @@ namespace HungryDrone
                     {
                         float subtotal = float.Parse(lbSubtotal.Text);
                         lbTotal.Text = subtotal.ToString();
+                    }
+                    string[] verificacion = mskFecha.Text.Split('/');
+                    if(int.Parse(verificacion[0]) < 1 || int.Parse(verificacion[0])>12 || int.Parse(verificacion[1]) < 2018)
+                    {
+                        throw new ApplicationException("Ingresa una fecha válida");
                     }
 
                     tarjeta = new PagoTarjeta(mskNumero.Text, mskFecha.Text, mskCvv.Text, txtbNombre.Text);
@@ -83,10 +88,15 @@ namespace HungryDrone
                     }
                 }
             }
-            catch(ApplicationException error)
+            catch (ApplicationException error)
+            {
+                errorProv.SetError(mskFecha, error.Message);
+            }
+            catch (FormatException error)
             {
                 errorProv.SetError(txtbNombre, error.Message);
             }
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
