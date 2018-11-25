@@ -79,12 +79,6 @@ namespace HungryDrone
                     if (tarjeta.Tarjeta())
                     {
                         FormDatosUsuarioFinal formUsuarioFinal = new FormDatosUsuarioFinal(home);
-                        AddOwnedForm(formUsuarioFinal);
-                        formUsuarioFinal.FormBorderStyle = FormBorderStyle.None;
-                        formUsuarioFinal.TopLevel = false;
-                        formUsuarioFinal.Dock = DockStyle.Fill;
-                        this.Controls.Add(formUsuarioFinal);
-                        this.Tag = formUsuarioFinal;
                         formUsuarioFinal.BringToFront();
                         formUsuarioFinal.Show();
                     }
