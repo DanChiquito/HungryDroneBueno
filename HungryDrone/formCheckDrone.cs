@@ -48,10 +48,7 @@ namespace HungryDrone
                 String[] puertos = SerialPort.GetPortNames();
                 Array.Sort(puertos);
                 cbPuertos.Items.AddRange(puertos);
-                int i1 = cbPuertos.Items.IndexOf("COM8");
-                int i2 = cbPuertos.Items.IndexOf("COM6");
-                cbPuertos.Items.RemoveAt(i1);
-                cbPuertos.Items.RemoveAt(i2);
+
             }
             catch(IOException error)
             {

@@ -14,18 +14,18 @@ namespace HungryDrone
     public partial class HomePage : Form
     {
         public string nomUsuario = "";
-        public double lat;
-        public double lng;
-        public float total;
-        public byte torta;
-        public byte gringas;
-        public byte sopes;
-        public byte hotdogs;
-        public byte sushi;
-        public byte pizza;
-        public byte pasta;
-        public byte burro;
-        public byte burguer;
+        public double lat = 0;
+        public double lng = 0;
+        public float total = 0;
+        public byte torta = 0;
+        public byte gringas = 0;
+        public byte sopes = 0;
+        public byte hotdogs = 0;
+        public byte sushi = 0;
+        public byte pizza = 0;
+        public byte pasta = 0;
+        public byte burro = 0;
+        public byte burguer = 0;
 
        
 

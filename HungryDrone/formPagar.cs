@@ -66,26 +66,15 @@ namespace HungryDrone
                         float subtotal = float.Parse(lbSubtotal.Text);
                         lbTotal.Text = subtotal.ToString();
                     }
+
                     string[] verificacion = mskFecha.Text.Split('/');
-                    if(int.Parse(verificacion[0]) < 1 || int.Parse(verificacion[0])>12 || int.Parse(verificacion[1]) < 2018)
+                    if(int.Parse(verificacion[0]) < 1 || int.Parse(verificacion[0])>12 || int.Parse(verificacion[1]) < 18)
                     {
                         throw new ApplicationException("Ingresa una fecha válida");
                     }
+                    //panel del usuario
 
                     tarjeta = new PagoTarjeta(mskNumero.Text, mskFecha.Text, mskCvv.Text, txtbNombre.Text);
-                    MessageBox.Show("Procesando pago...", "Espere un momento", 0, MessageBoxIcon.Asterisk);
-
-                   
-                    if (tarjeta.Tarjeta())
-                    {
-                        FormDatosUsuarioFinal formUsuarioFinal = new FormDatosUsuarioFinal(home);
-                        formUsuarioFinal.BringToFront();
-                        formUsuarioFinal.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Actualice su método de pago","Pago Declinado", 0,MessageBoxIcon.Exclamation);
-                    }
                 }
             }
             catch (ApplicationException error)
@@ -113,5 +102,7 @@ namespace HungryDrone
         {
 
         }
+
+
     }
 }

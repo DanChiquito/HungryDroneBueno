@@ -60,33 +60,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelfinal = new System.Windows.Forms.Panel();
-            this.lblPasta = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblPizza = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblSuchi = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblSope = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblHotDog = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblGringa = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblTorta = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.lblBurro = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.lblBurguer = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.lbProd1 = new System.Windows.Forms.Label();
+            this.lbProd2 = new System.Windows.Forms.Label();
+            this.lbcantidad3 = new System.Windows.Forms.Label();
+            this.lbProd3 = new System.Windows.Forms.Label();
+            this.lbcantidad2 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lbcantidad1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -96,6 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelfinal.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbNombre
@@ -118,7 +109,7 @@
             // mskFecha
             // 
             this.mskFecha.Location = new System.Drawing.Point(44, 148);
-            this.mskFecha.Mask = "00/0000";
+            this.mskFecha.Mask = "00/00";
             this.mskFecha.Name = "mskFecha";
             this.mskFecha.Size = new System.Drawing.Size(50, 26);
             this.mskFecha.TabIndex = 1;
@@ -428,308 +419,189 @@
             // panelfinal
             // 
             this.panelfinal.AutoScroll = true;
-            this.panelfinal.Controls.Add(this.lblBurro);
-            this.panelfinal.Controls.Add(this.label25);
-            this.panelfinal.Controls.Add(this.lblBurguer);
-            this.panelfinal.Controls.Add(this.label26);
+            this.panelfinal.Controls.Add(this.groupBox3);
+            this.panelfinal.Controls.Add(this.groupBox2);
             this.panelfinal.Controls.Add(this.label27);
-            this.panelfinal.Controls.Add(this.lblPasta);
-            this.panelfinal.Controls.Add(this.label14);
-            this.panelfinal.Controls.Add(this.lblPizza);
-            this.panelfinal.Controls.Add(this.label10);
-            this.panelfinal.Controls.Add(this.lblSuchi);
-            this.panelfinal.Controls.Add(this.label13);
-            this.panelfinal.Controls.Add(this.lblSope);
-            this.panelfinal.Controls.Add(this.label15);
-            this.panelfinal.Controls.Add(this.lblHotDog);
-            this.panelfinal.Controls.Add(this.label16);
-            this.panelfinal.Controls.Add(this.lblTotal);
-            this.panelfinal.Controls.Add(this.lblGringa);
-            this.panelfinal.Controls.Add(this.lblUsuario);
-            this.panelfinal.Controls.Add(this.label17);
-            this.panelfinal.Controls.Add(this.lblTorta);
-            this.panelfinal.Controls.Add(this.label18);
-            this.panelfinal.Controls.Add(this.label19);
-            this.panelfinal.Controls.Add(this.label20);
-            this.panelfinal.Controls.Add(this.label21);
-            this.panelfinal.Controls.Add(this.label22);
-            this.panelfinal.Controls.Add(this.label23);
             this.panelfinal.Controls.Add(this.label24);
+            this.panelfinal.ForeColor = System.Drawing.Color.Black;
             this.panelfinal.Location = new System.Drawing.Point(0, 0);
             this.panelfinal.Name = "panelfinal";
             this.panelfinal.Size = new System.Drawing.Size(578, 497);
             this.panelfinal.TabIndex = 9;
             this.panelfinal.Visible = false;
             // 
-            // lblPasta
+            // groupBox3
             // 
-            this.lblPasta.AutoSize = true;
-            this.lblPasta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPasta.Location = new System.Drawing.Point(402, 442);
-            this.lblPasta.Name = "lblPasta";
-            this.lblPasta.Size = new System.Drawing.Size(50, 20);
-            this.lblPasta.TabIndex = 24;
-            this.lblPasta.Text = "label3";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label14.Location = new System.Drawing.Point(41, 442);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(129, 20);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "Pasta con Salmón";
-            // 
-            // lblPizza
-            // 
-            this.lblPizza.AutoSize = true;
-            this.lblPizza.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPizza.Location = new System.Drawing.Point(402, 410);
-            this.lblPizza.Name = "lblPizza";
-            this.lblPizza.Size = new System.Drawing.Size(50, 20);
-            this.lblPizza.TabIndex = 21;
-            this.lblPizza.Text = "label3";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(41, 410);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 20);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Pizza Caprichosa";
-            // 
-            // lblSuchi
-            // 
-            this.lblSuchi.AutoSize = true;
-            this.lblSuchi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSuchi.Location = new System.Drawing.Point(402, 378);
-            this.lblSuchi.Name = "lblSuchi";
-            this.lblSuchi.Size = new System.Drawing.Size(50, 20);
-            this.lblSuchi.TabIndex = 19;
-            this.lblSuchi.Text = "label3";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(43, 378);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(209, 20);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Sushi con Huevos de Pescado";
-            // 
-            // lblSope
-            // 
-            this.lblSope.AutoSize = true;
-            this.lblSope.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSope.Location = new System.Drawing.Point(402, 314);
-            this.lblSope.Name = "lblSope";
-            this.lblSope.Size = new System.Drawing.Size(50, 20);
-            this.lblSope.TabIndex = 17;
-            this.lblSope.Text = "label3";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label15.Location = new System.Drawing.Point(43, 314);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(109, 20);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Sopes de Pollo";
-            // 
-            // lblHotDog
-            // 
-            this.lblHotDog.AutoSize = true;
-            this.lblHotDog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblHotDog.Location = new System.Drawing.Point(402, 344);
-            this.lblHotDog.Name = "lblHotDog";
-            this.lblHotDog.Size = new System.Drawing.Size(50, 20);
-            this.lblHotDog.TabIndex = 15;
-            this.lblHotDog.Text = "label3";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label16.Location = new System.Drawing.Point(43, 344);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(142, 20);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "HotDog Campesino";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTotal.Location = new System.Drawing.Point(402, 160);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(50, 20);
-            this.lblTotal.TabIndex = 14;
-            this.lblTotal.Text = "label3";
-            // 
-            // lblGringa
-            // 
-            this.lblGringa.AutoSize = true;
-            this.lblGringa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblGringa.Location = new System.Drawing.Point(402, 285);
-            this.lblGringa.Name = "lblGringa";
-            this.lblGringa.Size = new System.Drawing.Size(50, 20);
-            this.lblGringa.TabIndex = 13;
-            this.lblGringa.Text = "label3";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblUsuario.Location = new System.Drawing.Point(402, 128);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(50, 20);
-            this.lblUsuario.TabIndex = 12;
-            this.lblUsuario.Text = "label3";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label17.Location = new System.Drawing.Point(41, 252);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(79, 20);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "Torta Loca";
-            // 
-            // lblTorta
-            // 
-            this.lblTorta.AutoSize = true;
-            this.lblTorta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTorta.Location = new System.Drawing.Point(402, 252);
-            this.lblTorta.Name = "lblTorta";
-            this.lblTorta.Size = new System.Drawing.Size(50, 20);
-            this.lblTorta.TabIndex = 10;
-            this.lblTorta.Text = "label3";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label18.Location = new System.Drawing.Point(43, 285);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(137, 20);
-            this.label18.TabIndex = 9;
-            this.label18.Text = "Gringas de Chorizo";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label19.Location = new System.Drawing.Point(41, 160);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(101, 20);
-            this.label19.TabIndex = 8;
-            this.label19.Text = "Total a pagar:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label20.Location = new System.Drawing.Point(41, 128);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(141, 20);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Nombre del cliente:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label21.Location = new System.Drawing.Point(339, 198);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(182, 25);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Ordenes Adquirida:";
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.lbProd1);
+            this.groupBox3.Controls.Add(this.lbProd2);
+            this.groupBox3.Controls.Add(this.lbcantidad3);
+            this.groupBox3.Controls.Add(this.lbProd3);
+            this.groupBox3.Controls.Add(this.lbcantidad2);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.lbcantidad1);
+            this.groupBox3.ForeColor = System.Drawing.Color.Silver;
+            this.groupBox3.Location = new System.Drawing.Point(47, 203);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(487, 179);
+            this.groupBox3.TabIndex = 27;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Datos del pedido";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label22.Location = new System.Drawing.Point(39, 198);
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(53, 40);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(199, 25);
-            this.label22.TabIndex = 4;
+            this.label22.TabIndex = 0;
             this.label22.Text = "Nombre del producto:";
             // 
-            // label23
+            // lbProd1
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label23.Location = new System.Drawing.Point(41, 88);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(186, 25);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "Datos de la compra:";
+            this.lbProd1.AutoSize = true;
+            this.lbProd1.ForeColor = System.Drawing.Color.Black;
+            this.lbProd1.Location = new System.Drawing.Point(54, 77);
+            this.lbProd1.Name = "lbProd1";
+            this.lbProd1.Size = new System.Drawing.Size(0, 20);
+            this.lbProd1.TabIndex = 11;
             // 
-            // label24
+            // lbProd2
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label24.Location = new System.Drawing.Point(38, 35);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(502, 31);
-            this.label24.TabIndex = 3;
-            this.label24.Text = "Su compra se ha realizado exitosamente";
+            this.lbProd2.AutoSize = true;
+            this.lbProd2.ForeColor = System.Drawing.Color.Black;
+            this.lbProd2.Location = new System.Drawing.Point(54, 104);
+            this.lbProd2.Name = "lbProd2";
+            this.lbProd2.Size = new System.Drawing.Size(0, 20);
+            this.lbProd2.TabIndex = 9;
             // 
-            // lblBurro
+            // lbcantidad3
             // 
-            this.lblBurro.AutoSize = true;
-            this.lblBurro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblBurro.Location = new System.Drawing.Point(402, 503);
-            this.lblBurro.Name = "lblBurro";
-            this.lblBurro.Size = new System.Drawing.Size(50, 20);
-            this.lblBurro.TabIndex = 26;
-            this.lblBurro.Text = "label3";
+            this.lbcantidad3.AutoSize = true;
+            this.lbcantidad3.ForeColor = System.Drawing.Color.Black;
+            this.lbcantidad3.Location = new System.Drawing.Point(373, 134);
+            this.lbcantidad3.Name = "lbcantidad3";
+            this.lbcantidad3.Size = new System.Drawing.Size(50, 20);
+            this.lbcantidad3.TabIndex = 17;
+            this.lbcantidad3.Text = "label3";
             // 
-            // label25
+            // lbProd3
             // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label25.Location = new System.Drawing.Point(41, 503);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(120, 20);
-            this.label25.TabIndex = 27;
-            this.label25.Text = "Burrito Supremo";
+            this.lbProd3.AutoSize = true;
+            this.lbProd3.ForeColor = System.Drawing.Color.Black;
+            this.lbProd3.Location = new System.Drawing.Point(54, 134);
+            this.lbProd3.Name = "lbProd3";
+            this.lbProd3.Size = new System.Drawing.Size(0, 20);
+            this.lbProd3.TabIndex = 16;
             // 
-            // lblBurguer
+            // lbcantidad2
             // 
-            this.lblBurguer.AutoSize = true;
-            this.lblBurguer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblBurguer.Location = new System.Drawing.Point(402, 470);
-            this.lblBurguer.Name = "lblBurguer";
-            this.lblBurguer.Size = new System.Drawing.Size(50, 20);
-            this.lblBurguer.TabIndex = 28;
-            this.lblBurguer.Text = "label3";
+            this.lbcantidad2.AutoSize = true;
+            this.lbcantidad2.ForeColor = System.Drawing.Color.Black;
+            this.lbcantidad2.Location = new System.Drawing.Point(373, 104);
+            this.lbcantidad2.Name = "lbcantidad2";
+            this.lbcantidad2.Size = new System.Drawing.Size(50, 20);
+            this.lbcantidad2.TabIndex = 13;
+            this.lbcantidad2.Text = "label3";
             // 
-            // label26
+            // label21
             // 
-            this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label26.Location = new System.Drawing.Point(41, 470);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(113, 20);
-            this.label26.TabIndex = 29;
-            this.label26.Text = "HungryBurguer";
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(347, 40);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(97, 25);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Cantidad:";
+            // 
+            // lbcantidad1
+            // 
+            this.lbcantidad1.AutoSize = true;
+            this.lbcantidad1.ForeColor = System.Drawing.Color.Black;
+            this.lbcantidad1.Location = new System.Drawing.Point(373, 77);
+            this.lbcantidad1.Name = "lbcantidad1";
+            this.lbcantidad1.Size = new System.Drawing.Size(50, 20);
+            this.lbcantidad1.TabIndex = 10;
+            this.lbcantidad1.Text = "label3";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.lblUsuario);
+            this.groupBox2.Controls.Add(this.lblTotal);
+            this.groupBox2.ForeColor = System.Drawing.Color.Silver;
+            this.groupBox2.Location = new System.Drawing.Point(113, 96);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(345, 100);
+            this.groupBox2.TabIndex = 26;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Datos de la compra";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(38, 36);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(141, 20);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Nombre del cliente:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(38, 64);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(101, 20);
+            this.label19.TabIndex = 8;
+            this.label19.Text = "Total a pagar:";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuario.Location = new System.Drawing.Point(225, 36);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(50, 20);
+            this.lblUsuario.TabIndex = 12;
+            this.lblUsuario.Text = "label3";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTotal.Location = new System.Drawing.Point(225, 66);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(50, 20);
+            this.lblTotal.TabIndex = 14;
+            this.lblTotal.Text = "label3";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label27.Location = new System.Drawing.Point(21, 547);
+            this.label27.Location = new System.Drawing.Point(34, 401);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(515, 39);
             this.label27.TabIndex = 25;
             this.label27.Text = "¡Gracias por elegir HungryDrone!";
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.DarkRed;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(0, 34);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(578, 31);
+            this.label24.TabIndex = 3;
+            this.label24.Text = "Su compra se ha realizado exitosamente";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormPagar
             // 
@@ -737,9 +609,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(578, 497);
+            this.Controls.Add(this.panelfinal);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelfinal);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.ForeColor = System.Drawing.Color.DarkRed;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -762,6 +634,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelfinal.ResumeLayout(false);
             this.panelfinal.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -797,33 +673,22 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panelfinal;
-        private System.Windows.Forms.Label lblPasta;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblPizza;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblSuchi;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblSope;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lblHotDog;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lbcantidad3;
+        private System.Windows.Forms.Label lbProd3;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblGringa;
+        private System.Windows.Forms.Label lbcantidad2;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label lblTorta;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbProd1;
+        private System.Windows.Forms.Label lbcantidad1;
+        private System.Windows.Forms.Label lbProd2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label lblBurro;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label lblBurguer;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
