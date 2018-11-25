@@ -17,22 +17,35 @@ namespace HungryDrone
 {
     public partial class formCheckDrone : Form
     {
-        GMarkerGoogle destino;
-        GMapOverlay markerOverlay;
-        GMarkerArrow marker;
+        #region ATRIBUTOS
 
-        bool rep = true;
+        private GMarkerGoogle destino;
+        private GMapOverlay markerOverlay;
+        private GMarkerArrow marker;
+        private bool rep = true;
+        private SerialPort serialport;
+        private HomePage home;
+        private double LatDrone = 19.3316664;
+        private double LngDrone = -99.1869205;  //Coordenadas Que irá leeyendo del puerto serial de arduino
+        private double Lat;
+        private double Lng;
+        private double LatDestino;
+        private double LngDestino;
+        private float alt;
+        private float X;
+        private float Y;
+        private string rawdata;
+        private byte torta;
+        private byte gringas;
+        private byte sopes;
+        private byte hotdogs;
+        private byte sushi;
+        private byte pizza;
+        private byte pasta;
+        private byte burro;
+        private byte burguer;
 
-        SerialPort serialport;
-        HomePage home;
-        double LatDrone = 19.3316664;
-        double LngDrone = -99.1869205;  //Coordenadas Que irá leeyendo del puerto serial de arduino
-        double LatDestino;
-        double LngDestino;
-        float alt;
-        float X;
-        float Y;
-        string rawdata;
+        #endregion
 
         public formCheckDrone(HomePage homepage)
         {
@@ -40,6 +53,15 @@ namespace HungryDrone
             home = homepage;
             LatDestino = home.lat;
             LngDestino = home.lng;
+            torta = home.torta;
+            gringas = home.gringas;
+            sopes = home.sopes;
+            hotdogs = home.hotdogs;
+            sushi = home.sushi;
+            pizza = home.pizza;
+            pasta = home.pasta;
+            burro = home.burro;
+            burguer = home.burguer;
 
             try
             {
@@ -95,11 +117,6 @@ namespace HungryDrone
             #endregion
 
             gMapControl1.Overlays.Add(markerOverlay);
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
         }
 
@@ -296,7 +313,44 @@ namespace HungryDrone
 
         private void actualizarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //LEER LOS VALORES DEL MENU PUBLIC
+            dgvPedidos.Rows.Clear();
+            if (torta != 0)
+            {
+                dgvPedidos.Rows.Add("Torta Loca", torta);
+            }
+            if (gringas != 0)
+            {
+                dgvPedidos.Rows.Add("Gringas de Chorizo", gringas);
+            }
+            if (hotdogs != 0)
+            {
+                dgvPedidos.Rows.Add("HotDog Campesino", hotdogs);
+            }
+            if (sushi != 0)
+            {
+                dgvPedidos.Rows.Add("Sushi con huevos de pescado", sushi);
+            }
+            if (pizza != 0)
+            {
+                dgvPedidos.Rows.Add("Pizza Caprichosa", pizza);
+            }
+            if (pasta != 0)
+            {
+                dgvPedidos.Rows.Add("Pasta con Salmón", pasta);
+            }
+            if (burguer != 0)
+            {
+                dgvPedidos.Rows.Add("HungryBurguer", burguer);
+            }
+            if (burro != 0)
+            {
+                dgvPedidos.Rows.Add("Burros Supremos", burro);
+            }
+            if (sopes != 0)
+            {
+                dgvPedidos.Rows.Add("Sopes de pollo", sopes);
+            }
+
         }
 
         private void verificarToolStripMenuItem_Click(object sender, EventArgs e)

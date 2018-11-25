@@ -128,11 +128,11 @@
             this.cmsHambu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem22 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem25 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem26 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem27 = new System.Windows.Forms.ToolStripMenuItem();
+            this.papasFritasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem26 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem28 = new System.Windows.Forms.ToolStripMenuItem();
             this.jitomateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.papasFritasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsBurro = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem30 = new System.Windows.Forms.ToolStripMenuItem();
@@ -421,7 +421,7 @@
             this.label25.ForeColor = System.Drawing.Color.Black;
             this.label25.Location = new System.Drawing.Point(25, 115);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(113, 13);
+            this.label25.Size = new System.Drawing.Size(146, 17);
             this.label25.TabIndex = 89;
             this.label25.Text = "Gringas de chorizo";
             // 
@@ -445,7 +445,7 @@
             this.lbprecioGringas.ForeColor = System.Drawing.Color.DarkRed;
             this.lbprecioGringas.Location = new System.Drawing.Point(25, 151);
             this.lbprecioGringas.Name = "lbprecioGringas";
-            this.lbprecioGringas.Size = new System.Drawing.Size(70, 13);
+            this.lbprecioGringas.Size = new System.Drawing.Size(87, 17);
             this.lbprecioGringas.TabIndex = 87;
             this.lbprecioGringas.Text = "MXN 70.00";
             // 
@@ -473,7 +473,7 @@
             0,
             0});
             this.cantidadGringas.Name = "cantidadGringas";
-            this.cantidadGringas.Size = new System.Drawing.Size(36, 20);
+            this.cantidadGringas.Size = new System.Drawing.Size(36, 24);
             this.cantidadGringas.TabIndex = 91;
             this.cantidadGringas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cantidadGringas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cantidadHotDog_MouseDown);
@@ -486,7 +486,7 @@
             this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(25, 289);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(65, 13);
+            this.label22.Size = new System.Drawing.Size(82, 17);
             this.label22.TabIndex = 84;
             this.label22.Text = "Torta loca";
             // 
@@ -510,7 +510,7 @@
             this.lbprecioTorta.ForeColor = System.Drawing.Color.DarkRed;
             this.lbprecioTorta.Location = new System.Drawing.Point(25, 325);
             this.lbprecioTorta.Name = "lbprecioTorta";
-            this.lbprecioTorta.Size = new System.Drawing.Size(70, 13);
+            this.lbprecioTorta.Size = new System.Drawing.Size(87, 17);
             this.lbprecioTorta.TabIndex = 82;
             this.lbprecioTorta.Text = "MXN 65.00";
             // 
@@ -538,7 +538,7 @@
             0,
             0});
             this.cantidadTorta.Name = "cantidadTorta";
-            this.cantidadTorta.Size = new System.Drawing.Size(36, 20);
+            this.cantidadTorta.Size = new System.Drawing.Size(36, 24);
             this.cantidadTorta.TabIndex = 86;
             this.cantidadTorta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cantidadTorta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cantidadHotDog_MouseDown);
@@ -551,7 +551,7 @@
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(25, 1610);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(91, 13);
+            this.label19.Size = new System.Drawing.Size(116, 17);
             this.label19.TabIndex = 79;
             this.label19.Text = "Sopes de pollo";
             // 
@@ -563,7 +563,7 @@
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(25, 1420);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 13);
+            this.label16.Size = new System.Drawing.Size(131, 17);
             this.label16.TabIndex = 73;
             this.label16.Text = "Burros supremos";
             // 
@@ -616,7 +616,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(25, 1033);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 13);
+            this.label10.Size = new System.Drawing.Size(136, 17);
             this.label10.TabIndex = 30;
             this.label10.Text = "Pasta con salmon";
             // 
@@ -627,7 +627,7 @@
             this.lbprecioSopes.ForeColor = System.Drawing.Color.DarkRed;
             this.lbprecioSopes.Location = new System.Drawing.Point(25, 1646);
             this.lbprecioSopes.Name = "lbprecioSopes";
-            this.lbprecioSopes.Size = new System.Drawing.Size(70, 13);
+            this.lbprecioSopes.Size = new System.Drawing.Size(87, 17);
             this.lbprecioSopes.TabIndex = 77;
             this.lbprecioSopes.Text = "MXN 80.00";
             // 
@@ -638,7 +638,7 @@
             this.lbprecioPizza.ForeColor = System.Drawing.Color.DarkRed;
             this.lbprecioPizza.Location = new System.Drawing.Point(25, 893);
             this.lbprecioPizza.Name = "lbprecioPizza";
-            this.lbprecioPizza.Size = new System.Drawing.Size(77, 13);
+            this.lbprecioPizza.Size = new System.Drawing.Size(96, 17);
             this.lbprecioPizza.TabIndex = 75;
             this.lbprecioPizza.Text = "MXN 220.00";
             // 
@@ -666,7 +666,7 @@
             0,
             0});
             this.cantidadSopes.Name = "cantidadSopes";
-            this.cantidadSopes.Size = new System.Drawing.Size(36, 20);
+            this.cantidadSopes.Size = new System.Drawing.Size(36, 24);
             this.cantidadSopes.TabIndex = 81;
             this.cantidadSopes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cantidadSopes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cantidadHotDog_MouseDown);
@@ -692,7 +692,7 @@
             this.lbprecioBurro.ForeColor = System.Drawing.Color.DarkRed;
             this.lbprecioBurro.Location = new System.Drawing.Point(25, 1470);
             this.lbprecioBurro.Name = "lbprecioBurro";
-            this.lbprecioBurro.Size = new System.Drawing.Size(77, 13);
+            this.lbprecioBurro.Size = new System.Drawing.Size(96, 17);
             this.lbprecioBurro.TabIndex = 27;
             this.lbprecioBurro.Text = "MXN 120.00";
             // 
@@ -710,7 +710,7 @@
             0,
             0});
             this.cantidadBurro.Name = "cantidadBurro";
-            this.cantidadBurro.Size = new System.Drawing.Size(36, 20);
+            this.cantidadBurro.Size = new System.Drawing.Size(36, 24);
             this.cantidadBurro.TabIndex = 76;
             this.cantidadBurro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cantidadBurro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cantidadHotDog_MouseDown);
@@ -722,7 +722,7 @@
             this.lbprecioPasta.ForeColor = System.Drawing.Color.DarkRed;
             this.lbprecioPasta.Location = new System.Drawing.Point(25, 1081);
             this.lbprecioPasta.Name = "lbprecioPasta";
-            this.lbprecioPasta.Size = new System.Drawing.Size(77, 13);
+            this.lbprecioPasta.Size = new System.Drawing.Size(96, 17);
             this.lbprecioPasta.TabIndex = 32;
             this.lbprecioPasta.Text = "MXN 170.00";
             // 
@@ -740,7 +740,7 @@
             0,
             0});
             this.cantidadPasta.Name = "cantidadPasta";
-            this.cantidadPasta.Size = new System.Drawing.Size(36, 20);
+            this.cantidadPasta.Size = new System.Drawing.Size(36, 24);
             this.cantidadPasta.TabIndex = 36;
             this.cantidadPasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cantidadPasta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cantidadHotDog_MouseDown);
@@ -783,7 +783,7 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(26, 1220);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(91, 13);
+            this.label15.Size = new System.Drawing.Size(118, 17);
             this.label15.TabIndex = 69;
             this.label15.Text = "HungryBurguer";
             // 
@@ -809,7 +809,7 @@
             this.lbprecioHamburguesa.ForeColor = System.Drawing.Color.DarkRed;
             this.lbprecioHamburguesa.Location = new System.Drawing.Point(25, 1282);
             this.lbprecioHamburguesa.Name = "lbprecioHamburguesa";
-            this.lbprecioHamburguesa.Size = new System.Drawing.Size(70, 13);
+            this.lbprecioHamburguesa.Size = new System.Drawing.Size(87, 17);
             this.lbprecioHamburguesa.TabIndex = 71;
             this.lbprecioHamburguesa.Text = "MXN 95.00";
             // 
@@ -827,7 +827,7 @@
             0,
             0});
             this.cantidadHambu.Name = "cantidadHambu";
-            this.cantidadHambu.Size = new System.Drawing.Size(36, 20);
+            this.cantidadHambu.Size = new System.Drawing.Size(36, 24);
             this.cantidadHambu.TabIndex = 72;
             this.cantidadHambu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cantidadHambu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cantidadHotDog_MouseDown);
@@ -839,7 +839,7 @@
             this.lbprecioHotDog.ForeColor = System.Drawing.Color.DarkRed;
             this.lbprecioHotDog.Location = new System.Drawing.Point(25, 514);
             this.lbprecioHotDog.Name = "lbprecioHotDog";
-            this.lbprecioHotDog.Size = new System.Drawing.Size(70, 13);
+            this.lbprecioHotDog.Size = new System.Drawing.Size(87, 17);
             this.lbprecioHotDog.TabIndex = 43;
             this.lbprecioHotDog.Text = "MXN 35.00";
             // 
@@ -851,7 +851,7 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(25, 465);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 13);
+            this.label13.Size = new System.Drawing.Size(146, 17);
             this.label13.TabIndex = 42;
             this.label13.Text = "HotDog Campesino";
             // 
@@ -907,7 +907,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(25, 654);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 13);
+            this.label3.Size = new System.Drawing.Size(225, 17);
             this.label3.TabIndex = 24;
             this.label3.Text = "Sushi con huevos de pescado";
             // 
@@ -939,7 +939,7 @@
             0,
             0});
             this.cantidadPizza.Name = "cantidadPizza";
-            this.cantidadPizza.Size = new System.Drawing.Size(36, 20);
+            this.cantidadPizza.Size = new System.Drawing.Size(36, 24);
             this.cantidadPizza.TabIndex = 35;
             this.cantidadPizza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cantidadPizza.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cantidadHotDog_MouseDown);
@@ -951,7 +951,7 @@
             this.lbprecioSushi.ForeColor = System.Drawing.Color.DarkRed;
             this.lbprecioSushi.Location = new System.Drawing.Point(25, 701);
             this.lbprecioSushi.Name = "lbprecioSushi";
-            this.lbprecioSushi.Size = new System.Drawing.Size(77, 13);
+            this.lbprecioSushi.Size = new System.Drawing.Size(96, 17);
             this.lbprecioSushi.TabIndex = 26;
             this.lbprecioSushi.Text = "MXN 130.00";
             // 
@@ -969,7 +969,7 @@
             0,
             0});
             this.cantidadSushi.Name = "cantidadSushi";
-            this.cantidadSushi.Size = new System.Drawing.Size(36, 20);
+            this.cantidadSushi.Size = new System.Drawing.Size(36, 24);
             this.cantidadSushi.TabIndex = 34;
             this.cantidadSushi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cantidadSushi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cantidadHotDog_MouseDown);
@@ -988,7 +988,7 @@
             0,
             0});
             this.cantidadHotDog.Name = "cantidadHotDog";
-            this.cantidadHotDog.Size = new System.Drawing.Size(36, 20);
+            this.cantidadHotDog.Size = new System.Drawing.Size(36, 24);
             this.cantidadHotDog.TabIndex = 33;
             this.cantidadHotDog.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cantidadHotDog.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cantidadHotDog_MouseDown);
@@ -1001,7 +1001,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(25, 841);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 13);
+            this.label8.Size = new System.Drawing.Size(136, 17);
             this.label8.TabIndex = 28;
             this.label8.Text = "Pizza Capricciosa";
             // 
@@ -1024,13 +1024,14 @@
             // 
             // cmsGringa
             // 
+            this.cmsGringa.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsGringa.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TortillaToolStripMenuItem,
             this.pimientoMorrónToolStripMenuItem,
             this.quesoManchegoToolStripMenuItem,
             this.pimientoMorrónVerdeToolStripMenuItem});
             this.cmsGringa.Name = "cmsGringa";
-            this.cmsGringa.Size = new System.Drawing.Size(198, 92);
+            this.cmsGringa.Size = new System.Drawing.Size(232, 108);
             // 
             // TortillaToolStripMenuItem
             // 
@@ -1038,7 +1039,7 @@
             this.TortillaToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.TortillaToolStripMenuItem.Enabled = false;
             this.TortillaToolStripMenuItem.Name = "TortillaToolStripMenuItem";
-            this.TortillaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.TortillaToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.TortillaToolStripMenuItem.Text = "Tortilla de harina";
             // 
             // pimientoMorrónToolStripMenuItem
@@ -1047,7 +1048,7 @@
             this.pimientoMorrónToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.pimientoMorrónToolStripMenuItem.Enabled = false;
             this.pimientoMorrónToolStripMenuItem.Name = "pimientoMorrónToolStripMenuItem";
-            this.pimientoMorrónToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.pimientoMorrónToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.pimientoMorrónToolStripMenuItem.Text = "Chorizo";
             // 
             // quesoManchegoToolStripMenuItem
@@ -1056,7 +1057,7 @@
             this.quesoManchegoToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.quesoManchegoToolStripMenuItem.Enabled = false;
             this.quesoManchegoToolStripMenuItem.Name = "quesoManchegoToolStripMenuItem";
-            this.quesoManchegoToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.quesoManchegoToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.quesoManchegoToolStripMenuItem.Text = "Queso manchego";
             // 
             // pimientoMorrónVerdeToolStripMenuItem
@@ -1065,11 +1066,12 @@
             this.pimientoMorrónVerdeToolStripMenuItem.CheckOnClick = true;
             this.pimientoMorrónVerdeToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.pimientoMorrónVerdeToolStripMenuItem.Name = "pimientoMorrónVerdeToolStripMenuItem";
-            this.pimientoMorrónVerdeToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.pimientoMorrónVerdeToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.pimientoMorrónVerdeToolStripMenuItem.Text = "Pimiento morrón verde";
             // 
             // cmsTorta
             // 
+            this.cmsTorta.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsTorta.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
@@ -1079,7 +1081,7 @@
             this.quesoManchegoToolStripMenuItem1,
             this.aderezoToolStripMenuItem});
             this.cmsTorta.Name = "cmsGringa";
-            this.cmsTorta.Size = new System.Drawing.Size(198, 158);
+            this.cmsTorta.Size = new System.Drawing.Size(232, 186);
             // 
             // toolStripMenuItem1
             // 
@@ -1087,7 +1089,7 @@
             this.toolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem1.Enabled = false;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem1.Text = "Bolillo";
             // 
             // toolStripMenuItem2
@@ -1096,7 +1098,7 @@
             this.toolStripMenuItem2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem2.Enabled = false;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem2.Text = "Jamón de pierna";
             // 
             // toolStripMenuItem3
@@ -1105,7 +1107,7 @@
             this.toolStripMenuItem3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem3.Enabled = false;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem3.Text = "Salchicha de pavo";
             // 
             // cebollaToolStripMenuItem
@@ -1115,7 +1117,7 @@
             this.cebollaToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cebollaToolStripMenuItem.Enabled = false;
             this.cebollaToolStripMenuItem.Name = "cebollaToolStripMenuItem";
-            this.cebollaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.cebollaToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.cebollaToolStripMenuItem.Text = "Queso manchego";
             // 
             // toolStripMenuItem4
@@ -1124,7 +1126,7 @@
             this.toolStripMenuItem4.CheckOnClick = true;
             this.toolStripMenuItem4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem4.Text = "Pimiento morrón verde";
             // 
             // quesoManchegoToolStripMenuItem1
@@ -1133,7 +1135,7 @@
             this.quesoManchegoToolStripMenuItem1.CheckOnClick = true;
             this.quesoManchegoToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.quesoManchegoToolStripMenuItem1.Name = "quesoManchegoToolStripMenuItem1";
-            this.quesoManchegoToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
+            this.quesoManchegoToolStripMenuItem1.Size = new System.Drawing.Size(231, 26);
             this.quesoManchegoToolStripMenuItem1.Text = "Cebolla";
             // 
             // aderezoToolStripMenuItem
@@ -1142,11 +1144,12 @@
             this.aderezoToolStripMenuItem.CheckOnClick = true;
             this.aderezoToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aderezoToolStripMenuItem.Name = "aderezoToolStripMenuItem";
-            this.aderezoToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.aderezoToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.aderezoToolStripMenuItem.Text = "Aderezo";
             // 
             // cmsHotDog
             // 
+            this.cmsHotDog.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsHotDog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem5,
             this.toolStripMenuItem6,
@@ -1154,7 +1157,7 @@
             this.toolStripMenuItem9,
             this.toolStripMenuItem10});
             this.cmsHotDog.Name = "cmsGringa";
-            this.cmsHotDog.Size = new System.Drawing.Size(198, 114);
+            this.cmsHotDog.Size = new System.Drawing.Size(232, 134);
             // 
             // toolStripMenuItem5
             // 
@@ -1162,7 +1165,7 @@
             this.toolStripMenuItem5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem5.Enabled = false;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem5.Text = "Pan Campesino";
             // 
             // toolStripMenuItem6
@@ -1171,7 +1174,7 @@
             this.toolStripMenuItem6.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem6.Enabled = false;
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem6.Text = "Salchicha de tocino";
             // 
             // toolStripMenuItem7
@@ -1180,7 +1183,7 @@
             this.toolStripMenuItem7.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem7.Enabled = false;
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem7.Text = "Queso manchego";
             // 
             // toolStripMenuItem9
@@ -1189,7 +1192,7 @@
             this.toolStripMenuItem9.CheckOnClick = true;
             this.toolStripMenuItem9.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem9.Text = "Pimiento morrón verde";
             // 
             // toolStripMenuItem10
@@ -1198,11 +1201,12 @@
             this.toolStripMenuItem10.CheckOnClick = true;
             this.toolStripMenuItem10.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem10.Text = "Cebollín";
             // 
             // cmsSushi
             // 
+            this.cmsSushi.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsSushi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem8,
             this.toolStripMenuItem12,
@@ -1210,7 +1214,7 @@
             this.toolStripMenuItem11,
             this.toolStripMenuItem13});
             this.cmsSushi.Name = "cmsGringa";
-            this.cmsSushi.Size = new System.Drawing.Size(178, 114);
+            this.cmsSushi.Size = new System.Drawing.Size(209, 134);
             // 
             // toolStripMenuItem8
             // 
@@ -1218,7 +1222,7 @@
             this.toolStripMenuItem8.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem8.Enabled = false;
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(177, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(208, 26);
             this.toolStripMenuItem8.Text = "Arroz para sushi";
             // 
             // toolStripMenuItem12
@@ -1227,7 +1231,7 @@
             this.toolStripMenuItem12.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem12.Enabled = false;
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(177, 22);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(208, 26);
             this.toolStripMenuItem12.Text = "Masa tempura";
             // 
             // toolStripMenuItem14
@@ -1237,15 +1241,16 @@
             this.toolStripMenuItem14.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem14.Enabled = false;
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(177, 22);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(208, 26);
             this.toolStripMenuItem14.Text = "Huevos de pescado";
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Checked = true;
+            this.toolStripMenuItem11.CheckOnClick = true;
             this.toolStripMenuItem11.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(177, 22);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(208, 26);
             this.toolStripMenuItem11.Text = "Hongos japoneses";
             // 
             // toolStripMenuItem13
@@ -1254,11 +1259,12 @@
             this.toolStripMenuItem13.CheckOnClick = true;
             this.toolStripMenuItem13.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(177, 22);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(208, 26);
             this.toolStripMenuItem13.Text = "Cebolla de verdeo";
             // 
             // cmsPizza
             // 
+            this.cmsPizza.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsPizza.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem15,
             this.toolStripMenuItem16,
@@ -1266,7 +1272,7 @@
             this.toolStripMenuItem18,
             this.toolStripMenuItem19});
             this.cmsPizza.Name = "cmsGringa";
-            this.cmsPizza.Size = new System.Drawing.Size(198, 114);
+            this.cmsPizza.Size = new System.Drawing.Size(232, 134);
             // 
             // toolStripMenuItem15
             // 
@@ -1274,7 +1280,7 @@
             this.toolStripMenuItem15.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem15.Enabled = false;
             this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem15.Text = "Masa artesanal";
             // 
             // toolStripMenuItem16
@@ -1283,7 +1289,7 @@
             this.toolStripMenuItem16.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem16.Enabled = false;
             this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem16.Text = "Queso mozzarella";
             // 
             // toolStripMenuItem17
@@ -1293,15 +1299,16 @@
             this.toolStripMenuItem17.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem17.Enabled = false;
             this.toolStripMenuItem17.Name = "toolStripMenuItem17";
-            this.toolStripMenuItem17.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem17.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem17.Text = "Salsa de tomate";
             // 
             // toolStripMenuItem18
             // 
             this.toolStripMenuItem18.Checked = true;
+            this.toolStripMenuItem18.CheckOnClick = true;
             this.toolStripMenuItem18.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem18.Name = "toolStripMenuItem18";
-            this.toolStripMenuItem18.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem18.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem18.Text = "Aceitunas negras";
             // 
             // toolStripMenuItem19
@@ -1310,11 +1317,12 @@
             this.toolStripMenuItem19.CheckOnClick = true;
             this.toolStripMenuItem19.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem19.Name = "toolStripMenuItem19";
-            this.toolStripMenuItem19.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem19.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem19.Text = "Pimiento morrón verde";
             // 
             // cmsPasta
             // 
+            this.cmsPasta.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsPasta.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem20,
             this.toolStripMenuItem21,
@@ -1322,7 +1330,7 @@
             this.toolStripMenuItem24,
             this.espinacaToolStripMenuItem});
             this.cmsPasta.Name = "cmsGringa";
-            this.cmsPasta.Size = new System.Drawing.Size(190, 114);
+            this.cmsPasta.Size = new System.Drawing.Size(219, 134);
             // 
             // toolStripMenuItem20
             // 
@@ -1330,7 +1338,7 @@
             this.toolStripMenuItem20.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem20.Enabled = false;
             this.toolStripMenuItem20.Name = "toolStripMenuItem20";
-            this.toolStripMenuItem20.Size = new System.Drawing.Size(189, 22);
+            this.toolStripMenuItem20.Size = new System.Drawing.Size(218, 26);
             this.toolStripMenuItem20.Text = "Pasta fresca";
             // 
             // toolStripMenuItem21
@@ -1339,16 +1347,17 @@
             this.toolStripMenuItem21.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem21.Enabled = false;
             this.toolStripMenuItem21.Name = "toolStripMenuItem21";
-            this.toolStripMenuItem21.Size = new System.Drawing.Size(189, 22);
+            this.toolStripMenuItem21.Size = new System.Drawing.Size(218, 26);
             this.toolStripMenuItem21.Text = "Salmón ahumado";
             // 
             // toolStripMenuItem23
             // 
             this.toolStripMenuItem23.Checked = true;
+            this.toolStripMenuItem23.CheckOnClick = true;
             this.toolStripMenuItem23.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem23.Name = "toolStripMenuItem23";
-            this.toolStripMenuItem23.Size = new System.Drawing.Size(189, 22);
-            this.toolStripMenuItem23.Text = "Jitomate secado al sol";
+            this.toolStripMenuItem23.Size = new System.Drawing.Size(218, 26);
+            this.toolStripMenuItem23.Text = "Tomate secado al sol";
             // 
             // toolStripMenuItem24
             // 
@@ -1356,7 +1365,7 @@
             this.toolStripMenuItem24.CheckOnClick = true;
             this.toolStripMenuItem24.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem24.Name = "toolStripMenuItem24";
-            this.toolStripMenuItem24.Size = new System.Drawing.Size(189, 22);
+            this.toolStripMenuItem24.Size = new System.Drawing.Size(218, 26);
             this.toolStripMenuItem24.Text = "Queso parmesano";
             // 
             // espinacaToolStripMenuItem
@@ -1365,11 +1374,12 @@
             this.espinacaToolStripMenuItem.CheckOnClick = true;
             this.espinacaToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.espinacaToolStripMenuItem.Name = "espinacaToolStripMenuItem";
-            this.espinacaToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.espinacaToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.espinacaToolStripMenuItem.Text = "Espinaca";
             // 
             // cmsHambu
             // 
+            this.cmsHambu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsHambu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem22,
             this.toolStripMenuItem25,
@@ -1379,7 +1389,7 @@
             this.toolStripMenuItem28,
             this.jitomateToolStripMenuItem});
             this.cmsHambu.Name = "cmsGringa";
-            this.cmsHambu.Size = new System.Drawing.Size(186, 158);
+            this.cmsHambu.Size = new System.Drawing.Size(221, 186);
             // 
             // toolStripMenuItem22
             // 
@@ -1387,7 +1397,7 @@
             this.toolStripMenuItem22.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem22.Enabled = false;
             this.toolStripMenuItem22.Name = "toolStripMenuItem22";
-            this.toolStripMenuItem22.Size = new System.Drawing.Size(185, 22);
+            this.toolStripMenuItem22.Size = new System.Drawing.Size(220, 26);
             this.toolStripMenuItem22.Text = "Bollos de Ajonjolí";
             // 
             // toolStripMenuItem25
@@ -1396,16 +1406,8 @@
             this.toolStripMenuItem25.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem25.Enabled = false;
             this.toolStripMenuItem25.Name = "toolStripMenuItem25";
-            this.toolStripMenuItem25.Size = new System.Drawing.Size(185, 22);
+            this.toolStripMenuItem25.Size = new System.Drawing.Size(220, 26);
             this.toolStripMenuItem25.Text = "Carne de arrachera";
-            // 
-            // toolStripMenuItem26
-            // 
-            this.toolStripMenuItem26.Checked = true;
-            this.toolStripMenuItem26.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripMenuItem26.Name = "toolStripMenuItem26";
-            this.toolStripMenuItem26.Size = new System.Drawing.Size(185, 22);
-            this.toolStripMenuItem26.Text = "Aros fritos de cebolla";
             // 
             // toolStripMenuItem27
             // 
@@ -1414,26 +1416,8 @@
             this.toolStripMenuItem27.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem27.Enabled = false;
             this.toolStripMenuItem27.Name = "toolStripMenuItem27";
-            this.toolStripMenuItem27.Size = new System.Drawing.Size(185, 22);
+            this.toolStripMenuItem27.Size = new System.Drawing.Size(220, 26);
             this.toolStripMenuItem27.Text = "Queso manchego";
-            // 
-            // toolStripMenuItem28
-            // 
-            this.toolStripMenuItem28.Checked = true;
-            this.toolStripMenuItem28.CheckOnClick = true;
-            this.toolStripMenuItem28.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripMenuItem28.Name = "toolStripMenuItem28";
-            this.toolStripMenuItem28.Size = new System.Drawing.Size(185, 22);
-            this.toolStripMenuItem28.Text = "Lechuga";
-            // 
-            // jitomateToolStripMenuItem
-            // 
-            this.jitomateToolStripMenuItem.Checked = true;
-            this.jitomateToolStripMenuItem.CheckOnClick = true;
-            this.jitomateToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.jitomateToolStripMenuItem.Name = "jitomateToolStripMenuItem";
-            this.jitomateToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.jitomateToolStripMenuItem.Text = "Jitomate";
             // 
             // papasFritasToolStripMenuItem
             // 
@@ -1442,11 +1426,39 @@
             this.papasFritasToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.papasFritasToolStripMenuItem.Enabled = false;
             this.papasFritasToolStripMenuItem.Name = "papasFritasToolStripMenuItem";
-            this.papasFritasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.papasFritasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.papasFritasToolStripMenuItem.Text = "Papas fritas";
+            // 
+            // toolStripMenuItem26
+            // 
+            this.toolStripMenuItem26.Checked = true;
+            this.toolStripMenuItem26.CheckOnClick = true;
+            this.toolStripMenuItem26.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem26.Name = "toolStripMenuItem26";
+            this.toolStripMenuItem26.Size = new System.Drawing.Size(220, 26);
+            this.toolStripMenuItem26.Text = "Aros fritos de cebolla";
+            // 
+            // toolStripMenuItem28
+            // 
+            this.toolStripMenuItem28.Checked = true;
+            this.toolStripMenuItem28.CheckOnClick = true;
+            this.toolStripMenuItem28.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem28.Name = "toolStripMenuItem28";
+            this.toolStripMenuItem28.Size = new System.Drawing.Size(220, 26);
+            this.toolStripMenuItem28.Text = "Lechuga";
+            // 
+            // jitomateToolStripMenuItem
+            // 
+            this.jitomateToolStripMenuItem.Checked = true;
+            this.jitomateToolStripMenuItem.CheckOnClick = true;
+            this.jitomateToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.jitomateToolStripMenuItem.Name = "jitomateToolStripMenuItem";
+            this.jitomateToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.jitomateToolStripMenuItem.Text = "Jitomate";
             // 
             // cmsBurro
             // 
+            this.cmsBurro.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsBurro.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem29,
             this.toolStripMenuItem30,
@@ -1456,7 +1468,7 @@
             this.toolStripMenuItem34,
             this.toolStripMenuItem35});
             this.cmsBurro.Name = "cmsGringa";
-            this.cmsBurro.Size = new System.Drawing.Size(198, 158);
+            this.cmsBurro.Size = new System.Drawing.Size(232, 186);
             // 
             // toolStripMenuItem29
             // 
@@ -1464,7 +1476,7 @@
             this.toolStripMenuItem29.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem29.Enabled = false;
             this.toolStripMenuItem29.Name = "toolStripMenuItem29";
-            this.toolStripMenuItem29.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem29.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem29.Text = "Tortilla de harina";
             // 
             // toolStripMenuItem30
@@ -1473,7 +1485,7 @@
             this.toolStripMenuItem30.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem30.Enabled = false;
             this.toolStripMenuItem30.Name = "toolStripMenuItem30";
-            this.toolStripMenuItem30.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem30.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem30.Text = "Bisteck";
             // 
             // toolStripMenuItem31
@@ -1483,7 +1495,7 @@
             this.toolStripMenuItem31.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem31.Enabled = false;
             this.toolStripMenuItem31.Name = "toolStripMenuItem31";
-            this.toolStripMenuItem31.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem31.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem31.Text = "Frijoles";
             // 
             // toolStripMenuItem32
@@ -1493,15 +1505,16 @@
             this.toolStripMenuItem32.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem32.Enabled = false;
             this.toolStripMenuItem32.Name = "toolStripMenuItem32";
-            this.toolStripMenuItem32.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem32.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem32.Text = "Queso manchego";
             // 
             // toolStripMenuItem33
             // 
             this.toolStripMenuItem33.Checked = true;
+            this.toolStripMenuItem33.CheckOnClick = true;
             this.toolStripMenuItem33.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem33.Name = "toolStripMenuItem33";
-            this.toolStripMenuItem33.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem33.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem33.Text = "Cebolla";
             // 
             // toolStripMenuItem34
@@ -1510,7 +1523,7 @@
             this.toolStripMenuItem34.CheckOnClick = true;
             this.toolStripMenuItem34.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem34.Name = "toolStripMenuItem34";
-            this.toolStripMenuItem34.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem34.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem34.Text = "Lechuga";
             // 
             // toolStripMenuItem35
@@ -1519,11 +1532,12 @@
             this.toolStripMenuItem35.CheckOnClick = true;
             this.toolStripMenuItem35.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem35.Name = "toolStripMenuItem35";
-            this.toolStripMenuItem35.Size = new System.Drawing.Size(197, 22);
+            this.toolStripMenuItem35.Size = new System.Drawing.Size(231, 26);
             this.toolStripMenuItem35.Text = "Pimiento morrón verde";
             // 
             // cmsSopes
             // 
+            this.cmsSopes.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsSopes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem36,
             this.toolStripMenuItem37,
@@ -1531,7 +1545,7 @@
             this.toolStripMenuItem39,
             this.toolStripMenuItem41});
             this.cmsSopes.Name = "cmsGringa";
-            this.cmsSopes.Size = new System.Drawing.Size(144, 114);
+            this.cmsSopes.Size = new System.Drawing.Size(165, 134);
             // 
             // toolStripMenuItem36
             // 
@@ -1539,7 +1553,7 @@
             this.toolStripMenuItem36.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem36.Enabled = false;
             this.toolStripMenuItem36.Name = "toolStripMenuItem36";
-            this.toolStripMenuItem36.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem36.Size = new System.Drawing.Size(164, 26);
             this.toolStripMenuItem36.Text = "Sope";
             // 
             // toolStripMenuItem37
@@ -1548,7 +1562,7 @@
             this.toolStripMenuItem37.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem37.Enabled = false;
             this.toolStripMenuItem37.Name = "toolStripMenuItem37";
-            this.toolStripMenuItem37.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem37.Size = new System.Drawing.Size(164, 26);
             this.toolStripMenuItem37.Text = "Pollo";
             // 
             // toolStripMenuItem38
@@ -1558,7 +1572,7 @@
             this.toolStripMenuItem38.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem38.Enabled = false;
             this.toolStripMenuItem38.Name = "toolStripMenuItem38";
-            this.toolStripMenuItem38.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem38.Size = new System.Drawing.Size(164, 26);
             this.toolStripMenuItem38.Text = "Frijoles";
             // 
             // toolStripMenuItem39
@@ -1567,7 +1581,7 @@
             this.toolStripMenuItem39.CheckOnClick = true;
             this.toolStripMenuItem39.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem39.Name = "toolStripMenuItem39";
-            this.toolStripMenuItem39.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem39.Size = new System.Drawing.Size(164, 26);
             this.toolStripMenuItem39.Text = "Queso fresco";
             // 
             // toolStripMenuItem41
@@ -1576,12 +1590,12 @@
             this.toolStripMenuItem41.CheckOnClick = true;
             this.toolStripMenuItem41.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem41.Name = "toolStripMenuItem41";
-            this.toolStripMenuItem41.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem41.Size = new System.Drawing.Size(164, 26);
             this.toolStripMenuItem41.Text = "Lechuga";
             // 
             // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(578, 497);

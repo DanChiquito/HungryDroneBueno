@@ -69,7 +69,7 @@
             this.pbUp = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pbDown = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.Productos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
@@ -95,7 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -177,7 +177,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1459, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // conectarToolStripMenuItem
             // 
@@ -195,7 +194,7 @@
             this.btnPuertos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cbPuertos});
             this.btnPuertos.Name = "btnPuertos";
-            this.btnPuertos.Size = new System.Drawing.Size(216, 26);
+            this.btnPuertos.Size = new System.Drawing.Size(166, 26);
             this.btnPuertos.Text = "Puertos";
             // 
             // cbPuertos
@@ -206,14 +205,14 @@
             // btnVerificar
             // 
             this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(216, 26);
+            this.btnVerificar.Size = new System.Drawing.Size(166, 26);
             this.btnVerificar.Text = "Verificar";
             this.btnVerificar.Click += new System.EventHandler(this.verificarToolStripMenuItem_Click);
             // 
             // btnConectar
             // 
             this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(216, 26);
+            this.btnConectar.Size = new System.Drawing.Size(166, 26);
             this.btnConectar.Text = "Conectar";
             this.btnConectar.Click += new System.EventHandler(this.conectarToolStripMenuItem1_Click);
             // 
@@ -221,7 +220,7 @@
             // 
             this.btnDesconectar.Enabled = false;
             this.btnDesconectar.Name = "btnDesconectar";
-            this.btnDesconectar.Size = new System.Drawing.Size(216, 26);
+            this.btnDesconectar.Size = new System.Drawing.Size(166, 26);
             this.btnDesconectar.Text = "Desconectar";
             this.btnDesconectar.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
@@ -494,27 +493,33 @@
             this.pbDown.TabStop = false;
             this.pbDown.Visible = false;
             // 
-            // dataGridView1
+            // dgvPedidos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPedidos.AllowUserToAddRows = false;
+            this.dgvPedidos.AllowUserToDeleteRows = false;
+            this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Productos,
             this.Cantidad});
-            this.dataGridView1.Location = new System.Drawing.Point(28, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(245, 122);
-            this.dataGridView1.TabIndex = 13;
+            this.dgvPedidos.Location = new System.Drawing.Point(12, 31);
+            this.dgvPedidos.Name = "dgvPedidos";
+            this.dgvPedidos.ReadOnly = true;
+            this.dgvPedidos.RowTemplate.Height = 24;
+            this.dgvPedidos.Size = new System.Drawing.Size(296, 122);
+            this.dgvPedidos.TabIndex = 13;
             // 
             // Productos
             // 
             this.Productos.HeaderText = "Productos";
             this.Productos.Name = "Productos";
+            this.Productos.ReadOnly = true;
+            this.Productos.Width = 160;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             // 
             // label9
             // 
@@ -554,7 +559,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1459, 800);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPedidos);
             this.Controls.Add(this.pbUp);
             this.Controls.Add(this.pbForward);
             this.Controls.Add(this.pictureBox7);
@@ -617,7 +622,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,12 +670,12 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pbDown;
         private System.Windows.Forms.ToolStripMenuItem btnDesconectar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Productos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridView dgvPedidos;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbLatDest;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbLongDest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Productos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
     }
 }
