@@ -121,14 +121,17 @@
   <data name="chuchi1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chuchi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btncerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btncerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ubi3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ubi3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cubiertas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cubiertas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="madera oscura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\madera oscura.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chuchi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chuchi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ubi2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ubi2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,6 +178,9 @@
   <data name="LOGO11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="onion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -190,28 +196,33 @@
   <data name="LOGO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="prson" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\prson.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pizzaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pizzaa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="persona1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\persona1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="torta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\torta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pastii" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pastii.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chuchi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chuchi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\torta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+
+  <data name="btncerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btncerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prson" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prson.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="original" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\original.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="onion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
   </data>
   <data name="cubiertas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cubiertas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="onion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\onion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+
 </root>

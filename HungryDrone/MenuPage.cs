@@ -95,7 +95,7 @@ namespace HungryDrone
             Pasta.ingredientes[4].nombre = "Espinaca";
             #endregion
             #region Hamburguesa
-            Hambu.ingredientes = new Ingrediente[6];
+            Hambu.ingredientes = new Ingrediente[7];
             Hambu.nombre = "HungryBurguer";
             Hambu.precio = 95;
             Hambu.ingredientes[0].nombre = "Bollos de ajonjoli";
@@ -104,6 +104,7 @@ namespace HungryDrone
             Hambu.ingredientes[3].nombre = "carne de arrachera";
             Hambu.ingredientes[4].nombre = "Queso manchego";
             Hambu.ingredientes[5].nombre = "Papas fritas";
+            Hambu.ingredientes[6].nombre = "Jitomate";
             #endregion
             #region Burros
             Burros.ingredientes = new Ingrediente[7];
@@ -118,22 +119,19 @@ namespace HungryDrone
             Burros.ingredientes[6].nombre = "Pimiento morrón verde";
             #endregion
             #region Sopes
-            Sopes.ingredientes = new Ingrediente[7];
-            Sopes.nombre = "Burros supremos";
-            Sopes.precio = 120;
-            Sopes.ingredientes[0].nombre = "Tortilla de harina";
-            Sopes.ingredientes[1].nombre = "Lechuga";
-            Sopes.ingredientes[2].nombre = "Bisteck";
-            Sopes.ingredientes[3].nombre = "Frijoles";
-            Sopes.ingredientes[4].nombre = "Queso manchego";
-            Sopes.ingredientes[5].nombre = "Cebolla";
-            Sopes.ingredientes[6].nombre = "Pimiento morrón verde";
+            Sopes.ingredientes = new Ingrediente[5];
+            Sopes.nombre = "Sopes de pollo";
+            Sopes.precio = 80;
+            Sopes.ingredientes[0].nombre = "Sope";
+            Sopes.ingredientes[1].nombre = "Pollo";
+            Sopes.ingredientes[2].nombre = "Frijoles";
+            Sopes.ingredientes[3].nombre = "Queso fresco";
+            Sopes.ingredientes[4].nombre = "Lechuga";
             #endregion
             #endregion
+
         }
         #endregion
-
-
 
         #region Estructuras
 
@@ -196,6 +194,7 @@ namespace HungryDrone
             float Total = totGringas + totTorta + totBurros + totHotDog + totSushi + totPizza + totPasta +totSopes + totHambu;
             home.total = Total;
 
+
             try
             {
                 if (cantidadproductos == 0)
@@ -241,5 +240,54 @@ namespace HungryDrone
         {
             Close();
         }
+
+        #region ContextMenuStrip Ingredientes
+
+        private void btnIngredGringa_Click(object sender, EventArgs e)
+        {
+            cmsGringa.Show(btnIngredGringa, 0, btnIngredGringa.Height);
+        }
+
+        private void btnIngredTorta_Click(object sender, EventArgs e)
+        {
+            cmsTorta.Show(btnIngredTorta, 0, btnIngredTorta.Height);
+        }
+
+        private void btnIngredHotDog_Click(object sender, EventArgs e)
+        {
+            cmsHotDog.Show(btnIngredHotDog, 0, btnIngredHotDog.Height);
+        }
+
+        private void btnIngredSushi_Click(object sender, EventArgs e)
+        {
+            cmsSushi.Show(btnIngredSushi, 0, btnIngredSushi.Height);
+        }
+
+        private void btnIngredPizza_Click(object sender, EventArgs e)
+        {
+            cmsPizza.Show(btnIngredPizza, 0, btnIngredPizza.Height);
+        }
+
+        private void btnIngredPasta_Click(object sender, EventArgs e)
+        {
+            cmsPasta.Show(btnIngredPasta, 0, btnIngredPasta.Height);
+        }
+
+        private void btnIngredHamb_Click(object sender, EventArgs e)
+        {
+            cmsHambu.Show(btnIngredHamb, 0, btnIngredHamb.Height);
+        }
+
+        private void btnIngredBurro_Click(object sender, EventArgs e)
+        {
+            cmsBurro.Show(btnIngredBurro, 0, btnIngredBurro.Height);
+        }
+
+        private void btnIngredSopes_Click(object sender, EventArgs e)
+        {
+            cmsSopes.Show(btnIngredSopes, 0, btnIngredSopes.Height);
+        }
+
+        #endregion
     }
 }
