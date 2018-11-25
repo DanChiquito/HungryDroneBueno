@@ -33,7 +33,11 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnMenuLat = new System.Windows.Forms.PictureBox();
+            this.btnMinim = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+
             this.label = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
@@ -44,6 +48,7 @@
             this.btnMenuLat = new System.Windows.Forms.PictureBox();
             this.btnMinim = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+
             this.panelMenuLat = new System.Windows.Forms.Panel();
             this.btnInicio = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
@@ -51,12 +56,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.panel3.SuspendLayout();
+
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOpen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbClosed)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.btnMenuLat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelMenuLat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +101,42 @@
             this.panel3.TabIndex = 7;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             // 
+            // btnMenuLat
+            // 
+            this.btnMenuLat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuLat.Image = global::HungryDrone.Properties.Resources.btnmenu;
+            this.btnMenuLat.Location = new System.Drawing.Point(6, 12);
+            this.btnMenuLat.Name = "btnMenuLat";
+            this.btnMenuLat.Size = new System.Drawing.Size(32, 27);
+            this.btnMenuLat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMenuLat.TabIndex = 10;
+            this.btnMenuLat.TabStop = false;
+            this.btnMenuLat.Click += new System.EventHandler(this.btnMenuLat_Click);
+            // 
+            // btnMinim
+            // 
+            this.btnMinim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinim.Image = global::HungryDrone.Properties.Resources.btnmin;
+            this.btnMinim.Location = new System.Drawing.Point(364, 12);
+            this.btnMinim.Name = "btnMinim";
+            this.btnMinim.Size = new System.Drawing.Size(32, 27);
+            this.btnMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinim.TabIndex = 9;
+            this.btnMinim.TabStop = false;
+            this.btnMinim.Click += new System.EventHandler(this.btnMinim_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Image = global::HungryDrone.Properties.Resources.btncerrar2;
+            this.btnCerrar.Location = new System.Drawing.Point(402, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 27);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 8;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.Black;
@@ -107,6 +152,19 @@
             this.panelContenedor.Size = new System.Drawing.Size(450, 497);
             this.panelContenedor.TabIndex = 8;
             // 
+
+            // 
+            // label1
+            // 
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Image = global::HungryDrone.Properties.Resources.original;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(308, 479);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 18);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Hungry Drone 2018";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // label
             // 
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,6 +182,7 @@
             this.lbFecha.ForeColor = System.Drawing.Color.White;
             this.lbFecha.Location = new System.Drawing.Point(23, 45);
             this.lbFecha.Name = "lbFecha";
+
             this.lbFecha.Size = new System.Drawing.Size(411, 26);
             this.lbFecha.TabIndex = 9;
             this.lbFecha.Text = "Fecha";
@@ -135,6 +194,7 @@
             this.lbHora.ForeColor = System.Drawing.Color.White;
             this.lbHora.Location = new System.Drawing.Point(25, 71);
             this.lbHora.Name = "lbHora";
+
             this.lbHora.Size = new System.Drawing.Size(409, 55);
             this.lbHora.TabIndex = 9;
             this.lbHora.Text = "Hora";
@@ -206,15 +266,8 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Image = global::HungryDrone.Properties.Resources.btncerrar2;
-            this.btnCerrar.Location = new System.Drawing.Point(402, 12);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(32, 27);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 8;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.horaFeha.Enabled = true;
+            this.horaFeha.Tick += new System.EventHandler(this.horaFeha_Tick);
             // 
             // panelMenuLat
             // 
@@ -299,7 +352,7 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(650, 550);
@@ -318,6 +371,7 @@
             this.Text = "HUNGRY DRONE";
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
             this.panel3.ResumeLayout(false);
+
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOpen)).EndInit();
@@ -325,6 +379,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMenuLat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.panelContenedor.ResumeLayout(false);
+            this.panelContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelMenuLat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
