@@ -52,7 +52,7 @@ namespace HungryDrone
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            panelfinal.Visible = true;
             try
             {
                 if ((txtbNombre.Text == "") || (mskNumero.Text == "") || (mskFecha.Text == "") || (mskCvv.Text == ""))
@@ -107,6 +107,11 @@ namespace HungryDrone
         private void txtbNombre_TextChanged(object sender, EventArgs e)
         {
             errorProv.Clear();
+        }
+
+        private void FormPagar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
