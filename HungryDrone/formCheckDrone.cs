@@ -25,9 +25,6 @@ namespace HungryDrone
 
         SerialPort serialport;
         HomePage home;
-
-        HomePage home;
-
         double LatDrone = 19.3316664;
         double LngDrone = -99.1869205;  //Coordenadas Que irá leeyendo del puerto serial de arduino
         double LatDestino;
@@ -43,7 +40,6 @@ namespace HungryDrone
             home = homepage;
             LatDestino = home.lat;
             LngDestino = home.lng;
-
 
             try
             {

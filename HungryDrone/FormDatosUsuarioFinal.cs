@@ -28,7 +28,6 @@ namespace HungryDrone
         {
             InitializeComponent();
             home = homePage;
-            lblUsuario.Text = home.nomUsuario;
             total = home.total;
             torta = home.torta;
             gringas = home.gringas;
@@ -39,9 +38,11 @@ namespace HungryDrone
             pasta = home.pasta;
             burro = home.burro;
             burguer = home.burguer;
-            /*
+
+            lblUsuario.Text = home.nomUsuario;
+            lblTotal.Text = total.ToString() + " MNX";
             lblTorta.Text = torta.ToString();
-            lblGringa.Text = gringas.ToString();
+            lblGringa.Text = gringas.ToString(); ;
             lblSope.Text = sopes.ToString();
             lblHotDog.Text = hotdogs.ToString();
             lblSuchi.Text = sushi.ToString();
@@ -49,9 +50,6 @@ namespace HungryDrone
             lblPasta.Text = pasta.ToString();
             lblBurro.Text = burro.ToString();
             lblBurguer.Text = burguer.ToString();
-            */
         }
-
-        
     }
 }

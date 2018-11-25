@@ -9,6 +9,7 @@ namespace HungryDrone
     {
         #region Atributos
 
+        string nomUsuario;
         decimal cantidadproductos;
         HomePage home;
         Producto HotDog;
@@ -30,6 +31,8 @@ namespace HungryDrone
         {
             InitializeComponent();
             home = homePage;
+            nomUsuario = home.nomUsuario;
+
             #region productos
             #region torta
             torta.ingredientes = new Ingrediente[7];
@@ -197,7 +200,7 @@ namespace HungryDrone
 
             try
             {
-                if (cantidadproductos == 0)
+                if (cantidadproductos == 0 || nomUsuario == "")
                 {
                     throw new ApplicationException("No se ha seleccionado ningún producto");
                 }
@@ -230,6 +233,10 @@ namespace HungryDrone
             catch(ApplicationException error)
             {
                 errorProv.SetError(btnPagar, error.Message);
+                if (nomUsuario == "")
+                {
+                    MessageBox.Show("Revise que haya registradp su nombre y su direeción en el botón inicio","No tenemos sus datos",0,MessageBoxIcon.Exclamation);
+                }
             }
 
         }

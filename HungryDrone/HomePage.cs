@@ -13,7 +13,7 @@ namespace HungryDrone
 {
     public partial class HomePage : Form
     {
-        public string nomUsuario;
+        public string nomUsuario = "";
         public double lat;
         public double lng;
         public float total;
